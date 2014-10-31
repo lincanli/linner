@@ -1,0 +1,1652 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		430588CD68434159B4F6B1ED /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F4391B0B215C4E6CB49458B2 /* libPods.a */; };
+		A70DAB3C1A02959B00CE7104 /* LINProfileViewControllerNormal+DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A70DAB3A1A02959B00CE7104 /* LINProfileViewControllerNormal+DataModel.m */; };
+		A70DAB3F1A02B82800CE7104 /* LINProfileTableViewControllerPointToPoint+DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A70DAB3E1A02B82800CE7104 /* LINProfileTableViewControllerPointToPoint+DataModel.m */; };
+		A70DAB481A02F6AC00CE7104 /* LINFinanceControlTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A70DAB471A02F6AC00CE7104 /* LINFinanceControlTableViewController.m */; };
+		A70DAB4C1A02F6E600CE7104 /* LINFinanceControlTableViewCellBalance.m in Sources */ = {isa = PBXBuildFile; fileRef = A70DAB4B1A02F6E600CE7104 /* LINFinanceControlTableViewCellBalance.m */; };
+		A70DAB4E1A02F92000CE7104 /* LINFinaceControlCellBalance.xib in Resources */ = {isa = PBXBuildFile; fileRef = A70DAB4D1A02F92000CE7104 /* LINFinaceControlCellBalance.xib */; };
+		A70DAB511A03038200CE7104 /* LINPaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A70DAB501A03038200CE7104 /* LINPaymentViewController.m */; };
+		A71B9D1B19C0FBEB00C6C66D /* LogoutTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A71B9D1A19C0FBEB00C6C66D /* LogoutTableCell.xib */; };
+		A71B9D2819C0FF4D00C6C66D /* LINLogOutTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A71B9D2719C0FF4D00C6C66D /* LINLogOutTableViewCell.m */; };
+		A71D6E7319C5DE8200B13FD8 /* Calling.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A71D6E7219C5DE8200B13FD8 /* Calling.storyboard */; };
+		A731983219FDAB1400CD17B7 /* LoginAndLogout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A731983119FDAB1400CD17B7 /* LoginAndLogout.storyboard */; };
+		A7459C8819C2884B00BECCDF /* HFStretchableTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7459C8719C2884B00BECCDF /* HFStretchableTableHeaderView.m */; };
+		A7459C8C19C2888500BECCDF /* LINSocialPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7459C8B19C2888500BECCDF /* LINSocialPageView.m */; };
+		A7459C9819C2930C00BECCDF /* demo_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A7459C9419C2930C00BECCDF /* demo_1.jpg */; };
+		A7459C9919C2930C00BECCDF /* demo_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A7459C9519C2930C00BECCDF /* demo_2.jpg */; };
+		A7459C9A19C2930C00BECCDF /* demo_3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A7459C9619C2930C00BECCDF /* demo_3.jpg */; };
+		A7459C9B19C2930C00BECCDF /* demo_4.png in Resources */ = {isa = PBXBuildFile; fileRef = A7459C9719C2930C00BECCDF /* demo_4.png */; };
+		A7459C9F19C2936600BECCDF /* LINParallaxCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A7459C9E19C2936600BECCDF /* LINParallaxCell.m */; };
+		A758AA0619840D2C0055A44B /* LINExploreTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A758AA0519840D2C0055A44B /* LINExploreTableViewController.m */; };
+		A758AA09198490600055A44B /* LINSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A758AA08198490600055A44B /* LINSettingTableViewController.m */; };
+		A758AA0B198499500055A44B /* SettingUserProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A758AA0A198499500055A44B /* SettingUserProfileCell.xib */; };
+		A758AA0E19849AC00055A44B /* LINSettingTableViewUserProfileCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A758AA0D19849AC00055A44B /* LINSettingTableViewUserProfileCellTableViewCell.m */; };
+		A763440519A0D2AD00EB437A /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A763440319A0D2AD00EB437A /* Model.xcdatamodeld */; };
+		A763446A19A2029C00EB437A /* LINPhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A763446919A2029C00EB437A /* LINPhoneViewController.m */; };
+		A763447019A21AC900EB437A /* LINPersonalProfileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A763446F19A21AC900EB437A /* LINPersonalProfileTableViewController.m */; };
+		A763B3DF19C64B30006733D2 /* LINCallingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A763B3DE19C64B30006733D2 /* LINCallingViewController.m */; };
+		A771E2E119FDCDB600D8474B /* LINPhoneNumberHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A771E2E019FDCDB600D8474B /* LINPhoneNumberHelper.m */; };
+		A771E2E419FDD04E00D8474B /* LINPhoneNumberSelectTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A771E2E319FDD04E00D8474B /* LINPhoneNumberSelectTableViewController.m */; };
+		A771E2E619FDD3CA00D8474B /* LINPhoneNumberSelectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A771E2E519FDD3CA00D8474B /* LINPhoneNumberSelectionView.xib */; };
+		A771E2E919FE0BA800D8474B /* LINContactsTableCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A771E2E819FE0BA800D8474B /* LINContactsTableCellTableViewCell.m */; };
+		A771E2F119FF3F2600D8474B /* LINProfileTableViewControllerPointToPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = A771E2F019FF3F2600D8474B /* LINProfileTableViewControllerPointToPoint.m */; };
+		A77E7FE519C79CAF00E79DCB /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A77E7FE419C79CAF00E79DCB /* MapKit.framework */; };
+		A787B72319FAE1AE00ABF8DB /* LINMessagesListViewController+DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A787B72219FAE1AE00ABF8DB /* LINMessagesListViewController+DataModel.m */; };
+		A7899CF119FD4E9D001C2D96 /* LINAddFriendsTableViewController+DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A7899CF019FD4E9D001C2D96 /* LINAddFriendsTableViewController+DataModel.m */; };
+		A7899CF419FD584A001C2D96 /* LINNotificationTableViewController+DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A7899CF319FD584A001C2D96 /* LINNotificationTableViewController+DataModel.m */; };
+		A78BD1B319DD92E600AB6A0D /* LINUserObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A78BD1B219DD92E600AB6A0D /* LINUserObject.m */; };
+		A78BD1B619DD954F00AB6A0D /* LINUserSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = A78BD1B519DD954F00AB6A0D /* LINUserSetting.m */; };
+		A78BD1B919DD965C00AB6A0D /* LINUserRelation.m in Sources */ = {isa = PBXBuildFile; fileRef = A78BD1B819DD965C00AB6A0D /* LINUserRelation.m */; };
+		A78BD1BC19DD980400AB6A0D /* LINMessageList.m in Sources */ = {isa = PBXBuildFile; fileRef = A78BD1BB19DD980400AB6A0D /* LINMessageList.m */; };
+		A78BD1BF19DD987E00AB6A0D /* LINMessageRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = A78BD1BE19DD987E00AB6A0D /* LINMessageRecord.m */; };
+		A78BD1C719DDBB9100AB6A0D /* addFriends.xib in Resources */ = {isa = PBXBuildFile; fileRef = A78BD1C619DDBB9100AB6A0D /* addFriends.xib */; };
+		A78BD1CB19DDBF8B00AB6A0D /* LINSearchUserTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A78BD1CA19DDBF8B00AB6A0D /* LINSearchUserTableViewCell.m */; };
+		A78BD1CF19DDF35400AB6A0D /* LINAVAppNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = A78BD1CE19DDF35400AB6A0D /* LINAVAppNotification.m */; };
+		A78BD1D219DE042100AB6A0D /* LINAVUserObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A78BD1D119DE042100AB6A0D /* LINAVUserObject.m */; };
+		A78BD1D519DE136300AB6A0D /* NotificationCellForFriendRequest.xib in Resources */ = {isa = PBXBuildFile; fileRef = A78BD1D419DE136300AB6A0D /* NotificationCellForFriendRequest.xib */; };
+		A78BD1D819DE14C800AB6A0D /* LINNotificationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A78BD1D719DE14C800AB6A0D /* LINNotificationTableViewController.m */; };
+		A78BD1DC19DE14E900AB6A0D /* LINNotificationTableViewCellFriendRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A78BD1DB19DE14E900AB6A0D /* LINNotificationTableViewCellFriendRequest.m */; };
+		A78BD1DF19DEFC2B00AB6A0D /* LINAVUserRelation.m in Sources */ = {isa = PBXBuildFile; fileRef = A78BD1DE19DEFC2B00AB6A0D /* LINAVUserRelation.m */; };
+		A78BD1E319DFA07B00AB6A0D /* LINProfileFriend.xib in Resources */ = {isa = PBXBuildFile; fileRef = A78BD1E219DFA07B00AB6A0D /* LINProfileFriend.xib */; };
+		A78BD1F319E062F400AB6A0D /* ChineseToPinyinResource.m in Sources */ = {isa = PBXBuildFile; fileRef = A78BD1E719E062F400AB6A0D /* ChineseToPinyinResource.m */; };
+		A78BD1F419E062F400AB6A0D /* HanyuPinyinOutputFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = A78BD1E919E062F400AB6A0D /* HanyuPinyinOutputFormat.m */; };
+		A78BD1F519E062F400AB6A0D /* NSString+PinYin4Cocoa.m in Sources */ = {isa = PBXBuildFile; fileRef = A78BD1EB19E062F400AB6A0D /* NSString+PinYin4Cocoa.m */; };
+		A78BD1F619E062F400AB6A0D /* PinyinFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = A78BD1EE19E062F400AB6A0D /* PinyinFormatter.m */; };
+		A78BD1F719E062F400AB6A0D /* PinyinHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A78BD1F019E062F400AB6A0D /* PinyinHelper.m */; };
+		A78BD1F819E062F400AB6A0D /* unicode_to_hanyu_pinyin.txt in Resources */ = {isa = PBXBuildFile; fileRef = A78BD1F219E062F400AB6A0D /* unicode_to_hanyu_pinyin.txt */; };
+		A78DDD83198385EC00534254 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78DDD82198385EC00534254 /* Foundation.framework */; };
+		A78DDD85198385EC00534254 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78DDD84198385EC00534254 /* CoreGraphics.framework */; };
+		A78DDD87198385EC00534254 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78DDD86198385EC00534254 /* UIKit.framework */; };
+		A78DDD8D198385EC00534254 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A78DDD8B198385EC00534254 /* InfoPlist.strings */; };
+		A78DDD8F198385EC00534254 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A78DDD8E198385EC00534254 /* main.m */; };
+		A78DDD93198385EC00534254 /* LINAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A78DDD92198385EC00534254 /* LINAppDelegate.m */; };
+		A78DDD99198385EC00534254 /* LINViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A78DDD98198385EC00534254 /* LINViewController.m */; };
+		A78DDD9B198385EC00534254 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A78DDD9A198385EC00534254 /* Images.xcassets */; };
+		A78DDDA3198385EC00534254 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78DDD82198385EC00534254 /* Foundation.framework */; };
+		A78DDDA4198385EC00534254 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78DDD86198385EC00534254 /* UIKit.framework */; };
+		A78DDDAC198385EC00534254 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A78DDDAA198385EC00534254 /* InfoPlist.strings */; };
+		A78DDDAE198385EC00534254 /* linnerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A78DDDAD198385EC00534254 /* linnerTests.m */; };
+		A78DDDBE1983867600534254 /* LINLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A78DDDBD1983867600534254 /* LINLoginViewController.m */; };
+		A78DDDC11983868400534254 /* LINSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A78DDDC01983868400534254 /* LINSignUpViewController.m */; };
+		A78DDDC41983869700534254 /* LINiForgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A78DDDC31983869700534254 /* LINiForgetViewController.m */; };
+		A78DDDCB1983876300534254 /* LINChatTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A78DDDCA1983876300534254 /* LINChatTableViewController.m */; };
+		A78DDDCE19838A9300534254 /* LINMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A78DDDCD19838A9300534254 /* LINMainViewController.m */; };
+		A78DDDD119839B8900534254 /* LINChatNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A78DDDD019839B8900534254 /* LINChatNavViewController.m */; };
+		A78DDDD41983CA9900534254 /* LINChatTableViewCellList.m in Sources */ = {isa = PBXBuildFile; fileRef = A78DDDD31983CA9900534254 /* LINChatTableViewCellList.m */; };
+		A78DDDDA1983DDE600534254 /* LINContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A78DDDD91983DDE600534254 /* LINContactsViewController.m */; };
+		A78DDDDF1983E03600534254 /* LINExploreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A78DDDDE1983E03600534254 /* LINExploreViewController.m */; };
+		A78DDDE31983E04E00534254 /* LINSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A78DDDE21983E04E00534254 /* LINSettingViewController.m */; };
+		A78DDDE81983EA6000534254 /* LINContactsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A78DDDE71983EA6000534254 /* LINContactsTableViewController.m */; };
+		A78E8F8319CF5DEA0062A72F /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78E8F8219CF5DEA0062A72F /* MobileCoreServices.framework */; };
+		A78E8F8519CF5E120062A72F /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78E8F8419CF5E120062A72F /* CoreTelephony.framework */; };
+		A78E8F8719CF5E210062A72F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78E8F8619CF5E210062A72F /* CoreLocation.framework */; };
+		A78E8F8919CF5E370062A72F /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A78E8F8819CF5E370062A72F /* libicucore.dylib */; };
+		A78E8F9019CF80580062A72F /* cat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A78E8F8C19CF80580062A72F /* cat@2x.png */; };
+		A78E8F9119CF80580062A72F /* check@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A78E8F8D19CF80580062A72F /* check@2x.png */; };
+		A78E8F9219CF80580062A72F /* fav@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A78E8F8E19CF80580062A72F /* fav@2x.png */; };
+		A78E8F9319CF80580062A72F /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A78E8F8F19CF80580062A72F /* menu@2x.png */; };
+		A7942BD919C1EF5600878AC5 /* LINEmailEditingView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7942BD819C1EF5600878AC5 /* LINEmailEditingView.m */; };
+		A7942BE119C1EFA500878AC5 /* LINNameEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7942BE019C1EFA500878AC5 /* LINNameEditView.m */; };
+		A7942BE919C1EFE200878AC5 /* LINDescriptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7942BE819C1EFE200878AC5 /* LINDescriptionView.m */; };
+		A7942BED19C1F05D00878AC5 /* LINBirthdayEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7942BEC19C1F05D00878AC5 /* LINBirthdayEditView.m */; };
+		A7942BF119C1F07D00878AC5 /* LINLocationEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7942BF019C1F07D00878AC5 /* LINLocationEditView.m */; };
+		A79EAF3719C2A4DC00388ABF /* Socialx.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A79EAF3619C2A4DC00388ABF /* Socialx.storyboard */; };
+		A7A090E019FC992B00EEFFAB /* LINProfileNormal.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7A090DF19FC992B00EEFFAB /* LINProfileNormal.xib */; };
+		A7A090E219FC993F00EEFFAB /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7A090E119FC993F00EEFFAB /* Launch Screen.xib */; };
+		A7A090E519FCADC400EEFFAB /* LINProfileViewControllerNormal.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A090E419FCADC400EEFFAB /* LINProfileViewControllerNormal.m */; };
+		A7A4EB1E199A38A90067EBAC /* LINAddFriendsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A4EB1D199A38A90067EBAC /* LINAddFriendsTableViewController.m */; };
+		A7A5CD6B19FB49B1005061AD /* LINChatTableViewCellList.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7A5CD6A19FB49B1005061AD /* LINChatTableViewCellList.xib */; };
+		A7A5CD7819FC0F97005061AD /* LINAppDelegate+DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A7A5CD7719FC0F97005061AD /* LINAppDelegate+DataModel.m */; };
+		A7A8EAF219C4890600DDD4C2 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A8EAF119C4890600DDD4C2 /* CFNetwork.framework */; };
+		A7A8EAF419C4891100DDD4C2 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A8EAF319C4891100DDD4C2 /* CoreAudio.framework */; };
+		A7A8EAF619C4891E00DDD4C2 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A8EAF519C4891E00DDD4C2 /* CoreImage.framework */; };
+		A7A8EAF819C4892700DDD4C2 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A8EAF719C4892700DDD4C2 /* CoreMedia.framework */; };
+		A7A8EAFA19C4893100DDD4C2 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A8EAF919C4893100DDD4C2 /* CoreVideo.framework */; };
+		A7A8EAFC19C4894800DDD4C2 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A8EAFB19C4894800DDD4C2 /* libc++.dylib */; };
+		A7A8EAFE19C4895200DDD4C2 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A8EAFD19C4895200DDD4C2 /* libsqlite3.dylib */; };
+		A7A8EB0019C4896200DDD4C2 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A8EAFF19C4896200DDD4C2 /* libstdc++.dylib */; };
+		A7A8EB0219C4896C00DDD4C2 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A8EB0119C4896C00DDD4C2 /* OpenGLES.framework */; };
+		A7A8EB0419C4897600DDD4C2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A8EB0319C4897600DDD4C2 /* QuartzCore.framework */; };
+		A7A8EB0619C4897F00DDD4C2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A8EB0519C4897F00DDD4C2 /* SystemConfiguration.framework */; };
+		A7B07DA319CA8BD4005DABED /* incoming.wav in Resources */ = {isa = PBXBuildFile; fileRef = A7B07DA119CA8BD4005DABED /* incoming.wav */; };
+		A7B07DA419CA8BD4005DABED /* ringback.wav in Resources */ = {isa = PBXBuildFile; fileRef = A7B07DA219CA8BD4005DABED /* ringback.wav */; };
+		A7B7919C19C1202F00F654B2 /* LINSettingPrivacyControl.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B7919B19C1202F00F654B2 /* LINSettingPrivacyControl.m */; };
+		A7B791A019C1239800F654B2 /* LINSettingGeneralControl.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B7919F19C1239800F654B2 /* LINSettingGeneralControl.m */; };
+		A7BB62D019F8334700EB21CB /* LINMessageListModelData+DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BB62CF19F8334700EB21CB /* LINMessageListModelData+DataModel.m */; };
+		A7BB62D319F8336400EB21CB /* LINLoginSignUpDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BB62D119F8336400EB21CB /* LINLoginSignUpDataHelper.m */; };
+		A7BB62D619F8337200EB21CB /* LINContactsTableViewController+DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BB62D419F8337200EB21CB /* LINContactsTableViewController+DataModel.m */; };
+		A7D1E3C919C21E7800C5A1C4 /* LINSexEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D1E3C819C21E7800C5A1C4 /* LINSexEditView.m */; };
+		A7D1E3D219C22C4200C5A1C4 /* LINMultiLangView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D1E3D119C22C4200C5A1C4 /* LINMultiLangView.m */; };
+		A7D1E3D519C22C4D00C5A1C4 /* LINFontSizeEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D1E3D419C22C4D00C5A1C4 /* LINFontSizeEditView.m */; };
+		A7D1E3D919C22C6400C5A1C4 /* LINInitPageSelect.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D1E3D819C22C6400C5A1C4 /* LINInitPageSelect.m */; };
+		A7D73E2319937A540092C606 /* LINContactsTableCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7D73E2219937A540092C606 /* LINContactsTableCellTableViewCell.xib */; };
+		A7D73E2A1993B2CA0092C606 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7D73E281993B2CA0092C606 /* AudioToolbox.framework */; };
+		A7D73E2B1993B2CA0092C606 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7D73E291993B2CA0092C606 /* AVFoundation.framework */; };
+		A7E32B2919E71D6F005C615F /* LINMessagesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E32B2219E71D6F005C615F /* LINMessagesListViewController.m */; };
+		A7E32B2A19E71D6F005C615F /* LINMessageListModelData.m in Sources */ = {isa = PBXBuildFile; fileRef = A7E32B2419E71D6F005C615F /* LINMessageListModelData.m */; };
+		A7E56EEE19C29E7E00BCD476 /* SocialCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7E56EED19C29E7E00BCD476 /* SocialCell.xib */; };
+		A7F45FA319F345FD0028FFBE /* LINSettingDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F45FA219F345FD0028FFBE /* LINSettingDataHelper.m */; };
+		A7F45FAB19F4C4BF0028FFBE /* LINSocialCompose.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7F45FAA19F4C4BF0028FFBE /* LINSocialCompose.xib */; };
+		A7F45FAE19F4C98E0028FFBE /* LINSocialComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F45FAD19F4C98E0028FFBE /* LINSocialComposeViewController.m */; };
+		A7F6E8CA19F2213A0037EE06 /* sample_iTunes.mov in Resources */ = {isa = PBXBuildFile; fileRef = A7F6E8C919F2213A0037EE06 /* sample_iTunes.mov */; };
+		A7F6E8D319F2BE550037EE06 /* LINChatTableViewController+DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F6E8D219F2BE550037EE06 /* LINChatTableViewController+DataModel.m */; };
+		A7F6E8D919F2FAB40037EE06 /* LINSettingTableViewController+DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F6E8D819F2FAB40037EE06 /* LINSettingTableViewController+DataModel.m */; };
+		A7FAAEB219F9701D001B2886 /* LINProfileViewControllerFriends.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FAAEB119F9701D001B2886 /* LINProfileViewControllerFriends.m */; };
+		A7FAAEB519F98AE0001B2886 /* LINProfileViewControllerFriends+DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FAAEB419F98AE0001B2886 /* LINProfileViewControllerFriends+DataModel.m */; };
+		A7FCDCE919D47B0B0014818C /* LINUser.m in Sources */ = {isa = PBXBuildFile; fileRef = A7FCDCE819D47B0B0014818C /* LINUser.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A78DDDA5198385EC00534254 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A78DDD77198385EC00534254 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A78DDD7E198385EC00534254;
+			remoteInfo = linner;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A20465D43504FC6503ECDD11 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		A70DAB3A1A02959B00CE7104 /* LINProfileViewControllerNormal+DataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "LINProfileViewControllerNormal+DataModel.m"; path = "linner/LINProfileViewControllerNormal+DataModel.m"; sourceTree = "<group>"; };
+		A70DAB3B1A02959B00CE7104 /* LINProfileViewControllerNormal+DataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "LINProfileViewControllerNormal+DataModel.h"; path = "linner/LINProfileViewControllerNormal+DataModel.h"; sourceTree = "<group>"; };
+		A70DAB3D1A02B82800CE7104 /* LINProfileTableViewControllerPointToPoint+DataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "LINProfileTableViewControllerPointToPoint+DataModel.h"; path = "linner/LINProfileTableViewControllerPointToPoint+DataModel.h"; sourceTree = "<group>"; };
+		A70DAB3E1A02B82800CE7104 /* LINProfileTableViewControllerPointToPoint+DataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "LINProfileTableViewControllerPointToPoint+DataModel.m"; path = "linner/LINProfileTableViewControllerPointToPoint+DataModel.m"; sourceTree = "<group>"; };
+		A70DAB461A02F6AC00CE7104 /* LINFinanceControlTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINFinanceControlTableViewController.h; sourceTree = "<group>"; };
+		A70DAB471A02F6AC00CE7104 /* LINFinanceControlTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINFinanceControlTableViewController.m; sourceTree = "<group>"; };
+		A70DAB4A1A02F6E600CE7104 /* LINFinanceControlTableViewCellBalance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINFinanceControlTableViewCellBalance.h; sourceTree = "<group>"; };
+		A70DAB4B1A02F6E600CE7104 /* LINFinanceControlTableViewCellBalance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINFinanceControlTableViewCellBalance.m; sourceTree = "<group>"; };
+		A70DAB4D1A02F92000CE7104 /* LINFinaceControlCellBalance.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LINFinaceControlCellBalance.xib; sourceTree = "<group>"; };
+		A70DAB4F1A03038200CE7104 /* LINPaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINPaymentViewController.h; sourceTree = "<group>"; };
+		A70DAB501A03038200CE7104 /* LINPaymentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINPaymentViewController.m; sourceTree = "<group>"; };
+		A71B9D1A19C0FBEB00C6C66D /* LogoutTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogoutTableCell.xib; sourceTree = "<group>"; };
+		A71B9D2619C0FF4D00C6C66D /* LINLogOutTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINLogOutTableViewCell.h; sourceTree = "<group>"; };
+		A71B9D2719C0FF4D00C6C66D /* LINLogOutTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINLogOutTableViewCell.m; sourceTree = "<group>"; };
+		A71D6E7219C5DE8200B13FD8 /* Calling.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Calling.storyboard; sourceTree = "<group>"; };
+		A731983119FDAB1400CD17B7 /* LoginAndLogout.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginAndLogout.storyboard; sourceTree = "<group>"; };
+		A7459C8619C2884B00BECCDF /* HFStretchableTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFStretchableTableHeaderView.h; sourceTree = "<group>"; };
+		A7459C8719C2884B00BECCDF /* HFStretchableTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFStretchableTableHeaderView.m; sourceTree = "<group>"; };
+		A7459C8A19C2888500BECCDF /* LINSocialPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINSocialPageView.h; sourceTree = "<group>"; };
+		A7459C8B19C2888500BECCDF /* LINSocialPageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINSocialPageView.m; sourceTree = "<group>"; };
+		A7459C9419C2930C00BECCDF /* demo_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = demo_1.jpg; sourceTree = "<group>"; };
+		A7459C9519C2930C00BECCDF /* demo_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = demo_2.jpg; sourceTree = "<group>"; };
+		A7459C9619C2930C00BECCDF /* demo_3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = demo_3.jpg; sourceTree = "<group>"; };
+		A7459C9719C2930C00BECCDF /* demo_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = demo_4.png; sourceTree = "<group>"; };
+		A7459C9D19C2936600BECCDF /* LINParallaxCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINParallaxCell.h; sourceTree = "<group>"; };
+		A7459C9E19C2936600BECCDF /* LINParallaxCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINParallaxCell.m; sourceTree = "<group>"; };
+		A758AA0419840D2C0055A44B /* LINExploreTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINExploreTableViewController.h; sourceTree = "<group>"; };
+		A758AA0519840D2C0055A44B /* LINExploreTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINExploreTableViewController.m; sourceTree = "<group>"; };
+		A758AA07198490600055A44B /* LINSettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINSettingTableViewController.h; sourceTree = "<group>"; };
+		A758AA08198490600055A44B /* LINSettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINSettingTableViewController.m; sourceTree = "<group>"; };
+		A758AA0A198499500055A44B /* SettingUserProfileCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingUserProfileCell.xib; sourceTree = "<group>"; };
+		A758AA0C19849AC00055A44B /* LINSettingTableViewUserProfileCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINSettingTableViewUserProfileCellTableViewCell.h; sourceTree = "<group>"; };
+		A758AA0D19849AC00055A44B /* LINSettingTableViewUserProfileCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINSettingTableViewUserProfileCellTableViewCell.m; sourceTree = "<group>"; };
+		A763440419A0D2AD00EB437A /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		A763446819A2029C00EB437A /* LINPhoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINPhoneViewController.h; sourceTree = "<group>"; };
+		A763446919A2029C00EB437A /* LINPhoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINPhoneViewController.m; sourceTree = "<group>"; };
+		A763446E19A21AC900EB437A /* LINPersonalProfileTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINPersonalProfileTableViewController.h; sourceTree = "<group>"; };
+		A763446F19A21AC900EB437A /* LINPersonalProfileTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINPersonalProfileTableViewController.m; sourceTree = "<group>"; };
+		A763B3DD19C64B30006733D2 /* LINCallingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINCallingViewController.h; sourceTree = "<group>"; };
+		A763B3DE19C64B30006733D2 /* LINCallingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINCallingViewController.m; sourceTree = "<group>"; };
+		A771E2DF19FDCDB600D8474B /* LINPhoneNumberHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINPhoneNumberHelper.h; sourceTree = "<group>"; };
+		A771E2E019FDCDB600D8474B /* LINPhoneNumberHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINPhoneNumberHelper.m; sourceTree = "<group>"; };
+		A771E2E219FDD04E00D8474B /* LINPhoneNumberSelectTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINPhoneNumberSelectTableViewController.h; sourceTree = "<group>"; };
+		A771E2E319FDD04E00D8474B /* LINPhoneNumberSelectTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINPhoneNumberSelectTableViewController.m; sourceTree = "<group>"; };
+		A771E2E519FDD3CA00D8474B /* LINPhoneNumberSelectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LINPhoneNumberSelectionView.xib; sourceTree = "<group>"; };
+		A771E2E719FE0BA800D8474B /* LINContactsTableCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINContactsTableCellTableViewCell.h; sourceTree = "<group>"; };
+		A771E2E819FE0BA800D8474B /* LINContactsTableCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINContactsTableCellTableViewCell.m; sourceTree = "<group>"; };
+		A771E2EF19FF3F2600D8474B /* LINProfileTableViewControllerPointToPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINProfileTableViewControllerPointToPoint.h; sourceTree = "<group>"; };
+		A771E2F019FF3F2600D8474B /* LINProfileTableViewControllerPointToPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINProfileTableViewControllerPointToPoint.m; sourceTree = "<group>"; };
+		A77E7FE419C79CAF00E79DCB /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		A787B72119FAE1AE00ABF8DB /* LINMessagesListViewController+DataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "LINMessagesListViewController+DataModel.h"; path = "linner/LINMessagesListViewController+DataModel.h"; sourceTree = "<group>"; };
+		A787B72219FAE1AE00ABF8DB /* LINMessagesListViewController+DataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "LINMessagesListViewController+DataModel.m"; path = "linner/LINMessagesListViewController+DataModel.m"; sourceTree = "<group>"; };
+		A7899CEF19FD4E9D001C2D96 /* LINAddFriendsTableViewController+DataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "LINAddFriendsTableViewController+DataModel.h"; path = "linner/LINAddFriendsTableViewController+DataModel.h"; sourceTree = "<group>"; };
+		A7899CF019FD4E9D001C2D96 /* LINAddFriendsTableViewController+DataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "LINAddFriendsTableViewController+DataModel.m"; path = "linner/LINAddFriendsTableViewController+DataModel.m"; sourceTree = "<group>"; };
+		A7899CF219FD584A001C2D96 /* LINNotificationTableViewController+DataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "LINNotificationTableViewController+DataModel.h"; path = "linner/LINNotificationTableViewController+DataModel.h"; sourceTree = "<group>"; };
+		A7899CF319FD584A001C2D96 /* LINNotificationTableViewController+DataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "LINNotificationTableViewController+DataModel.m"; path = "linner/LINNotificationTableViewController+DataModel.m"; sourceTree = "<group>"; };
+		A78BD1B119DD92E600AB6A0D /* LINUserObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINUserObject.h; sourceTree = "<group>"; };
+		A78BD1B219DD92E600AB6A0D /* LINUserObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINUserObject.m; sourceTree = "<group>"; };
+		A78BD1B419DD954F00AB6A0D /* LINUserSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINUserSetting.h; sourceTree = "<group>"; };
+		A78BD1B519DD954F00AB6A0D /* LINUserSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINUserSetting.m; sourceTree = "<group>"; };
+		A78BD1B719DD965C00AB6A0D /* LINUserRelation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINUserRelation.h; sourceTree = "<group>"; };
+		A78BD1B819DD965C00AB6A0D /* LINUserRelation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINUserRelation.m; sourceTree = "<group>"; };
+		A78BD1BA19DD980400AB6A0D /* LINMessageList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINMessageList.h; sourceTree = "<group>"; };
+		A78BD1BB19DD980400AB6A0D /* LINMessageList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINMessageList.m; sourceTree = "<group>"; };
+		A78BD1BD19DD987E00AB6A0D /* LINMessageRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINMessageRecord.h; sourceTree = "<group>"; };
+		A78BD1BE19DD987E00AB6A0D /* LINMessageRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINMessageRecord.m; sourceTree = "<group>"; };
+		A78BD1C619DDBB9100AB6A0D /* addFriends.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = addFriends.xib; sourceTree = "<group>"; };
+		A78BD1C919DDBF8B00AB6A0D /* LINSearchUserTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINSearchUserTableViewCell.h; sourceTree = "<group>"; };
+		A78BD1CA19DDBF8B00AB6A0D /* LINSearchUserTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINSearchUserTableViewCell.m; sourceTree = "<group>"; };
+		A78BD1CD19DDF35400AB6A0D /* LINAVAppNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINAVAppNotification.h; sourceTree = "<group>"; };
+		A78BD1CE19DDF35400AB6A0D /* LINAVAppNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINAVAppNotification.m; sourceTree = "<group>"; };
+		A78BD1D019DE042100AB6A0D /* LINAVUserObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINAVUserObject.h; sourceTree = "<group>"; };
+		A78BD1D119DE042100AB6A0D /* LINAVUserObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINAVUserObject.m; sourceTree = "<group>"; };
+		A78BD1D419DE136300AB6A0D /* NotificationCellForFriendRequest.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotificationCellForFriendRequest.xib; sourceTree = "<group>"; };
+		A78BD1D619DE14C800AB6A0D /* LINNotificationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINNotificationTableViewController.h; sourceTree = "<group>"; };
+		A78BD1D719DE14C800AB6A0D /* LINNotificationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINNotificationTableViewController.m; sourceTree = "<group>"; };
+		A78BD1DA19DE14E900AB6A0D /* LINNotificationTableViewCellFriendRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINNotificationTableViewCellFriendRequest.h; sourceTree = "<group>"; };
+		A78BD1DB19DE14E900AB6A0D /* LINNotificationTableViewCellFriendRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINNotificationTableViewCellFriendRequest.m; sourceTree = "<group>"; };
+		A78BD1DD19DEFC2B00AB6A0D /* LINAVUserRelation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINAVUserRelation.h; sourceTree = "<group>"; };
+		A78BD1DE19DEFC2B00AB6A0D /* LINAVUserRelation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINAVUserRelation.m; sourceTree = "<group>"; };
+		A78BD1E219DFA07B00AB6A0D /* LINProfileFriend.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LINProfileFriend.xib; sourceTree = "<group>"; };
+		A78BD1E619E062F400AB6A0D /* ChineseToPinyinResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChineseToPinyinResource.h; sourceTree = "<group>"; };
+		A78BD1E719E062F400AB6A0D /* ChineseToPinyinResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChineseToPinyinResource.m; sourceTree = "<group>"; };
+		A78BD1E819E062F400AB6A0D /* HanyuPinyinOutputFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HanyuPinyinOutputFormat.h; sourceTree = "<group>"; };
+		A78BD1E919E062F400AB6A0D /* HanyuPinyinOutputFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HanyuPinyinOutputFormat.m; sourceTree = "<group>"; };
+		A78BD1EA19E062F400AB6A0D /* NSString+PinYin4Cocoa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+PinYin4Cocoa.h"; sourceTree = "<group>"; };
+		A78BD1EB19E062F400AB6A0D /* NSString+PinYin4Cocoa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+PinYin4Cocoa.m"; sourceTree = "<group>"; };
+		A78BD1EC19E062F400AB6A0D /* PinYin4Objc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinYin4Objc.h; sourceTree = "<group>"; };
+		A78BD1ED19E062F400AB6A0D /* PinyinFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinyinFormatter.h; sourceTree = "<group>"; };
+		A78BD1EE19E062F400AB6A0D /* PinyinFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinyinFormatter.m; sourceTree = "<group>"; };
+		A78BD1EF19E062F400AB6A0D /* PinyinHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinyinHelper.h; sourceTree = "<group>"; };
+		A78BD1F019E062F400AB6A0D /* PinyinHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinyinHelper.m; sourceTree = "<group>"; };
+		A78BD1F219E062F400AB6A0D /* unicode_to_hanyu_pinyin.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = unicode_to_hanyu_pinyin.txt; sourceTree = "<group>"; };
+		A78DDD7F198385EC00534254 /* Linner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Linner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A78DDD82198385EC00534254 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A78DDD84198385EC00534254 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A78DDD86198385EC00534254 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A78DDD8A198385EC00534254 /* Linner-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Linner-Info.plist"; sourceTree = "<group>"; };
+		A78DDD8C198385EC00534254 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A78DDD8E198385EC00534254 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A78DDD90198385EC00534254 /* Linner-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Linner-Prefix.pch"; sourceTree = "<group>"; };
+		A78DDD91198385EC00534254 /* LINAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LINAppDelegate.h; sourceTree = "<group>"; };
+		A78DDD92198385EC00534254 /* LINAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LINAppDelegate.m; sourceTree = "<group>"; };
+		A78DDD97198385EC00534254 /* LINViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LINViewController.h; sourceTree = "<group>"; };
+		A78DDD98198385EC00534254 /* LINViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LINViewController.m; sourceTree = "<group>"; };
+		A78DDD9A198385EC00534254 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A78DDDA0198385EC00534254 /* Linner.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_renameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Linner.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_renameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A78DDDA9198385EC00534254 /* Linner.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_renameTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Linner.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_renameTests-Info.plist"; sourceTree = "<group>"; };
+		A78DDDAB198385EC00534254 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A78DDDAD198385EC00534254 /* linnerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = linnerTests.m; sourceTree = "<group>"; };
+		A78DDDBC1983867600534254 /* LINLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINLoginViewController.h; sourceTree = "<group>"; };
+		A78DDDBD1983867600534254 /* LINLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINLoginViewController.m; sourceTree = "<group>"; };
+		A78DDDBF1983868400534254 /* LINSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINSignUpViewController.h; sourceTree = "<group>"; };
+		A78DDDC01983868400534254 /* LINSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINSignUpViewController.m; sourceTree = "<group>"; };
+		A78DDDC21983869700534254 /* LINiForgetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINiForgetViewController.h; sourceTree = "<group>"; };
+		A78DDDC31983869700534254 /* LINiForgetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINiForgetViewController.m; sourceTree = "<group>"; };
+		A78DDDC91983876300534254 /* LINChatTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINChatTableViewController.h; sourceTree = "<group>"; };
+		A78DDDCA1983876300534254 /* LINChatTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINChatTableViewController.m; sourceTree = "<group>"; };
+		A78DDDCC19838A9300534254 /* LINMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINMainViewController.h; sourceTree = "<group>"; };
+		A78DDDCD19838A9300534254 /* LINMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINMainViewController.m; sourceTree = "<group>"; };
+		A78DDDCF19839B8900534254 /* LINChatNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINChatNavViewController.h; sourceTree = "<group>"; };
+		A78DDDD019839B8900534254 /* LINChatNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINChatNavViewController.m; sourceTree = "<group>"; };
+		A78DDDD21983CA9900534254 /* LINChatTableViewCellList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINChatTableViewCellList.h; sourceTree = "<group>"; };
+		A78DDDD31983CA9900534254 /* LINChatTableViewCellList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINChatTableViewCellList.m; sourceTree = "<group>"; };
+		A78DDDD81983DDE600534254 /* LINContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINContactsViewController.h; sourceTree = "<group>"; };
+		A78DDDD91983DDE600534254 /* LINContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINContactsViewController.m; sourceTree = "<group>"; };
+		A78DDDDD1983E03600534254 /* LINExploreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINExploreViewController.h; sourceTree = "<group>"; };
+		A78DDDDE1983E03600534254 /* LINExploreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINExploreViewController.m; sourceTree = "<group>"; };
+		A78DDDE11983E04E00534254 /* LINSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINSettingViewController.h; sourceTree = "<group>"; };
+		A78DDDE21983E04E00534254 /* LINSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINSettingViewController.m; sourceTree = "<group>"; };
+		A78DDDE61983EA6000534254 /* LINContactsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINContactsTableViewController.h; sourceTree = "<group>"; };
+		A78DDDE71983EA6000534254 /* LINContactsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINContactsTableViewController.m; sourceTree = "<group>"; };
+		A78E8F8219CF5DEA0062A72F /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		A78E8F8419CF5E120062A72F /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		A78E8F8619CF5E210062A72F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A78E8F8819CF5E370062A72F /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		A78E8F8C19CF80580062A72F /* cat@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cat@2x.png"; sourceTree = "<group>"; };
+		A78E8F8D19CF80580062A72F /* check@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "check@2x.png"; sourceTree = "<group>"; };
+		A78E8F8E19CF80580062A72F /* fav@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fav@2x.png"; sourceTree = "<group>"; };
+		A78E8F8F19CF80580062A72F /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
+		A7942BD719C1EF5600878AC5 /* LINEmailEditingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINEmailEditingView.h; sourceTree = "<group>"; };
+		A7942BD819C1EF5600878AC5 /* LINEmailEditingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINEmailEditingView.m; sourceTree = "<group>"; };
+		A7942BDF19C1EFA500878AC5 /* LINNameEditView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINNameEditView.h; sourceTree = "<group>"; };
+		A7942BE019C1EFA500878AC5 /* LINNameEditView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINNameEditView.m; sourceTree = "<group>"; };
+		A7942BE719C1EFE200878AC5 /* LINDescriptionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINDescriptionView.h; sourceTree = "<group>"; };
+		A7942BE819C1EFE200878AC5 /* LINDescriptionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINDescriptionView.m; sourceTree = "<group>"; };
+		A7942BEB19C1F05D00878AC5 /* LINBirthdayEditView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINBirthdayEditView.h; sourceTree = "<group>"; };
+		A7942BEC19C1F05D00878AC5 /* LINBirthdayEditView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINBirthdayEditView.m; sourceTree = "<group>"; };
+		A7942BEF19C1F07D00878AC5 /* LINLocationEditView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINLocationEditView.h; sourceTree = "<group>"; };
+		A7942BF019C1F07D00878AC5 /* LINLocationEditView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINLocationEditView.m; sourceTree = "<group>"; };
+		A79EAF3619C2A4DC00388ABF /* Socialx.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Socialx.storyboard; sourceTree = "<group>"; };
+		A7A090DF19FC992B00EEFFAB /* LINProfileNormal.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LINProfileNormal.xib; sourceTree = "<group>"; };
+		A7A090E119FC993F00EEFFAB /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
+		A7A090E319FCADC400EEFFAB /* LINProfileViewControllerNormal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINProfileViewControllerNormal.h; sourceTree = "<group>"; };
+		A7A090E419FCADC400EEFFAB /* LINProfileViewControllerNormal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINProfileViewControllerNormal.m; sourceTree = "<group>"; };
+		A7A4EB1C199A38A90067EBAC /* LINAddFriendsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINAddFriendsTableViewController.h; sourceTree = "<group>"; };
+		A7A4EB1D199A38A90067EBAC /* LINAddFriendsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINAddFriendsTableViewController.m; sourceTree = "<group>"; };
+		A7A5CD6A19FB49B1005061AD /* LINChatTableViewCellList.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LINChatTableViewCellList.xib; sourceTree = "<group>"; };
+		A7A5CD7619FC0F97005061AD /* LINAppDelegate+DataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LINAppDelegate+DataModel.h"; sourceTree = "<group>"; };
+		A7A5CD7719FC0F97005061AD /* LINAppDelegate+DataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "LINAppDelegate+DataModel.m"; sourceTree = "<group>"; };
+		A7A8EAF119C4890600DDD4C2 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		A7A8EAF319C4891100DDD4C2 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		A7A8EAF519C4891E00DDD4C2 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		A7A8EAF719C4892700DDD4C2 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		A7A8EAF919C4893100DDD4C2 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		A7A8EAFB19C4894800DDD4C2 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		A7A8EAFD19C4895200DDD4C2 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		A7A8EAFF19C4896200DDD4C2 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
+		A7A8EB0119C4896C00DDD4C2 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		A7A8EB0319C4897600DDD4C2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A7A8EB0519C4897F00DDD4C2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A7B07DA119CA8BD4005DABED /* incoming.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = incoming.wav; path = Resources/incoming.wav; sourceTree = "<group>"; };
+		A7B07DA219CA8BD4005DABED /* ringback.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = ringback.wav; path = Resources/ringback.wav; sourceTree = "<group>"; };
+		A7B7919A19C1202F00F654B2 /* LINSettingPrivacyControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LINSettingPrivacyControl.h; path = "DCIntrospect-ARC/LINSettingPrivacyControl.h"; sourceTree = "<group>"; };
+		A7B7919B19C1202F00F654B2 /* LINSettingPrivacyControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LINSettingPrivacyControl.m; path = "DCIntrospect-ARC/LINSettingPrivacyControl.m"; sourceTree = "<group>"; };
+		A7B7919E19C1239800F654B2 /* LINSettingGeneralControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINSettingGeneralControl.h; sourceTree = "<group>"; };
+		A7B7919F19C1239800F654B2 /* LINSettingGeneralControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINSettingGeneralControl.m; sourceTree = "<group>"; };
+		A7BB62CE19F8334700EB21CB /* LINMessageListModelData+DataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "LINMessageListModelData+DataModel.h"; path = "linner/LINMessageListModelData+DataModel.h"; sourceTree = "<group>"; };
+		A7BB62CF19F8334700EB21CB /* LINMessageListModelData+DataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "LINMessageListModelData+DataModel.m"; path = "linner/LINMessageListModelData+DataModel.m"; sourceTree = "<group>"; };
+		A7BB62D119F8336400EB21CB /* LINLoginSignUpDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LINLoginSignUpDataHelper.m; path = linner/LINLoginSignUpDataHelper.m; sourceTree = "<group>"; };
+		A7BB62D219F8336400EB21CB /* LINLoginSignUpDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LINLoginSignUpDataHelper.h; path = linner/LINLoginSignUpDataHelper.h; sourceTree = "<group>"; };
+		A7BB62D419F8337200EB21CB /* LINContactsTableViewController+DataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "LINContactsTableViewController+DataModel.m"; path = "linner/LINContactsTableViewController+DataModel.m"; sourceTree = "<group>"; };
+		A7BB62D519F8337200EB21CB /* LINContactsTableViewController+DataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "LINContactsTableViewController+DataModel.h"; path = "linner/LINContactsTableViewController+DataModel.h"; sourceTree = "<group>"; };
+		A7D1E3C719C21E7800C5A1C4 /* LINSexEditView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINSexEditView.h; sourceTree = "<group>"; };
+		A7D1E3C819C21E7800C5A1C4 /* LINSexEditView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINSexEditView.m; sourceTree = "<group>"; };
+		A7D1E3D019C22C4200C5A1C4 /* LINMultiLangView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINMultiLangView.h; sourceTree = "<group>"; };
+		A7D1E3D119C22C4200C5A1C4 /* LINMultiLangView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINMultiLangView.m; sourceTree = "<group>"; };
+		A7D1E3D319C22C4D00C5A1C4 /* LINFontSizeEditView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINFontSizeEditView.h; sourceTree = "<group>"; };
+		A7D1E3D419C22C4D00C5A1C4 /* LINFontSizeEditView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINFontSizeEditView.m; sourceTree = "<group>"; };
+		A7D1E3D719C22C6400C5A1C4 /* LINInitPageSelect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINInitPageSelect.h; sourceTree = "<group>"; };
+		A7D1E3D819C22C6400C5A1C4 /* LINInitPageSelect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINInitPageSelect.m; sourceTree = "<group>"; };
+		A7D73E2219937A540092C606 /* LINContactsTableCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LINContactsTableCellTableViewCell.xib; sourceTree = "<group>"; };
+		A7D73E281993B2CA0092C606 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		A7D73E291993B2CA0092C606 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		A7E32B2119E71D6F005C615F /* LINMessagesListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINMessagesListViewController.h; sourceTree = "<group>"; };
+		A7E32B2219E71D6F005C615F /* LINMessagesListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINMessagesListViewController.m; sourceTree = "<group>"; };
+		A7E32B2319E71D6F005C615F /* LINMessageListModelData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINMessageListModelData.h; sourceTree = "<group>"; };
+		A7E32B2419E71D6F005C615F /* LINMessageListModelData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINMessageListModelData.m; sourceTree = "<group>"; };
+		A7E56EED19C29E7E00BCD476 /* SocialCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SocialCell.xib; sourceTree = "<group>"; };
+		A7F45FA119F345FD0028FFBE /* LINSettingDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LINSettingDataHelper.h; path = linner/LINSettingDataHelper.h; sourceTree = "<group>"; };
+		A7F45FA219F345FD0028FFBE /* LINSettingDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LINSettingDataHelper.m; path = linner/LINSettingDataHelper.m; sourceTree = "<group>"; };
+		A7F45FAA19F4C4BF0028FFBE /* LINSocialCompose.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LINSocialCompose.xib; sourceTree = "<group>"; };
+		A7F45FAC19F4C98E0028FFBE /* LINSocialComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINSocialComposeViewController.h; sourceTree = "<group>"; };
+		A7F45FAD19F4C98E0028FFBE /* LINSocialComposeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINSocialComposeViewController.m; sourceTree = "<group>"; };
+		A7F6E8C919F2213A0037EE06 /* sample_iTunes.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = sample_iTunes.mov; sourceTree = "<group>"; };
+		A7F6E8D119F2BE550037EE06 /* LINChatTableViewController+DataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "LINChatTableViewController+DataModel.h"; path = "linner/LINChatTableViewController+DataModel.h"; sourceTree = "<group>"; };
+		A7F6E8D219F2BE550037EE06 /* LINChatTableViewController+DataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "LINChatTableViewController+DataModel.m"; path = "linner/LINChatTableViewController+DataModel.m"; sourceTree = "<group>"; };
+		A7F6E8D719F2FAB40037EE06 /* LINSettingTableViewController+DataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "LINSettingTableViewController+DataModel.h"; path = "linner/LINSettingTableViewController+DataModel.h"; sourceTree = "<group>"; };
+		A7F6E8D819F2FAB40037EE06 /* LINSettingTableViewController+DataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "LINSettingTableViewController+DataModel.m"; path = "linner/LINSettingTableViewController+DataModel.m"; sourceTree = "<group>"; };
+		A7FAAEB019F9701D001B2886 /* LINProfileViewControllerFriends.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINProfileViewControllerFriends.h; sourceTree = "<group>"; };
+		A7FAAEB119F9701D001B2886 /* LINProfileViewControllerFriends.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINProfileViewControllerFriends.m; sourceTree = "<group>"; };
+		A7FAAEB319F98AE0001B2886 /* LINProfileViewControllerFriends+DataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "LINProfileViewControllerFriends+DataModel.h"; path = "linner/LINProfileViewControllerFriends+DataModel.h"; sourceTree = "<group>"; };
+		A7FAAEB419F98AE0001B2886 /* LINProfileViewControllerFriends+DataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "LINProfileViewControllerFriends+DataModel.m"; path = "linner/LINProfileViewControllerFriends+DataModel.m"; sourceTree = "<group>"; };
+		A7FCDCE719D47B0B0014818C /* LINUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINUser.h; sourceTree = "<group>"; };
+		A7FCDCE819D47B0B0014818C /* LINUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINUser.m; sourceTree = "<group>"; };
+		D4240ACE46C1872EADE00254 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		F4391B0B215C4E6CB49458B2 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A78DDD7C198385EC00534254 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7D73E2A1993B2CA0092C606 /* AudioToolbox.framework in Frameworks */,
+				A7D73E2B1993B2CA0092C606 /* AVFoundation.framework in Frameworks */,
+				A77E7FE519C79CAF00E79DCB /* MapKit.framework in Frameworks */,
+				A78E8F8319CF5DEA0062A72F /* MobileCoreServices.framework in Frameworks */,
+				A7A8EAF219C4890600DDD4C2 /* CFNetwork.framework in Frameworks */,
+				A7A8EAF419C4891100DDD4C2 /* CoreAudio.framework in Frameworks */,
+				A78DDD85198385EC00534254 /* CoreGraphics.framework in Frameworks */,
+				A7A8EAF619C4891E00DDD4C2 /* CoreImage.framework in Frameworks */,
+				A78E8F8719CF5E210062A72F /* CoreLocation.framework in Frameworks */,
+				A7A8EAF819C4892700DDD4C2 /* CoreMedia.framework in Frameworks */,
+				A78E8F8519CF5E120062A72F /* CoreTelephony.framework in Frameworks */,
+				A7A8EAFA19C4893100DDD4C2 /* CoreVideo.framework in Frameworks */,
+				A78DDD83198385EC00534254 /* Foundation.framework in Frameworks */,
+				A7A8EAFC19C4894800DDD4C2 /* libc++.dylib in Frameworks */,
+				A7A8EAFE19C4895200DDD4C2 /* libsqlite3.dylib in Frameworks */,
+				A78E8F8919CF5E370062A72F /* libicucore.dylib in Frameworks */,
+				A7A8EB0019C4896200DDD4C2 /* libstdc++.dylib in Frameworks */,
+				430588CD68434159B4F6B1ED /* libPods.a in Frameworks */,
+				A7A8EB0219C4896C00DDD4C2 /* OpenGLES.framework in Frameworks */,
+				A7A8EB0419C4897600DDD4C2 /* QuartzCore.framework in Frameworks */,
+				A7A8EB0619C4897F00DDD4C2 /* SystemConfiguration.framework in Frameworks */,
+				A78DDD87198385EC00534254 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A78DDD9D198385EC00534254 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A78DDDA4198385EC00534254 /* UIKit.framework in Frameworks */,
+				A78DDDA3198385EC00534254 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4D0307396B55B294D9FF64AF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A20465D43504FC6503ECDD11 /* Pods.debug.xcconfig */,
+				D4240ACE46C1872EADE00254 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A70DAB401A02F2A100CE7104 /* FinanceControlView */ = {
+			isa = PBXGroup;
+			children = (
+				A70DAB491A02F6C600CE7104 /* Cells */,
+				A70DAB461A02F6AC00CE7104 /* LINFinanceControlTableViewController.h */,
+				A70DAB471A02F6AC00CE7104 /* LINFinanceControlTableViewController.m */,
+				A70DAB4F1A03038200CE7104 /* LINPaymentViewController.h */,
+				A70DAB501A03038200CE7104 /* LINPaymentViewController.m */,
+			);
+			name = FinanceControlView;
+			sourceTree = "<group>";
+		};
+		A70DAB491A02F6C600CE7104 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A70DAB4A1A02F6E600CE7104 /* LINFinanceControlTableViewCellBalance.h */,
+				A70DAB4B1A02F6E600CE7104 /* LINFinanceControlTableViewCellBalance.m */,
+				A70DAB4D1A02F92000CE7104 /* LINFinaceControlCellBalance.xib */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		A71B9D2919C1009F00C6C66D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A71B9D1A19C0FBEB00C6C66D /* LogoutTableCell.xib */,
+				A758AA0A198499500055A44B /* SettingUserProfileCell.xib */,
+				A758AA0C19849AC00055A44B /* LINSettingTableViewUserProfileCellTableViewCell.h */,
+				A758AA0D19849AC00055A44B /* LINSettingTableViewUserProfileCellTableViewCell.m */,
+				A71B9D2619C0FF4D00C6C66D /* LINLogOutTableViewCell.h */,
+				A71B9D2719C0FF4D00C6C66D /* LINLogOutTableViewCell.m */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		A71B9D2A19C10ABA00C6C66D /* SubPage */ = {
+			isa = PBXGroup;
+			children = (
+				A70DAB401A02F2A100CE7104 /* FinanceControlView */,
+				A763446D19A21AA400EB437A /* PersonalProfileView */,
+				A7B7919919C11FFC00F654B2 /* PrivacyControlView */,
+				A7B7919D19C1236C00F654B2 /* GeneralControl */,
+			);
+			name = SubPage;
+			sourceTree = "<group>";
+		};
+		A7459C8419C2850900BECCDF /* SubPage */ = {
+			isa = PBXGroup;
+			children = (
+				A7459C8919C2886D00BECCDF /* socialPageView */,
+			);
+			name = SubPage;
+			sourceTree = "<group>";
+		};
+		A7459C8519C2884B00BECCDF /* HFStretchableTableHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				A7459C8619C2884B00BECCDF /* HFStretchableTableHeaderView.h */,
+				A7459C8719C2884B00BECCDF /* HFStretchableTableHeaderView.m */,
+			);
+			path = HFStretchableTableHeaderView;
+			sourceTree = "<group>";
+		};
+		A7459C8919C2886D00BECCDF /* socialPageView */ = {
+			isa = PBXGroup;
+			children = (
+				A79EAF3819C2BC4100388ABF /* SubPage */,
+				A7459C9C19C2935F00BECCDF /* LINParallaxCell */,
+				A79EAF3619C2A4DC00388ABF /* Socialx.storyboard */,
+				A7E56EED19C29E7E00BCD476 /* SocialCell.xib */,
+				A7459C8A19C2888500BECCDF /* LINSocialPageView.h */,
+				A7459C8B19C2888500BECCDF /* LINSocialPageView.m */,
+			);
+			name = socialPageView;
+			sourceTree = "<group>";
+		};
+		A7459C9319C2930400BECCDF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A7F6E8C919F2213A0037EE06 /* sample_iTunes.mov */,
+				A77E7FE619C7A23100E79DCB /* sound */,
+				A78E8F8B19CF80440062A72F /* images */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		A7459C9C19C2935F00BECCDF /* LINParallaxCell */ = {
+			isa = PBXGroup;
+			children = (
+				A7459C9D19C2936600BECCDF /* LINParallaxCell.h */,
+				A7459C9E19C2936600BECCDF /* LINParallaxCell.m */,
+			);
+			name = LINParallaxCell;
+			sourceTree = "<group>";
+		};
+		A758A9BD1983F46E0055A44B /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				A78BD1E419E062F400AB6A0D /* PinYin4Objc */,
+				A7459C8519C2884B00BECCDF /* HFStretchableTableHeaderView */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		A763440219A0D29A00EB437A /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				A78BD1CC19DDCD4200AB6A0D /* AVSubclasses */,
+				A78BD1AD19DD910900AB6A0D /* ModalClasses */,
+				A763440319A0D2AD00EB437A /* Model.xcdatamodeld */,
+				A7FCDCE719D47B0B0014818C /* LINUser.h */,
+				A7FCDCE819D47B0B0014818C /* LINUser.m */,
+			);
+			name = DataModel;
+			sourceTree = "<group>";
+		};
+		A763446719A2028200EB437A /* PhoneView */ = {
+			isa = PBXGroup;
+			children = (
+				A71D6E7219C5DE8200B13FD8 /* Calling.storyboard */,
+				A763446819A2029C00EB437A /* LINPhoneViewController.h */,
+				A763446919A2029C00EB437A /* LINPhoneViewController.m */,
+				A763B3DD19C64B30006733D2 /* LINCallingViewController.h */,
+				A763B3DE19C64B30006733D2 /* LINCallingViewController.m */,
+			);
+			name = PhoneView;
+			sourceTree = "<group>";
+		};
+		A763446D19A21AA400EB437A /* PersonalProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				A7942BD219C1EDBA00878AC5 /* SubPage */,
+				A763446E19A21AC900EB437A /* LINPersonalProfileTableViewController.h */,
+				A763446F19A21AC900EB437A /* LINPersonalProfileTableViewController.m */,
+			);
+			name = PersonalProfileView;
+			sourceTree = "<group>";
+		};
+		A7788AF319C37BCB0065789D /* SubPage */ = {
+			isa = PBXGroup;
+			children = (
+				A7D457D8199A2F6400788530 /* AddFriendsController */,
+				A78BD1D319DE133F00AB6A0D /* notificationController */,
+			);
+			name = SubPage;
+			sourceTree = "<group>";
+		};
+		A77E7FE619C7A23100E79DCB /* sound */ = {
+			isa = PBXGroup;
+			children = (
+				A7B07DA119CA8BD4005DABED /* incoming.wav */,
+				A7B07DA219CA8BD4005DABED /* ringback.wav */,
+			);
+			name = sound;
+			sourceTree = "<group>";
+		};
+		A7899CEA19FD4E25001C2D96 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				A7F6E8D119F2BE550037EE06 /* LINChatTableViewController+DataModel.h */,
+				A7F6E8D219F2BE550037EE06 /* LINChatTableViewController+DataModel.m */,
+				A7BB62CE19F8334700EB21CB /* LINMessageListModelData+DataModel.h */,
+				A7BB62CF19F8334700EB21CB /* LINMessageListModelData+DataModel.m */,
+				A787B72119FAE1AE00ABF8DB /* LINMessagesListViewController+DataModel.h */,
+				A787B72219FAE1AE00ABF8DB /* LINMessagesListViewController+DataModel.m */,
+			);
+			name = Chat;
+			sourceTree = "<group>";
+		};
+		A7899CEB19FD4E3D001C2D96 /* Contact */ = {
+			isa = PBXGroup;
+			children = (
+				A7BB62D519F8337200EB21CB /* LINContactsTableViewController+DataModel.h */,
+				A7BB62D419F8337200EB21CB /* LINContactsTableViewController+DataModel.m */,
+				A7899CEF19FD4E9D001C2D96 /* LINAddFriendsTableViewController+DataModel.h */,
+				A7899CF019FD4E9D001C2D96 /* LINAddFriendsTableViewController+DataModel.m */,
+				A7899CF219FD584A001C2D96 /* LINNotificationTableViewController+DataModel.h */,
+				A7899CF319FD584A001C2D96 /* LINNotificationTableViewController+DataModel.m */,
+			);
+			name = Contact;
+			sourceTree = "<group>";
+		};
+		A7899CEC19FD4E50001C2D96 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				A7F6E8D719F2FAB40037EE06 /* LINSettingTableViewController+DataModel.h */,
+				A7F6E8D819F2FAB40037EE06 /* LINSettingTableViewController+DataModel.m */,
+				A7F45FA119F345FD0028FFBE /* LINSettingDataHelper.h */,
+				A7F45FA219F345FD0028FFBE /* LINSettingDataHelper.m */,
+			);
+			name = Setting;
+			sourceTree = "<group>";
+		};
+		A7899CED19FD4E5B001C2D96 /* Login/out */ = {
+			isa = PBXGroup;
+			children = (
+				A7BB62D219F8336400EB21CB /* LINLoginSignUpDataHelper.h */,
+				A7BB62D119F8336400EB21CB /* LINLoginSignUpDataHelper.m */,
+			);
+			name = Login/out;
+			sourceTree = "<group>";
+		};
+		A7899CEE19FD4E6B001C2D96 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				A7FAAEB319F98AE0001B2886 /* LINProfileViewControllerFriends+DataModel.h */,
+				A7FAAEB419F98AE0001B2886 /* LINProfileViewControllerFriends+DataModel.m */,
+				A70DAB3B1A02959B00CE7104 /* LINProfileViewControllerNormal+DataModel.h */,
+				A70DAB3A1A02959B00CE7104 /* LINProfileViewControllerNormal+DataModel.m */,
+				A70DAB3D1A02B82800CE7104 /* LINProfileTableViewControllerPointToPoint+DataModel.h */,
+				A70DAB3E1A02B82800CE7104 /* LINProfileTableViewControllerPointToPoint+DataModel.m */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		A78BD1AD19DD910900AB6A0D /* ModalClasses */ = {
+			isa = PBXGroup;
+			children = (
+				A78BD1B119DD92E600AB6A0D /* LINUserObject.h */,
+				A78BD1B219DD92E600AB6A0D /* LINUserObject.m */,
+				A78BD1B419DD954F00AB6A0D /* LINUserSetting.h */,
+				A78BD1B519DD954F00AB6A0D /* LINUserSetting.m */,
+				A78BD1B719DD965C00AB6A0D /* LINUserRelation.h */,
+				A78BD1B819DD965C00AB6A0D /* LINUserRelation.m */,
+				A78BD1BA19DD980400AB6A0D /* LINMessageList.h */,
+				A78BD1BB19DD980400AB6A0D /* LINMessageList.m */,
+				A78BD1BD19DD987E00AB6A0D /* LINMessageRecord.h */,
+				A78BD1BE19DD987E00AB6A0D /* LINMessageRecord.m */,
+			);
+			name = ModalClasses;
+			sourceTree = "<group>";
+		};
+		A78BD1C819DDBF7400AB6A0D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A78BD1C919DDBF8B00AB6A0D /* LINSearchUserTableViewCell.h */,
+				A78BD1CA19DDBF8B00AB6A0D /* LINSearchUserTableViewCell.m */,
+				A78BD1C619DDBB9100AB6A0D /* addFriends.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		A78BD1CC19DDCD4200AB6A0D /* AVSubclasses */ = {
+			isa = PBXGroup;
+			children = (
+				A78BD1CD19DDF35400AB6A0D /* LINAVAppNotification.h */,
+				A78BD1CE19DDF35400AB6A0D /* LINAVAppNotification.m */,
+				A78BD1D019DE042100AB6A0D /* LINAVUserObject.h */,
+				A78BD1D119DE042100AB6A0D /* LINAVUserObject.m */,
+				A78BD1DD19DEFC2B00AB6A0D /* LINAVUserRelation.h */,
+				A78BD1DE19DEFC2B00AB6A0D /* LINAVUserRelation.m */,
+			);
+			name = AVSubclasses;
+			sourceTree = "<group>";
+		};
+		A78BD1D319DE133F00AB6A0D /* notificationController */ = {
+			isa = PBXGroup;
+			children = (
+				A78BD1D919DE14D200AB6A0D /* Cell */,
+				A78BD1D619DE14C800AB6A0D /* LINNotificationTableViewController.h */,
+				A78BD1D719DE14C800AB6A0D /* LINNotificationTableViewController.m */,
+			);
+			name = notificationController;
+			sourceTree = "<group>";
+		};
+		A78BD1D919DE14D200AB6A0D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A78BD1D419DE136300AB6A0D /* NotificationCellForFriendRequest.xib */,
+				A78BD1DA19DE14E900AB6A0D /* LINNotificationTableViewCellFriendRequest.h */,
+				A78BD1DB19DE14E900AB6A0D /* LINNotificationTableViewCellFriendRequest.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		A78BD1E419E062F400AB6A0D /* PinYin4Objc */ = {
+			isa = PBXGroup;
+			children = (
+				A78BD1E519E062F400AB6A0D /* Classes */,
+				A78BD1F119E062F400AB6A0D /* Resources */,
+			);
+			path = PinYin4Objc;
+			sourceTree = "<group>";
+		};
+		A78BD1E519E062F400AB6A0D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A78BD1E619E062F400AB6A0D /* ChineseToPinyinResource.h */,
+				A78BD1E719E062F400AB6A0D /* ChineseToPinyinResource.m */,
+				A78BD1E819E062F400AB6A0D /* HanyuPinyinOutputFormat.h */,
+				A78BD1E919E062F400AB6A0D /* HanyuPinyinOutputFormat.m */,
+				A78BD1EA19E062F400AB6A0D /* NSString+PinYin4Cocoa.h */,
+				A78BD1EB19E062F400AB6A0D /* NSString+PinYin4Cocoa.m */,
+				A78BD1EC19E062F400AB6A0D /* PinYin4Objc.h */,
+				A78BD1ED19E062F400AB6A0D /* PinyinFormatter.h */,
+				A78BD1EE19E062F400AB6A0D /* PinyinFormatter.m */,
+				A78BD1EF19E062F400AB6A0D /* PinyinHelper.h */,
+				A78BD1F019E062F400AB6A0D /* PinyinHelper.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		A78BD1F119E062F400AB6A0D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A78BD1F219E062F400AB6A0D /* unicode_to_hanyu_pinyin.txt */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A78DDD76198385EC00534254 = {
+			isa = PBXGroup;
+			children = (
+				A78DDD88198385EC00534254 /* linner */,
+				A78DDDA7198385EC00534254 /* linnerTests */,
+				A78DDD81198385EC00534254 /* Frameworks */,
+				A78DDD80198385EC00534254 /* Products */,
+				4D0307396B55B294D9FF64AF /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		A78DDD80198385EC00534254 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A78DDD7F198385EC00534254 /* Linner.app */,
+				A78DDDA0198385EC00534254 /* Linner.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_renameTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A78DDD81198385EC00534254 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A78E8F8819CF5E370062A72F /* libicucore.dylib */,
+				A78E8F8619CF5E210062A72F /* CoreLocation.framework */,
+				A78E8F8419CF5E120062A72F /* CoreTelephony.framework */,
+				A78E8F8219CF5DEA0062A72F /* MobileCoreServices.framework */,
+				A77E7FE419C79CAF00E79DCB /* MapKit.framework */,
+				A7A8EB0519C4897F00DDD4C2 /* SystemConfiguration.framework */,
+				A7A8EB0319C4897600DDD4C2 /* QuartzCore.framework */,
+				A7A8EB0119C4896C00DDD4C2 /* OpenGLES.framework */,
+				A7A8EAFF19C4896200DDD4C2 /* libstdc++.dylib */,
+				A7A8EAFD19C4895200DDD4C2 /* libsqlite3.dylib */,
+				A7A8EAFB19C4894800DDD4C2 /* libc++.dylib */,
+				A7A8EAF919C4893100DDD4C2 /* CoreVideo.framework */,
+				A7A8EAF719C4892700DDD4C2 /* CoreMedia.framework */,
+				A7A8EAF519C4891E00DDD4C2 /* CoreImage.framework */,
+				A7A8EAF319C4891100DDD4C2 /* CoreAudio.framework */,
+				A7A8EAF119C4890600DDD4C2 /* CFNetwork.framework */,
+				A7D73E281993B2CA0092C606 /* AudioToolbox.framework */,
+				A7D73E291993B2CA0092C606 /* AVFoundation.framework */,
+				A78DDD82198385EC00534254 /* Foundation.framework */,
+				A78DDD84198385EC00534254 /* CoreGraphics.framework */,
+				A78DDD86198385EC00534254 /* UIKit.framework */,
+				F4391B0B215C4E6CB49458B2 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A78DDD88198385EC00534254 /* linner */ = {
+			isa = PBXGroup;
+			children = (
+				A7459C9319C2930400BECCDF /* Resources */,
+				A763440219A0D29A00EB437A /* DataModel */,
+				A758A9BD1983F46E0055A44B /* Helper */,
+				A7F6E8CB19F2B7CD0037EE06 /* ModelSource */,
+				A78DDDB7198385F200534254 /* ViewController */,
+				A7A5CD6F19FC0BC9005061AD /* AppDelegate */,
+				A78DDD9A198385EC00534254 /* Images.xcassets */,
+				A78DDD89198385EC00534254 /* Supporting Files */,
+			);
+			path = linner;
+			sourceTree = "<group>";
+		};
+		A78DDD89198385EC00534254 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A78DDD97198385EC00534254 /* LINViewController.h */,
+				A78DDD98198385EC00534254 /* LINViewController.m */,
+				A78DDD8A198385EC00534254 /* Linner-Info.plist */,
+				A78DDD8B198385EC00534254 /* InfoPlist.strings */,
+				A78DDD8E198385EC00534254 /* main.m */,
+				A78DDD90198385EC00534254 /* Linner-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A78DDDA7198385EC00534254 /* linnerTests */ = {
+			isa = PBXGroup;
+			children = (
+				A78DDDAD198385EC00534254 /* linnerTests.m */,
+				A78DDDA8198385EC00534254 /* Supporting Files */,
+			);
+			path = linnerTests;
+			sourceTree = "<group>";
+		};
+		A78DDDA8198385EC00534254 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A78DDDA9198385EC00534254 /* Linner.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_renameTests-Info.plist */,
+				A78DDDAA198385EC00534254 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A78DDDB7198385F200534254 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A78DDDB8198385F800534254 /* LoginView */,
+				A78DDDDC1983E01A00534254 /* SettingView */,
+				A78DDDDB1983DFFF00534254 /* ExploreView */,
+				A7B2DC9E1994F9CF00F4A2AA /* ProfileView */,
+				A78DDDD71983DC2200534254 /* ContactsView */,
+				A78DDDC81983874700534254 /* MessageListView */,
+				A763446719A2028200EB437A /* PhoneView */,
+				A78DDDCC19838A9300534254 /* LINMainViewController.h */,
+				A78DDDCD19838A9300534254 /* LINMainViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		A78DDDB8198385F800534254 /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				A731983119FDAB1400CD17B7 /* LoginAndLogout.storyboard */,
+				A771E2E519FDD3CA00D8474B /* LINPhoneNumberSelectionView.xib */,
+				A78DDDBC1983867600534254 /* LINLoginViewController.h */,
+				A78DDDBD1983867600534254 /* LINLoginViewController.m */,
+				A78DDDBF1983868400534254 /* LINSignUpViewController.h */,
+				A78DDDC01983868400534254 /* LINSignUpViewController.m */,
+				A78DDDC21983869700534254 /* LINiForgetViewController.h */,
+				A78DDDC31983869700534254 /* LINiForgetViewController.m */,
+				A771E2E219FDD04E00D8474B /* LINPhoneNumberSelectTableViewController.h */,
+				A771E2E319FDD04E00D8474B /* LINPhoneNumberSelectTableViewController.m */,
+				A771E2DF19FDCDB600D8474B /* LINPhoneNumberHelper.h */,
+				A771E2E019FDCDB600D8474B /* LINPhoneNumberHelper.m */,
+			);
+			name = LoginView;
+			sourceTree = "<group>";
+		};
+		A78DDDC81983874700534254 /* MessageListView */ = {
+			isa = PBXGroup;
+			children = (
+				A7E32B2019E71D4C005C615F /* Message */,
+				A7A8EAEE19C3EBEF00DDD4C2 /* SubPage */,
+				A7A5CD6A19FB49B1005061AD /* LINChatTableViewCellList.xib */,
+				A78DDDD21983CA9900534254 /* LINChatTableViewCellList.h */,
+				A78DDDD31983CA9900534254 /* LINChatTableViewCellList.m */,
+				A78DDDC91983876300534254 /* LINChatTableViewController.h */,
+				A78DDDCA1983876300534254 /* LINChatTableViewController.m */,
+				A78DDDCF19839B8900534254 /* LINChatNavViewController.h */,
+				A78DDDD019839B8900534254 /* LINChatNavViewController.m */,
+			);
+			name = MessageListView;
+			sourceTree = "<group>";
+		};
+		A78DDDD71983DC2200534254 /* ContactsView */ = {
+			isa = PBXGroup;
+			children = (
+				A7788AF319C37BCB0065789D /* SubPage */,
+				A7D73E2219937A540092C606 /* LINContactsTableCellTableViewCell.xib */,
+				A771E2E719FE0BA800D8474B /* LINContactsTableCellTableViewCell.h */,
+				A771E2E819FE0BA800D8474B /* LINContactsTableCellTableViewCell.m */,
+				A78DDDE61983EA6000534254 /* LINContactsTableViewController.h */,
+				A78DDDE71983EA6000534254 /* LINContactsTableViewController.m */,
+				A78DDDD81983DDE600534254 /* LINContactsViewController.h */,
+				A78DDDD91983DDE600534254 /* LINContactsViewController.m */,
+			);
+			name = ContactsView;
+			sourceTree = "<group>";
+		};
+		A78DDDDB1983DFFF00534254 /* ExploreView */ = {
+			isa = PBXGroup;
+			children = (
+				A7459C8419C2850900BECCDF /* SubPage */,
+				A758AA0419840D2C0055A44B /* LINExploreTableViewController.h */,
+				A758AA0519840D2C0055A44B /* LINExploreTableViewController.m */,
+				A78DDDDD1983E03600534254 /* LINExploreViewController.h */,
+				A78DDDDE1983E03600534254 /* LINExploreViewController.m */,
+			);
+			name = ExploreView;
+			sourceTree = "<group>";
+		};
+		A78DDDDC1983E01A00534254 /* SettingView */ = {
+			isa = PBXGroup;
+			children = (
+				A71B9D2A19C10ABA00C6C66D /* SubPage */,
+				A71B9D2919C1009F00C6C66D /* Cells */,
+				A758AA07198490600055A44B /* LINSettingTableViewController.h */,
+				A758AA08198490600055A44B /* LINSettingTableViewController.m */,
+				A78DDDE11983E04E00534254 /* LINSettingViewController.h */,
+				A78DDDE21983E04E00534254 /* LINSettingViewController.m */,
+			);
+			name = SettingView;
+			sourceTree = "<group>";
+		};
+		A78E8F8B19CF80440062A72F /* images */ = {
+			isa = PBXGroup;
+			children = (
+				A78E8F8C19CF80580062A72F /* cat@2x.png */,
+				A78E8F8D19CF80580062A72F /* check@2x.png */,
+				A78E8F8E19CF80580062A72F /* fav@2x.png */,
+				A78E8F8F19CF80580062A72F /* menu@2x.png */,
+				A7459C9419C2930C00BECCDF /* demo_1.jpg */,
+				A7459C9519C2930C00BECCDF /* demo_2.jpg */,
+				A7459C9619C2930C00BECCDF /* demo_3.jpg */,
+				A7459C9719C2930C00BECCDF /* demo_4.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		A7942BD219C1EDBA00878AC5 /* SubPage */ = {
+			isa = PBXGroup;
+			children = (
+				A7942BDA19C1EF6C00878AC5 /* NameEdit */,
+				A7942BD619C1EEC600878AC5 /* EmailEdit */,
+				A7942BE619C1EFCE00878AC5 /* DescriptionEdit */,
+				A7942BE219C1EFB700878AC5 /* SexEdit */,
+				A7942BEA19C1F04500878AC5 /* BirthdayEdit */,
+				A7942BEE19C1F06700878AC5 /* LocationEdit */,
+			);
+			name = SubPage;
+			sourceTree = "<group>";
+		};
+		A7942BD619C1EEC600878AC5 /* EmailEdit */ = {
+			isa = PBXGroup;
+			children = (
+				A7942BD719C1EF5600878AC5 /* LINEmailEditingView.h */,
+				A7942BD819C1EF5600878AC5 /* LINEmailEditingView.m */,
+			);
+			name = EmailEdit;
+			sourceTree = "<group>";
+		};
+		A7942BDA19C1EF6C00878AC5 /* NameEdit */ = {
+			isa = PBXGroup;
+			children = (
+				A7942BDF19C1EFA500878AC5 /* LINNameEditView.h */,
+				A7942BE019C1EFA500878AC5 /* LINNameEditView.m */,
+			);
+			name = NameEdit;
+			sourceTree = "<group>";
+		};
+		A7942BE219C1EFB700878AC5 /* SexEdit */ = {
+			isa = PBXGroup;
+			children = (
+				A7D1E3C719C21E7800C5A1C4 /* LINSexEditView.h */,
+				A7D1E3C819C21E7800C5A1C4 /* LINSexEditView.m */,
+			);
+			name = SexEdit;
+			sourceTree = "<group>";
+		};
+		A7942BE619C1EFCE00878AC5 /* DescriptionEdit */ = {
+			isa = PBXGroup;
+			children = (
+				A7942BE719C1EFE200878AC5 /* LINDescriptionView.h */,
+				A7942BE819C1EFE200878AC5 /* LINDescriptionView.m */,
+			);
+			name = DescriptionEdit;
+			sourceTree = "<group>";
+		};
+		A7942BEA19C1F04500878AC5 /* BirthdayEdit */ = {
+			isa = PBXGroup;
+			children = (
+				A7942BEB19C1F05D00878AC5 /* LINBirthdayEditView.h */,
+				A7942BEC19C1F05D00878AC5 /* LINBirthdayEditView.m */,
+			);
+			name = BirthdayEdit;
+			sourceTree = "<group>";
+		};
+		A7942BEE19C1F06700878AC5 /* LocationEdit */ = {
+			isa = PBXGroup;
+			children = (
+				A7942BEF19C1F07D00878AC5 /* LINLocationEditView.h */,
+				A7942BF019C1F07D00878AC5 /* LINLocationEditView.m */,
+			);
+			name = LocationEdit;
+			sourceTree = "<group>";
+		};
+		A79EAF3819C2BC4100388ABF /* SubPage */ = {
+			isa = PBXGroup;
+			children = (
+				A79EAF3919C2BC4800388ABF /* socialCompuseView */,
+			);
+			name = SubPage;
+			sourceTree = "<group>";
+		};
+		A79EAF3919C2BC4800388ABF /* socialCompuseView */ = {
+			isa = PBXGroup;
+			children = (
+				A7F45FAA19F4C4BF0028FFBE /* LINSocialCompose.xib */,
+				A7F45FAC19F4C98E0028FFBE /* LINSocialComposeViewController.h */,
+				A7F45FAD19F4C98E0028FFBE /* LINSocialComposeViewController.m */,
+			);
+			name = socialCompuseView;
+			sourceTree = "<group>";
+		};
+		A7A5CD6F19FC0BC9005061AD /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				A78DDD91198385EC00534254 /* LINAppDelegate.h */,
+				A78DDD92198385EC00534254 /* LINAppDelegate.m */,
+				A7A5CD7619FC0F97005061AD /* LINAppDelegate+DataModel.h */,
+				A7A5CD7719FC0F97005061AD /* LINAppDelegate+DataModel.m */,
+				A7A090E119FC993F00EEFFAB /* Launch Screen.xib */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		A7A8EAEE19C3EBEF00DDD4C2 /* SubPage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = SubPage;
+			sourceTree = "<group>";
+		};
+		A7B2DC9E1994F9CF00F4A2AA /* ProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				A78BD1E219DFA07B00AB6A0D /* LINProfileFriend.xib */,
+				A7A090DF19FC992B00EEFFAB /* LINProfileNormal.xib */,
+				A7FAAEB019F9701D001B2886 /* LINProfileViewControllerFriends.h */,
+				A7FAAEB119F9701D001B2886 /* LINProfileViewControllerFriends.m */,
+				A7A090E319FCADC400EEFFAB /* LINProfileViewControllerNormal.h */,
+				A7A090E419FCADC400EEFFAB /* LINProfileViewControllerNormal.m */,
+				A771E2EF19FF3F2600D8474B /* LINProfileTableViewControllerPointToPoint.h */,
+				A771E2F019FF3F2600D8474B /* LINProfileTableViewControllerPointToPoint.m */,
+			);
+			name = ProfileView;
+			sourceTree = "<group>";
+		};
+		A7B7919919C11FFC00F654B2 /* PrivacyControlView */ = {
+			isa = PBXGroup;
+			children = (
+				A7B7919A19C1202F00F654B2 /* LINSettingPrivacyControl.h */,
+				A7B7919B19C1202F00F654B2 /* LINSettingPrivacyControl.m */,
+			);
+			name = PrivacyControlView;
+			sourceTree = "<group>";
+		};
+		A7B7919D19C1236C00F654B2 /* GeneralControl */ = {
+			isa = PBXGroup;
+			children = (
+				A7D1E3CC19C22BB900C5A1C4 /* SubPage */,
+				A7B7919E19C1239800F654B2 /* LINSettingGeneralControl.h */,
+				A7B7919F19C1239800F654B2 /* LINSettingGeneralControl.m */,
+			);
+			name = GeneralControl;
+			sourceTree = "<group>";
+		};
+		A7D1E3CC19C22BB900C5A1C4 /* SubPage */ = {
+			isa = PBXGroup;
+			children = (
+				A7D1E3CD19C22BCB00C5A1C4 /* MultiLang */,
+				A7D1E3CE19C22BD400C5A1C4 /* FontSize */,
+				A7D1E3CF19C22BDB00C5A1C4 /* InitPage */,
+			);
+			name = SubPage;
+			sourceTree = "<group>";
+		};
+		A7D1E3CD19C22BCB00C5A1C4 /* MultiLang */ = {
+			isa = PBXGroup;
+			children = (
+				A7D1E3D019C22C4200C5A1C4 /* LINMultiLangView.h */,
+				A7D1E3D119C22C4200C5A1C4 /* LINMultiLangView.m */,
+			);
+			name = MultiLang;
+			sourceTree = "<group>";
+		};
+		A7D1E3CE19C22BD400C5A1C4 /* FontSize */ = {
+			isa = PBXGroup;
+			children = (
+				A7D1E3D319C22C4D00C5A1C4 /* LINFontSizeEditView.h */,
+				A7D1E3D419C22C4D00C5A1C4 /* LINFontSizeEditView.m */,
+			);
+			name = FontSize;
+			sourceTree = "<group>";
+		};
+		A7D1E3CF19C22BDB00C5A1C4 /* InitPage */ = {
+			isa = PBXGroup;
+			children = (
+				A7D1E3D719C22C6400C5A1C4 /* LINInitPageSelect.h */,
+				A7D1E3D819C22C6400C5A1C4 /* LINInitPageSelect.m */,
+			);
+			name = InitPage;
+			sourceTree = "<group>";
+		};
+		A7D457D8199A2F6400788530 /* AddFriendsController */ = {
+			isa = PBXGroup;
+			children = (
+				A78BD1C819DDBF7400AB6A0D /* Cell */,
+				A7A4EB1C199A38A90067EBAC /* LINAddFriendsTableViewController.h */,
+				A7A4EB1D199A38A90067EBAC /* LINAddFriendsTableViewController.m */,
+			);
+			name = AddFriendsController;
+			sourceTree = "<group>";
+		};
+		A7E32B2019E71D4C005C615F /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				A7E32B2119E71D6F005C615F /* LINMessagesListViewController.h */,
+				A7E32B2219E71D6F005C615F /* LINMessagesListViewController.m */,
+				A7E32B2319E71D6F005C615F /* LINMessageListModelData.h */,
+				A7E32B2419E71D6F005C615F /* LINMessageListModelData.m */,
+			);
+			name = Message;
+			sourceTree = "<group>";
+		};
+		A7F6E8CB19F2B7CD0037EE06 /* ModelSource */ = {
+			isa = PBXGroup;
+			children = (
+				A7899CEE19FD4E6B001C2D96 /* Profile */,
+				A7899CED19FD4E5B001C2D96 /* Login/out */,
+				A7899CEC19FD4E50001C2D96 /* Setting */,
+				A7899CEB19FD4E3D001C2D96 /* Contact */,
+				A7899CEA19FD4E25001C2D96 /* Chat */,
+			);
+			name = ModelSource;
+			path = ..;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A78DDD7E198385EC00534254 /* Linner */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A78DDDB1198385EC00534254 /* Build configuration list for PBXNativeTarget "Linner" */;
+			buildPhases = (
+				CE4EB09107714CAFBC7621F2 /* Check Pods Manifest.lock */,
+				A78DDD7B198385EC00534254 /* Sources */,
+				A78DDD7C198385EC00534254 /* Frameworks */,
+				A78DDD7D198385EC00534254 /* Resources */,
+				045935191DDB4E0583CD0F72 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Linner;
+			productName = linner;
+			productReference = A78DDD7F198385EC00534254 /* Linner.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A78DDD9F198385EC00534254 /* LinnerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A78DDDB4198385EC00534254 /* Build configuration list for PBXNativeTarget "LinnerTests" */;
+			buildPhases = (
+				A78DDD9C198385EC00534254 /* Sources */,
+				A78DDD9D198385EC00534254 /* Frameworks */,
+				A78DDD9E198385EC00534254 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A78DDDA6198385EC00534254 /* PBXTargetDependency */,
+			);
+			name = LinnerTests;
+			productName = linnerTests;
+			productReference = A78DDDA0198385EC00534254 /* Linner.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_renameTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A78DDD77198385EC00534254 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = LIN;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "___Lincan Li___";
+				TargetAttributes = {
+					A78DDD7E198385EC00534254 = {
+						DevelopmentTeam = EL786JFEYA;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					A78DDD9F198385EC00534254 = {
+						TestTargetID = A78DDD7E198385EC00534254;
+					};
+				};
+			};
+			buildConfigurationList = A78DDD7A198385EC00534254 /* Build configuration list for PBXProject "Linner" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A78DDD76198385EC00534254;
+			productRefGroup = A78DDD80198385EC00534254 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A78DDD7E198385EC00534254 /* Linner */,
+				A78DDD9F198385EC00534254 /* LinnerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A78DDD7D198385EC00534254 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A78BD1D519DE136300AB6A0D /* NotificationCellForFriendRequest.xib in Resources */,
+				A78E8F9019CF80580062A72F /* cat@2x.png in Resources */,
+				A78E8F9319CF80580062A72F /* menu@2x.png in Resources */,
+				A78E8F9119CF80580062A72F /* check@2x.png in Resources */,
+				A758AA0B198499500055A44B /* SettingUserProfileCell.xib in Resources */,
+				A7459C9B19C2930C00BECCDF /* demo_4.png in Resources */,
+				A7A090E019FC992B00EEFFAB /* LINProfileNormal.xib in Resources */,
+				A7F45FAB19F4C4BF0028FFBE /* LINSocialCompose.xib in Resources */,
+				A7A090E219FC993F00EEFFAB /* Launch Screen.xib in Resources */,
+				A7459C9A19C2930C00BECCDF /* demo_3.jpg in Resources */,
+				A7F6E8CA19F2213A0037EE06 /* sample_iTunes.mov in Resources */,
+				A78E8F9219CF80580062A72F /* fav@2x.png in Resources */,
+				A7E56EEE19C29E7E00BCD476 /* SocialCell.xib in Resources */,
+				A7459C9819C2930C00BECCDF /* demo_1.jpg in Resources */,
+				A731983219FDAB1400CD17B7 /* LoginAndLogout.storyboard in Resources */,
+				A7B07DA319CA8BD4005DABED /* incoming.wav in Resources */,
+				A70DAB4E1A02F92000CE7104 /* LINFinaceControlCellBalance.xib in Resources */,
+				A71D6E7319C5DE8200B13FD8 /* Calling.storyboard in Resources */,
+				A7A5CD6B19FB49B1005061AD /* LINChatTableViewCellList.xib in Resources */,
+				A7D73E2319937A540092C606 /* LINContactsTableCellTableViewCell.xib in Resources */,
+				A78DDD9B198385EC00534254 /* Images.xcassets in Resources */,
+				A7459C9919C2930C00BECCDF /* demo_2.jpg in Resources */,
+				A78BD1C719DDBB9100AB6A0D /* addFriends.xib in Resources */,
+				A79EAF3719C2A4DC00388ABF /* Socialx.storyboard in Resources */,
+				A78DDD8D198385EC00534254 /* InfoPlist.strings in Resources */,
+				A771E2E619FDD3CA00D8474B /* LINPhoneNumberSelectionView.xib in Resources */,
+				A78BD1F819E062F400AB6A0D /* unicode_to_hanyu_pinyin.txt in Resources */,
+				A71B9D1B19C0FBEB00C6C66D /* LogoutTableCell.xib in Resources */,
+				A7B07DA419CA8BD4005DABED /* ringback.wav in Resources */,
+				A78BD1E319DFA07B00AB6A0D /* LINProfileFriend.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A78DDD9E198385EC00534254 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A78DDDAC198385EC00534254 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		045935191DDB4E0583CD0F72 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE4EB09107714CAFBC7621F2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A78DDD7B198385EC00534254 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A7D1E3D219C22C4200C5A1C4 /* LINMultiLangView.m in Sources */,
+				A7BB62D619F8337200EB21CB /* LINContactsTableViewController+DataModel.m in Sources */,
+				A7459C8C19C2888500BECCDF /* LINSocialPageView.m in Sources */,
+				A7459C8819C2884B00BECCDF /* HFStretchableTableHeaderView.m in Sources */,
+				A78DDD93198385EC00534254 /* LINAppDelegate.m in Sources */,
+				A70DAB511A03038200CE7104 /* LINPaymentViewController.m in Sources */,
+				A771E2E919FE0BA800D8474B /* LINContactsTableCellTableViewCell.m in Sources */,
+				A78DDDCE19838A9300534254 /* LINMainViewController.m in Sources */,
+				A78DDDCB1983876300534254 /* LINChatTableViewController.m in Sources */,
+				A7A5CD7819FC0F97005061AD /* LINAppDelegate+DataModel.m in Sources */,
+				A70DAB4C1A02F6E600CE7104 /* LINFinanceControlTableViewCellBalance.m in Sources */,
+				A78DDD8F198385EC00534254 /* main.m in Sources */,
+				A78DDDBE1983867600534254 /* LINLoginViewController.m in Sources */,
+				A78DDDC41983869700534254 /* LINiForgetViewController.m in Sources */,
+				A7B7919C19C1202F00F654B2 /* LINSettingPrivacyControl.m in Sources */,
+				A78BD1BF19DD987E00AB6A0D /* LINMessageRecord.m in Sources */,
+				A78DDDDF1983E03600534254 /* LINExploreViewController.m in Sources */,
+				A7BB62D319F8336400EB21CB /* LINLoginSignUpDataHelper.m in Sources */,
+				A70DAB3F1A02B82800CE7104 /* LINProfileTableViewControllerPointToPoint+DataModel.m in Sources */,
+				A78BD1DF19DEFC2B00AB6A0D /* LINAVUserRelation.m in Sources */,
+				A7459C9F19C2936600BECCDF /* LINParallaxCell.m in Sources */,
+				A758AA09198490600055A44B /* LINSettingTableViewController.m in Sources */,
+				A7942BED19C1F05D00878AC5 /* LINBirthdayEditView.m in Sources */,
+				A7FAAEB519F98AE0001B2886 /* LINProfileViewControllerFriends+DataModel.m in Sources */,
+				A7F45FAE19F4C98E0028FFBE /* LINSocialComposeViewController.m in Sources */,
+				A70DAB481A02F6AC00CE7104 /* LINFinanceControlTableViewController.m in Sources */,
+				A7F6E8D319F2BE550037EE06 /* LINChatTableViewController+DataModel.m in Sources */,
+				A7FAAEB219F9701D001B2886 /* LINProfileViewControllerFriends.m in Sources */,
+				A78DDD99198385EC00534254 /* LINViewController.m in Sources */,
+				A7A090E519FCADC400EEFFAB /* LINProfileViewControllerNormal.m in Sources */,
+				A78BD1DC19DE14E900AB6A0D /* LINNotificationTableViewCellFriendRequest.m in Sources */,
+				A78DDDE81983EA6000534254 /* LINContactsTableViewController.m in Sources */,
+				A7B791A019C1239800F654B2 /* LINSettingGeneralControl.m in Sources */,
+				A71B9D2819C0FF4D00C6C66D /* LINLogOutTableViewCell.m in Sources */,
+				A7899CF419FD584A001C2D96 /* LINNotificationTableViewController+DataModel.m in Sources */,
+				A7FCDCE919D47B0B0014818C /* LINUser.m in Sources */,
+				A78BD1F319E062F400AB6A0D /* ChineseToPinyinResource.m in Sources */,
+				A78BD1CF19DDF35400AB6A0D /* LINAVAppNotification.m in Sources */,
+				A78DDDE31983E04E00534254 /* LINSettingViewController.m in Sources */,
+				A78BD1F519E062F400AB6A0D /* NSString+PinYin4Cocoa.m in Sources */,
+				A7942BE119C1EFA500878AC5 /* LINNameEditView.m in Sources */,
+				A7899CF119FD4E9D001C2D96 /* LINAddFriendsTableViewController+DataModel.m in Sources */,
+				A7E32B2919E71D6F005C615F /* LINMessagesListViewController.m in Sources */,
+				A78DDDC11983868400534254 /* LINSignUpViewController.m in Sources */,
+				A78BD1CB19DDBF8B00AB6A0D /* LINSearchUserTableViewCell.m in Sources */,
+				A78BD1F419E062F400AB6A0D /* HanyuPinyinOutputFormat.m in Sources */,
+				A7BB62D019F8334700EB21CB /* LINMessageListModelData+DataModel.m in Sources */,
+				A78BD1BC19DD980400AB6A0D /* LINMessageList.m in Sources */,
+				A78DDDD41983CA9900534254 /* LINChatTableViewCellList.m in Sources */,
+				A7A4EB1E199A38A90067EBAC /* LINAddFriendsTableViewController.m in Sources */,
+				A7D1E3D919C22C6400C5A1C4 /* LINInitPageSelect.m in Sources */,
+				A7F45FA319F345FD0028FFBE /* LINSettingDataHelper.m in Sources */,
+				A78BD1B919DD965C00AB6A0D /* LINUserRelation.m in Sources */,
+				A70DAB3C1A02959B00CE7104 /* LINProfileViewControllerNormal+DataModel.m in Sources */,
+				A7D1E3D519C22C4D00C5A1C4 /* LINFontSizeEditView.m in Sources */,
+				A78BD1B319DD92E600AB6A0D /* LINUserObject.m in Sources */,
+				A7942BE919C1EFE200878AC5 /* LINDescriptionView.m in Sources */,
+				A7942BF119C1F07D00878AC5 /* LINLocationEditView.m in Sources */,
+				A763447019A21AC900EB437A /* LINPersonalProfileTableViewController.m in Sources */,
+				A758AA0E19849AC00055A44B /* LINSettingTableViewUserProfileCellTableViewCell.m in Sources */,
+				A78BD1F619E062F400AB6A0D /* PinyinFormatter.m in Sources */,
+				A78BD1D819DE14C800AB6A0D /* LINNotificationTableViewController.m in Sources */,
+				A771E2E119FDCDB600D8474B /* LINPhoneNumberHelper.m in Sources */,
+				A771E2F119FF3F2600D8474B /* LINProfileTableViewControllerPointToPoint.m in Sources */,
+				A787B72319FAE1AE00ABF8DB /* LINMessagesListViewController+DataModel.m in Sources */,
+				A7E32B2A19E71D6F005C615F /* LINMessageListModelData.m in Sources */,
+				A78BD1B619DD954F00AB6A0D /* LINUserSetting.m in Sources */,
+				A78DDDDA1983DDE600534254 /* LINContactsViewController.m in Sources */,
+				A763440519A0D2AD00EB437A /* Model.xcdatamodeld in Sources */,
+				A763B3DF19C64B30006733D2 /* LINCallingViewController.m in Sources */,
+				A7942BD919C1EF5600878AC5 /* LINEmailEditingView.m in Sources */,
+				A763446A19A2029C00EB437A /* LINPhoneViewController.m in Sources */,
+				A758AA0619840D2C0055A44B /* LINExploreTableViewController.m in Sources */,
+				A78BD1D219DE042100AB6A0D /* LINAVUserObject.m in Sources */,
+				A78BD1F719E062F400AB6A0D /* PinyinHelper.m in Sources */,
+				A7D1E3C919C21E7800C5A1C4 /* LINSexEditView.m in Sources */,
+				A7F6E8D919F2FAB40037EE06 /* LINSettingTableViewController+DataModel.m in Sources */,
+				A771E2E419FDD04E00D8474B /* LINPhoneNumberSelectTableViewController.m in Sources */,
+				A78DDDD119839B8900534254 /* LINChatNavViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A78DDD9C198385EC00534254 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A78DDDAE198385EC00534254 /* linnerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A78DDDA6198385EC00534254 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A78DDD7E198385EC00534254 /* Linner */;
+			targetProxy = A78DDDA5198385EC00534254 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A78DDD8B198385EC00534254 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A78DDD8C198385EC00534254 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A78DDDAA198385EC00534254 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A78DDDAB198385EC00534254 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A78DDDAF198385EC00534254 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A78DDDB0198385EC00534254 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A78DDDB2198385EC00534254 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A20465D43504FC6503ECDD11 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Linner/Linner-Prefix.pch";
+				INFOPLIST_FILE = "Linner/Linner-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = Linner;
+				PROVISIONING_PROFILE = "";
+				VALID_ARCHS = "armv7 armv7s";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A78DDDB3198385EC00534254 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4240ACE46C1872EADE00254 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Linner/Linner-Prefix.pch";
+				INFOPLIST_FILE = "Linner/Linner-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = Linner;
+				PROVISIONING_PROFILE = "";
+				VALID_ARCHS = "armv7 armv7s";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		A78DDDB5198385EC00534254 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/linner.app/linner";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "linner/linner-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "linnerTests/Linner.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_renameTests-Info.plist";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = Linner.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_renameTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		A78DDDB6198385EC00534254 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/linner.app/linner";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "linner/linner-Prefix.pch";
+				INFOPLIST_FILE = "linnerTests/Linner.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_renameTests-Info.plist";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = Linner.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_renameTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A78DDD7A198385EC00534254 /* Build configuration list for PBXProject "Linner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A78DDDAF198385EC00534254 /* Debug */,
+				A78DDDB0198385EC00534254 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A78DDDB1198385EC00534254 /* Build configuration list for PBXNativeTarget "Linner" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A78DDDB2198385EC00534254 /* Debug */,
+				A78DDDB3198385EC00534254 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A78DDDB4198385EC00534254 /* Build configuration list for PBXNativeTarget "LinnerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A78DDDB5198385EC00534254 /* Debug */,
+				A78DDDB6198385EC00534254 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A763440319A0D2AD00EB437A /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A763440419A0D2AD00EB437A /* Model.xcdatamodel */,
+			);
+			currentVersion = A763440419A0D2AD00EB437A /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A78DDD77198385EC00534254 /* Project object */;
+}

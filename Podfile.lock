@@ -1,0 +1,65 @@
+PODS:
+  - AHKActionSheet (0.4.2)
+  - AVOSCloud (2.6.6)
+  - AVOSCloudSNS (2.6.6):
+    - AVOSCloud
+  - AVOSCloudUI (2.1.2):
+    - AVOSCloud
+  - FontAwesomeKit (2.1.8):
+    - FontAwesomeKit/Core
+    - FontAwesomeKit/FontAwesome
+    - FontAwesomeKit/FoundationIcons
+    - FontAwesomeKit/IonIcons
+    - FontAwesomeKit/Zocial
+  - FontAwesomeKit/Core (2.1.8)
+  - FontAwesomeKit/FontAwesome (2.1.8):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/FoundationIcons (2.1.8):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/IonIcons (2.1.8):
+    - FontAwesomeKit/Core
+  - FontAwesomeKit/Zocial (2.1.8):
+    - FontAwesomeKit/Core
+  - HexColors (2.2.1)
+  - JSQMessagesViewController (6.0-beta6):
+    - JSQSystemSoundPlayer (~> 2.0.0)
+  - JSQSystemSoundPlayer (2.0.0)
+  - MBProgressHUD (0.9)
+  - PaymentKit (1.1.1)
+  - pop (1.0.7)
+  - SinchRTC (3.2.7)
+  - Stripe (2.2.0):
+    - Stripe/Core
+  - Stripe/Core (2.2.0)
+
+DEPENDENCIES:
+  - AHKActionSheet
+  - AVOSCloud
+  - AVOSCloudSNS
+  - AVOSCloudUI
+  - FontAwesomeKit
+  - HexColors
+  - JSQMessagesViewController
+  - JSQSystemSoundPlayer
+  - MBProgressHUD
+  - PaymentKit
+  - pop
+  - SinchRTC
+  - Stripe
+
+SPEC CHECKSUMS:
+  AHKActionSheet: 5bac772d0e966456257fbb8eefafbea9717ccbbc
+  AVOSCloud: 64b6fcd3bba5b8009aae9bcd3150431b02f16555
+  AVOSCloudSNS: 80e6062e0bf2b66a972e5467699d4d52e848ae11
+  AVOSCloudUI: 457b626791a873e71e01c8ebc475c144a40b370b
+  FontAwesomeKit: a2edea3111dab107b4cc43b85881b404eb063385
+  HexColors: 01384d2bbe8dc4ffa43c3b4135db6e976952d153
+  JSQMessagesViewController: 6e78b14e804a0ac4353765ef40e9d20c157a0ebf
+  JSQSystemSoundPlayer: c98443b1cbb3b45db09d0d3d6c2355cf78294981
+  MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8
+  PaymentKit: f77b4d5cee45947949429c3d587e8eb160a3c9e2
+  pop: 2f14a1ea61339767af9e66741b418c831b3844df
+  SinchRTC: ee6d982a2adfbace7e66945f4c33db0a601ef626
+  Stripe: 935d0ff491100ca1ba0f4040c64e449c5ed69f6d
+
+COCOAPODS: 0.34.4

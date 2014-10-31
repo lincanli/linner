@@ -1,0 +1,42 @@
+//
+//  LINChatTableCellTableViewCell.m
+//  linner
+//
+//  Created by Lincan Li on 7/26/14.
+//  Copyright (c) 2014 ___Lincan Li___. All rights reserved.
+//
+
+#import "LINChatTableViewCellList.h"
+
+@implementation LINChatTableViewCellList
+
+@synthesize userProfilePhoto = _userProfilePhoto;
+@synthesize userName = _userName;
+@synthesize chatRecord = _chatRecord;
+@synthesize timeLable = _timeLable;
+
+- (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
+{
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+        // Initialization code
+        
+    }
+    return self;
+}
+
+- (void)awakeFromNib
+{
+    // Initialization code
+}
+
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated
+{
+    [super setSelected:selected animated:animated];
+
+    // Configure the view for the selected state
+    
+    
+}
+
+@end

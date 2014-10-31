@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6252" systemVersion="14A389" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="AppNotification" syncable="YES">
+        <attribute name="acted" optional="YES" attributeType="Boolean" defaultValueString="0" syncable="YES"/>
+        <attribute name="notificationContent" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="notificationType" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="notificationUserId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="updatedAt" optional="YES" attributeType="Date" syncable="YES"/>
+    </entity>
+    <entity name="MessageList" representedClassName="LINMessageList" syncable="YES">
+        <attribute name="enableNoti" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="messageContent" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="newNo" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="read" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="topRank" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="toUserId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="updatedAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="targetUserObject" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserObject" syncable="YES"/>
+        <relationship name="targetUserRelation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserRelation" syncable="YES"/>
+    </entity>
+    <entity name="MessageRecord" representedClassName="LINMessageRecord" syncable="YES">
+        <attribute name="messageListId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="messageMediaLocation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="messageText" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="messageType" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="toUserId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="updatedAt" optional="YES" attributeType="Date" syncable="YES"/>
+    </entity>
+    <entity name="SocialRecord" syncable="YES"/>
+    <entity name="UserObject" representedClassName="LINUserObject" syncable="YES">
+        <attribute name="mainUser" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="updatedAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="userActive" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="userBirthday" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="userDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userEmail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="userLocation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userNikeName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userProfilePhoto" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" syncable="YES"/>
+        <attribute name="userRealName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userSex" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="userSetting" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserSetting" syncable="YES"/>
+    </entity>
+    <entity name="UserRelation" representedClassName="LINUserRelation" syncable="YES">
+        <attribute name="allowCallByApp" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="allowCallByPhoneNumber" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="relationActive" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="sharePhoneNumber" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="toUserId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="updatedAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="userRelation" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="userObject" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserObject" syncable="YES"/>
+    </entity>
+    <entity name="UserSetting" representedClassName="LINUserSetting" syncable="YES">
+        <attribute name="callViaLinner" optional="YES" attributeType="Boolean" defaultValueString="0" syncable="YES"/>
+        <attribute name="callViaNo" optional="YES" attributeType="Boolean" defaultValueString="0" syncable="YES"/>
+        <attribute name="fontSize" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="friendRequestByEmail" optional="YES" attributeType="Boolean" defaultValueString="0" syncable="YES"/>
+        <attribute name="friendRequestById" optional="YES" attributeType="Boolean" defaultValueString="0" syncable="YES"/>
+        <attribute name="friendRequestByphoneNo" optional="YES" attributeType="Boolean" defaultValueString="0" syncable="YES"/>
+        <attribute name="language" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="pageInit" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="requireValidation" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="updatedAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="userId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="AppNotification" positionX="144" positionY="320" width="128" height="118"/>
+        <element name="MessageList" positionX="-243" positionY="533" width="128" height="178"/>
+        <element name="MessageRecord" positionX="-9" positionY="380" width="128" height="133"/>
+        <element name="SocialRecord" positionX="124" positionY="180" width="128" height="45"/>
+        <element name="UserObject" positionX="-162" positionY="-9" width="128" height="255"/>
+        <element name="UserRelation" positionX="-362" positionY="260" width="128" height="163"/>
+        <element name="UserSetting" positionX="43" positionY="72" width="128" height="30"/>
+    </elements>
+</model>
