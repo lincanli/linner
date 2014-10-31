@@ -8,6 +8,8 @@
 
 #import "LINAppDelegate.h"
 #import <Sinch/Sinch.h>
+#import "Stripe.h"
+
 #import "LINMainViewController.h"
 #import "LINCallingViewController.h"
 
@@ -19,6 +21,8 @@
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
+NSString * const StripePublishableKey = @"pk_test_0hh6eMglKBNlFUBhnVOdsSSJ";
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
@@ -27,6 +31,9 @@
     [AVOSCloud setApplicationId:@"dnrltp67optv4amgcg73v3u7i4jp09r5x5qgn5dmkndkwvg6"
                       clientKey:@"l3dv1nhuo3tklitahbnwzfu3gzdva52mc515eg5ctpofu6e0"];
     [AVAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    [Stripe setDefaultPublishableKey:StripePublishableKey];
+
     
     NSLog(@"app dir: %@",[[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject]);
  

@@ -25,7 +25,6 @@ static NSString* cardsCellIdentifier = @"FinanceControlCellCardsIndentifier";
     self.financeControlData = @[@"0001"];
     
     [self.tableView registerNib:[UINib nibWithNibName:@"LINFinaceControlCellBalance" bundle:nil] forCellReuseIdentifier:balanceCellIdentifier];
-    
 }
 
 - (void)didReceiveMemoryWarning {
