@@ -20,7 +20,7 @@
     </entity>
     <entity name="MessageRecord" representedClassName="LINMessageRecord" syncable="YES">
         <attribute name="messageListId" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="messageMediaLocation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="messageMedia" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" storedInTruthFile="YES" syncable="YES"/>
         <attribute name="messageText" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="messageType" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="toUserId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
@@ -70,7 +70,7 @@
     <elements>
         <element name="AppNotification" positionX="144" positionY="320" width="128" height="118"/>
         <element name="MessageList" positionX="-243" positionY="533" width="128" height="178"/>
-        <element name="MessageRecord" positionX="-9" positionY="380" width="128" height="133"/>
+        <element name="MessageRecord" positionX="-9" positionY="380" width="128" height="135"/>
         <element name="SocialRecord" positionX="124" positionY="180" width="128" height="45"/>
         <element name="UserObject" positionX="-162" positionY="-9" width="128" height="270"/>
         <element name="UserRelation" positionX="-362" positionY="260" width="128" height="163"/>

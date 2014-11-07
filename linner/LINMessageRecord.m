@@ -10,6 +10,6 @@
 
 @implementation LINMessageRecord
 
-@dynamic toUserId, messageListId, messageType, messageText, messageMediaLocation, updatedAt;
+@dynamic toUserId, messageListId, messageType, messageText, messageMedia, updatedAt;
 
 @end

@@ -12,11 +12,11 @@
 @interface LINMessagesListViewController (DataModel)
 
 - (NSString *) returnJsonEncryption: (NSDictionary *) rawData;
-- (NSDictionary *) returnJsonDncryption: (NSString *) rawData;
+- (NSMutableDictionary *) returnJsonDncryption: (NSString *) rawData;
 
-- (void) storeToLocal: (NSDictionary *) rawData withTargetUser: (LINUserObject *) targetUser withMessageList: (LINMessageList *) messageList;
-- (void) storeForSelfToLocal:(NSDictionary *) rawData  withMessageList: (LINMessageList *) messageList withMessageType: (NSNumber *) messageType;
-- (void) storeImageToLocal: (NSDictionary *) rawData withTargetUser: (LINUserObject *) targetUser withMessageList: (LINMessageList *) messageList;
+- (void) storeToLocal: (NSMutableDictionary *) rawData withTargetUser: (LINUserObject *) targetUser withMessageList: (LINMessageList *) messageList;
+- (void) storeForSelfToLocal:(NSMutableDictionary *) rawData  withMessageList: (LINMessageList *) messageList withMessageType: (NSNumber *) messageType;
+- (void) storeImageToLocal: (NSMutableDictionary *) rawData withTargetUser: (LINUserObject *) targetUser withMessageList: (LINMessageList *) messageList;
 
 - (UIImage *)imageWithImage:(UIImage *)image scaledToWidth:(int)newWidth;
 

@@ -94,15 +94,9 @@
             [self.messages addObject:aMessage];
 
         }else if ([record.messageType isEqualToNumber:[NSNumber numberWithInt:1]]) {
-            JSQPhotoMediaItem *aPhoto;
+            JSQPhotoMediaItem *aPhoto = [[JSQPhotoMediaItem alloc]initWithImage:[UIImage imageWithData:record.messageMedia]];
             JSQMediaMessage* aMessage;
-            
-            NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-            NSString *documentsDirectory = [paths objectAtIndex:0];
-            NSString *getImagePath = [documentsDirectory stringByAppendingPathComponent:record.messageMediaLocation];
-            aPhoto = [[JSQPhotoMediaItem alloc] initWithImage:[UIImage imageWithContentsOfFile:getImagePath]];
 
-            
             if ([record.toUserId isEqualToNumber:self.userId]) {
                 aMessage = [JSQMediaMessage messageWithSenderId:[NSString stringWithFormat:@"%@", self.userId]
                                                     displayName:self.userName

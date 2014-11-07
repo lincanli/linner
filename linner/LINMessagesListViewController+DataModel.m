@@ -10,7 +10,7 @@
 
 @implementation LINMessagesListViewController (DataModel)
 
-- (NSString *) returnJsonEncryption: (NSDictionary *) rawData
+- (NSString *) returnJsonEncryption: (NSMutableDictionary *) rawData
 {
     NSError* error = nil;
     NSData* jsonData = [NSJSONSerialization dataWithJSONObject:rawData options:NSJSONWritingPrettyPrinted error:&error];
@@ -21,13 +21,13 @@
 }
 
 
-- (NSDictionary *) returnJsonDncryption: (NSString *) rawData
+- (NSMutableDictionary *) returnJsonDncryption: (NSString *) rawData
 {
     NSData* jsonData = [rawData dataUsingEncoding:NSUTF8StringEncoding];
-    return [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:nil];
+    return [NSMutableDictionary dictionaryWithDictionary:[NSJSONSerialization JSONObjectWithData:jsonData options:0 error:nil]];
 }
 
-- (void) storeForSelfToLocal:(NSDictionary *) rawData  withMessageList: (LINMessageList *) messageList withMessageType: (NSNumber *) messageType
+- (void) storeForSelfToLocal:(NSMutableDictionary *) rawData  withMessageList: (LINMessageList *) messageList withMessageType: (NSNumber *) messageType
 {
     AVUser* currentUser = [AVUser currentUser];
     LINAppDelegate *appDelegate = (LINAppDelegate*)[[UIApplication sharedApplication] delegate];
@@ -49,7 +49,7 @@
         [self storeImageToLocal:rawData withTargetUser:user withMessageList:messageList];
 }
 
-- (void) storeToLocal: (NSDictionary *) rawData withTargetUser: (LINUserObject *) targetUser withMessageList: (LINMessageList *) messageList
+- (void) storeToLocal: (NSMutableDictionary *) rawData withTargetUser: (LINUserObject *) targetUser withMessageList: (LINMessageList *) messageList
 {
     LINAppDelegate *appDelegate = (LINAppDelegate*)[[UIApplication sharedApplication] delegate];
     NSManagedObjectContext* dataModel = appDelegate.managedObjectContext;
@@ -71,24 +71,9 @@
     [self updateMessageList:messageList withMessageRecord:messageRecord];
 }
 
-- (void) storeImageToLocal: (NSDictionary *) rawData withTargetUser: (LINUserObject *) targetUser withMessageList: (LINMessageList *) messageList
+- (void) storeImageToLocal: (NSMutableDictionary *) rawData withTargetUser: (LINUserObject *) targetUser withMessageList: (LINMessageList *) messageList
 {
-    
-    //store UIImage to local
-    
     NSData *imageData = UIImagePNGRepresentation([rawData objectForKey:@"messageMedia"]);
-    
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
-    
-    NSString *imagePath =[documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.png",@"cached"]];
-    
-    NSLog((@"pre writing to file"));
-    if (![imageData writeToFile:imagePath atomically:NO]) {
-        NSLog((@"Failed to cache image data to disk"));
-    }
-    
-    NSLog(@"the cachedImagedPath is %@",imagePath);
     
     LINAppDelegate *appDelegate = (LINAppDelegate*)[[UIApplication sharedApplication] delegate];
     NSManagedObjectContext* dataModel = appDelegate.managedObjectContext;
@@ -96,7 +81,7 @@
     LINMessageRecord* messageRecord = [NSEntityDescription insertNewObjectForEntityForName:@"MessageRecord" inManagedObjectContext:dataModel];
     
     messageRecord.toUserId = targetUser.userId;
-    messageRecord.messageMediaLocation = imagePath;
+    messageRecord.messageMedia = imageData;
     messageRecord.messageType = [rawData objectForKey:@"type"];
     
     messageRecord.messageListId = [NSString stringWithFormat:@"%@", [messageList.objectID URIRepresentation]];

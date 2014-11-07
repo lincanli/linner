@@ -129,7 +129,7 @@ static NSString *listCellIdentifier = @"ChatListCellIndentifier";
 
     cell.timeLable.text = [dateFormatter stringFromDate:currentMessageList.updatedAt];
     
-    cell.userProfilePhoto.image = [UIImage imageNamed:@"LoginBackground"];
+    cell.userProfilePhoto.image = [UIImage imageWithData:currentMessageList.targetUserObject.userProfilePhoto];
     
     cell.userProfilePhoto.layer.cornerRadius = cell.userProfilePhoto.frame.size.width/2;
     cell.userProfilePhoto.layer.masksToBounds = YES;

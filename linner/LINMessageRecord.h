@@ -15,7 +15,7 @@
 
 @property (nonatomic) NSString* messageListId;
 @property (strong, nonatomic) NSString* messageText;
-@property (strong, nonatomic) NSString* messageMediaLocation;
+@property (strong, nonatomic) NSData* messageMedia;
 
 @property (strong, nonatomic) NSDate* updatedAt;
 

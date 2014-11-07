@@ -74,9 +74,9 @@ UIImage* tmpImage = nil;
     NSLog(@"targertUser user id %@", self.targetUser.userId);
     NSString* currentUserIdInString = [NSString stringWithFormat:@"%@", [currentUser objectForKey:@"userId"]];
     NSString* targetUserIdInString = [NSString stringWithFormat:@"%@", self.targetUser.userId];
-
+    
     [messageSession openWithPeerId:currentUserIdInString watchedPeerIds:@[targetUserIdInString]];
-
+    
     self.collectionView.collectionViewLayout.incomingAvatarViewSize = CGSizeZero;
     self.collectionView.collectionViewLayout.outgoingAvatarViewSize = CGSizeZero;
 }
@@ -104,7 +104,11 @@ UIImage* tmpImage = nil;
     self.collectionView.collectionViewLayout.springinessEnabled = YES;
 }
 
-
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    [AVFile clearAllCachedFiles];
+}
 
 #pragma mark - Actions
 
@@ -118,156 +122,156 @@ UIImage* tmpImage = nil;
     
     
     
-//    /**
-//     *  DEMO ONLY
-//     *
-//     *  The following is simply to simulate received messages for the demo.
-//     *  Do not actually do this.
-//     */
-//    
-//    
-//    /**
-//     *  Show the typing indicator to be shown
-//     */
-//    self.showTypingIndicator = !self.showTypingIndicator;
-//    
-//    /**
-//     *  Scroll to actually view the indicator
-//     */
-//    [self scrollToBottomAnimated:YES];
-//    
-//    /**
-//     *  Copy last sent message, this will be the new "received" message
-//     */
-//    JSQMessage *copyMessage = [[self.demoData.messages lastObject] copy];
-//    
-//    if (!copyMessage) {
-//        copyMessage = [JSQTextMessage messageWithSenderId:kJSQDemoAvatarIdJobs
-//                                              displayName:kJSQDemoAvatarDisplayNameJobs
-//                                                     text:@"First received!"];
-//    }
-//    
-//    /**
-//     *  Allow typing indicator to show
-//     */
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        
-//        NSMutableArray *userIds = [[self.demoData.users allKeys] mutableCopy];
-//        [userIds removeObject:self.senderId];
-//        NSString *randomUserId = userIds[arc4random_uniform((int)[userIds count])];
-//        
-//        JSQMessage *newMessage = nil;
-//        id<JSQMessageMediaData> newMediaData = nil;
-//        id newMediaAttachmentCopy = nil;
-//        
-//        if ([copyMessage isKindOfClass:[JSQMediaMessage class]]) {
-//            /**
-//             *  Last message was a media message
-//             */
-//            id<JSQMessageMediaData> copyMediaData = copyMessage.media;
-//            
-//            if ([copyMediaData isKindOfClass:[JSQPhotoMediaItem class]]) {
-//                JSQPhotoMediaItem *photoItemCopy = [((JSQPhotoMediaItem *)copyMediaData) copy];
-//                photoItemCopy.appliesMediaViewMaskAsOutgoing = NO;
-//                newMediaAttachmentCopy = [UIImage imageWithCGImage:photoItemCopy.image.CGImage];
-//                
-//                /**
-//                 *  Set image to nil to simulate "downloading" the image
-//                 *  and show the placeholder view
-//                 */
-//                photoItemCopy.image = nil;
-//                
-//                newMediaData = photoItemCopy;
-//            }
-//            else if ([copyMediaData isKindOfClass:[JSQLocationMediaItem class]]) {
-//                JSQLocationMediaItem *locationItemCopy = [((JSQLocationMediaItem *)copyMediaData) copy];
-//                locationItemCopy.appliesMediaViewMaskAsOutgoing = NO;
-//                newMediaAttachmentCopy = [locationItemCopy.location copy];
-//                
-//                /**
-//                 *  Set location to nil to simulate "downloading" the location data
-//                 */
-//                locationItemCopy.location = nil;
-//                
-//                newMediaData = locationItemCopy;
-//            }
-//            else if ([copyMediaData isKindOfClass:[JSQVideoMediaItem class]]) {
-//                JSQVideoMediaItem *videoItemCopy = [((JSQVideoMediaItem *)copyMediaData) copy];
-//                videoItemCopy.appliesMediaViewMaskAsOutgoing = NO;
-//                newMediaAttachmentCopy = [videoItemCopy.fileURL copy];
-//                
-//                /**
-//                 *  Reset video item to simulate "downloading" the video
-//                 */
-//                videoItemCopy.fileURL = nil;
-//                videoItemCopy.isReadyToPlay = NO;
-//                
-//                newMediaData = videoItemCopy;
-//            }
-//            else {
-//                NSLog(@"%s error: unrecognized media item", __PRETTY_FUNCTION__);
-//            }
-//            
-//            newMessage = [JSQMediaMessage messageWithSenderId:randomUserId
-//                                                  displayName:self.demoData.users[randomUserId]
-//                                                        media:newMediaData];
-//        }
-//        else {
-//            /**
-//             *  Last message was a text message
-//             */
-//            newMessage = [JSQTextMessage messageWithSenderId:randomUserId
-//                                                 displayName:self.demoData.users[randomUserId]
-//                                                        text:copyMessage.text];
-//        }
-//        
-//        /**
-//         *  Upon receiving a message, you should:
-//         *
-//         *  1. Play sound (optional)
-//         *  2. Add new id<JSQMessageData> object to your data source
-//         *  3. Call `finishReceivingMessage`
-//         */
-//        [JSQSystemSoundPlayer jsq_playMessageReceivedSound];
-//        [self.demoData.messages addObject:newMessage];
-//        [self finishReceivingMessage];
-//        
-//        
-//        if ([newMessage isKindOfClass:[JSQMediaMessage class]]) {
-//            /**
-//             *  Simulate "downloading" media
-//             */
-//            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//                /**
-//                 *  Media is "finished downloading", re-display visible cells
-//                 *
-//                 *  If media cell is not visible, the next time it is dequeued the view controller will display its new attachment data
-//                 *
-//                 *  Reload the specific item, or simply call `reloadData`
-//                 */
-//                
-//                if ([newMediaData isKindOfClass:[JSQPhotoMediaItem class]]) {
-//                    ((JSQPhotoMediaItem *)newMediaData).image = newMediaAttachmentCopy;
-//                    [self.collectionView reloadData];
-//                }
-//                else if ([newMediaData isKindOfClass:[JSQLocationMediaItem class]]) {
-//                    [((JSQLocationMediaItem *)newMediaData)setLocation:newMediaAttachmentCopy withCompletionHandler:^{
-//                        [self.collectionView reloadData];
-//                    }];
-//                }
-//                else if ([newMediaData isKindOfClass:[JSQVideoMediaItem class]]) {
-//                    ((JSQVideoMediaItem *)newMediaData).fileURL = newMediaAttachmentCopy;
-//                    ((JSQVideoMediaItem *)newMediaData).isReadyToPlay = YES;
-//                    [self.collectionView reloadData];
-//                }
-//                else {
-//                    NSLog(@"%s error: unrecognized media item", __PRETTY_FUNCTION__);
-//                }
-//                
-//            });
-//        }
-//        
-//    });
+    //    /**
+    //     *  DEMO ONLY
+    //     *
+    //     *  The following is simply to simulate received messages for the demo.
+    //     *  Do not actually do this.
+    //     */
+    //
+    //
+    //    /**
+    //     *  Show the typing indicator to be shown
+    //     */
+    //    self.showTypingIndicator = !self.showTypingIndicator;
+    //
+    //    /**
+    //     *  Scroll to actually view the indicator
+    //     */
+    //    [self scrollToBottomAnimated:YES];
+    //
+    //    /**
+    //     *  Copy last sent message, this will be the new "received" message
+    //     */
+    //    JSQMessage *copyMessage = [[self.demoData.messages lastObject] copy];
+    //
+    //    if (!copyMessage) {
+    //        copyMessage = [JSQTextMessage messageWithSenderId:kJSQDemoAvatarIdJobs
+    //                                              displayName:kJSQDemoAvatarDisplayNameJobs
+    //                                                     text:@"First received!"];
+    //    }
+    //
+    //    /**
+    //     *  Allow typing indicator to show
+    //     */
+    //    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    //
+    //        NSMutableArray *userIds = [[self.demoData.users allKeys] mutableCopy];
+    //        [userIds removeObject:self.senderId];
+    //        NSString *randomUserId = userIds[arc4random_uniform((int)[userIds count])];
+    //
+    //        JSQMessage *newMessage = nil;
+    //        id<JSQMessageMediaData> newMediaData = nil;
+    //        id newMediaAttachmentCopy = nil;
+    //
+    //        if ([copyMessage isKindOfClass:[JSQMediaMessage class]]) {
+    //            /**
+    //             *  Last message was a media message
+    //             */
+    //            id<JSQMessageMediaData> copyMediaData = copyMessage.media;
+    //
+    //            if ([copyMediaData isKindOfClass:[JSQPhotoMediaItem class]]) {
+    //                JSQPhotoMediaItem *photoItemCopy = [((JSQPhotoMediaItem *)copyMediaData) copy];
+    //                photoItemCopy.appliesMediaViewMaskAsOutgoing = NO;
+    //                newMediaAttachmentCopy = [UIImage imageWithCGImage:photoItemCopy.image.CGImage];
+    //
+    //                /**
+    //                 *  Set image to nil to simulate "downloading" the image
+    //                 *  and show the placeholder view
+    //                 */
+    //                photoItemCopy.image = nil;
+    //
+    //                newMediaData = photoItemCopy;
+    //            }
+    //            else if ([copyMediaData isKindOfClass:[JSQLocationMediaItem class]]) {
+    //                JSQLocationMediaItem *locationItemCopy = [((JSQLocationMediaItem *)copyMediaData) copy];
+    //                locationItemCopy.appliesMediaViewMaskAsOutgoing = NO;
+    //                newMediaAttachmentCopy = [locationItemCopy.location copy];
+    //
+    //                /**
+    //                 *  Set location to nil to simulate "downloading" the location data
+    //                 */
+    //                locationItemCopy.location = nil;
+    //
+    //                newMediaData = locationItemCopy;
+    //            }
+    //            else if ([copyMediaData isKindOfClass:[JSQVideoMediaItem class]]) {
+    //                JSQVideoMediaItem *videoItemCopy = [((JSQVideoMediaItem *)copyMediaData) copy];
+    //                videoItemCopy.appliesMediaViewMaskAsOutgoing = NO;
+    //                newMediaAttachmentCopy = [videoItemCopy.fileURL copy];
+    //
+    //                /**
+    //                 *  Reset video item to simulate "downloading" the video
+    //                 */
+    //                videoItemCopy.fileURL = nil;
+    //                videoItemCopy.isReadyToPlay = NO;
+    //
+    //                newMediaData = videoItemCopy;
+    //            }
+    //            else {
+    //                NSLog(@"%s error: unrecognized media item", __PRETTY_FUNCTION__);
+    //            }
+    //
+    //            newMessage = [JSQMediaMessage messageWithSenderId:randomUserId
+    //                                                  displayName:self.demoData.users[randomUserId]
+    //                                                        media:newMediaData];
+    //        }
+    //        else {
+    //            /**
+    //             *  Last message was a text message
+    //             */
+    //            newMessage = [JSQTextMessage messageWithSenderId:randomUserId
+    //                                                 displayName:self.demoData.users[randomUserId]
+    //                                                        text:copyMessage.text];
+    //        }
+    //
+    //        /**
+    //         *  Upon receiving a message, you should:
+    //         *
+    //         *  1. Play sound (optional)
+    //         *  2. Add new id<JSQMessageData> object to your data source
+    //         *  3. Call `finishReceivingMessage`
+    //         */
+    //        [JSQSystemSoundPlayer jsq_playMessageReceivedSound];
+    //        [self.demoData.messages addObject:newMessage];
+    //        [self finishReceivingMessage];
+    //
+    //
+    //        if ([newMessage isKindOfClass:[JSQMediaMessage class]]) {
+    //            /**
+    //             *  Simulate "downloading" media
+    //             */
+    //            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    //                /**
+    //                 *  Media is "finished downloading", re-display visible cells
+    //                 *
+    //                 *  If media cell is not visible, the next time it is dequeued the view controller will display its new attachment data
+    //                 *
+    //                 *  Reload the specific item, or simply call `reloadData`
+    //                 */
+    //
+    //                if ([newMediaData isKindOfClass:[JSQPhotoMediaItem class]]) {
+    //                    ((JSQPhotoMediaItem *)newMediaData).image = newMediaAttachmentCopy;
+    //                    [self.collectionView reloadData];
+    //                }
+    //                else if ([newMediaData isKindOfClass:[JSQLocationMediaItem class]]) {
+    //                    [((JSQLocationMediaItem *)newMediaData)setLocation:newMediaAttachmentCopy withCompletionHandler:^{
+    //                        [self.collectionView reloadData];
+    //                    }];
+    //                }
+    //                else if ([newMediaData isKindOfClass:[JSQVideoMediaItem class]]) {
+    //                    ((JSQVideoMediaItem *)newMediaData).fileURL = newMediaAttachmentCopy;
+    //                    ((JSQVideoMediaItem *)newMediaData).isReadyToPlay = YES;
+    //                    [self.collectionView reloadData];
+    //                }
+    //                else {
+    //                    NSLog(@"%s error: unrecognized media item", __PRETTY_FUNCTION__);
+    //                }
+    //
+    //            });
+    //        }
+    //
+    //    });
 }
 
 
@@ -295,7 +299,8 @@ UIImage* tmpImage = nil;
     [self.messageListData.messages addObject:newMessage];
     [self finishSendingMessage];
     
-    NSDictionary* newMessageDictionary = [[NSDictionary alloc]initWithObjects:@[[NSNumber numberWithInt:0], text] forKeys:@[@"type", @"content"]];
+    NSMutableDictionary* newMessageDictionary = [[NSMutableDictionary alloc]initWithObjects:@[[NSNumber numberWithInt:0], text]
+                                                                                    forKeys:@[@"type", @"content"]];
     NSString* jsonData = [self returnJsonEncryption:newMessageDictionary];
     
     [self storeForSelfToLocal:newMessageDictionary withMessageList:self.messageList withMessageType:[NSNumber numberWithInt:0]];
@@ -324,40 +329,40 @@ UIImage* tmpImage = nil;
     
     actionSheet.destructiveButtonTextAttributes = @{ NSFontAttributeName : defaultFont,
                                                      NSForegroundColorAttributeName : [UIColor colorWithHexString:@"#FF9500" alpha:1] };
-
+    
     actionSheet.cancelButtonTextAttributes = @{ NSFontAttributeName : defaultFont,
                                                 NSForegroundColorAttributeName : [UIColor redColor] };
     
     [actionSheet addButtonWithTitle:@"Photo" image:[photoIcon imageWithSize:CGSizeMake(30, 30)]
                                type:AHKActionSheetButtonTypeDefault handler:^(AHKActionSheet *as)
-    {
-        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-        picker.delegate = self;
-        picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-        [self showDetailViewController:picker sender:nil];
-    }];
-
+     {
+         UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+         picker.delegate = self;
+         picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+         [self showDetailViewController:picker sender:nil];
+     }];
+    
     [actionSheet addButtonWithTitle:@"Camera" image:[cameraIcon imageWithSize:CGSizeMake(30, 30)]
                                type:AHKActionSheetButtonTypeDestructive handler:^(AHKActionSheet *as)
-    {
-        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-        picker.delegate = self;
-        picker.sourceType = UIImagePickerControllerSourceTypeCamera;
-        [self showDetailViewController:picker sender:nil];
-    }];
+     {
+         UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+         picker.delegate = self;
+         picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+         [self showDetailViewController:picker sender:nil];
+     }];
     
     [actionSheet addButtonWithTitle:@"Location" image:[locationIcon imageWithSize:CGSizeMake(30, 30)]
                                type:AHKActionSheetButtonTypeDisabled handler:^(AHKActionSheet *as)
-    {
-        __weak UICollectionView *weakView = self.collectionView;
-        
-        [self.messageListData addLocationMediaMessageCompletion:^{
-            [weakView reloadData];
-        }];
-        
-        [JSQSystemSoundPlayer jsq_playMessageSentSound];
-        [self finishSendingMessage];
-    }];
+     {
+         __weak UICollectionView *weakView = self.collectionView;
+         
+         [self.messageListData addLocationMediaMessageCompletion:^{
+             [weakView reloadData];
+         }];
+         
+         [JSQSystemSoundPlayer jsq_playMessageSentSound];
+         [self finishSendingMessage];
+     }];
     
     [actionSheet show];
     
@@ -376,7 +381,7 @@ UIImage* tmpImage = nil;
         rawImage = [info objectForKey:UIImagePickerControllerCropRect];
     
     UIImageWriteToSavedPhotosAlbum(rawImage, nil, nil, nil);
-
+    
     UIImage* scaledImage = [self imageWithImage:rawImage scaledToWidth:160];
     
     JSQPhotoMediaItem *photoItem = [[JSQPhotoMediaItem alloc] initWithImage:scaledImage];
@@ -385,7 +390,7 @@ UIImage* tmpImage = nil;
                                                                    media:photoItem];
     
     [self.messageListData.messages addObject:photoMessage];
-
+    
     [JSQSystemSoundPlayer jsq_playMessageSentSound];
     [self finishSendingMessage];
     
@@ -400,7 +405,10 @@ UIImage* tmpImage = nil;
         }
         
         NSString* fileUrl = [imageFile url];
-        NSDictionary* newMessageDictionary = [[NSDictionary alloc]initWithObjects:@[[NSNumber numberWithInt:1], fileUrl] forKeys:@[@"type", @"content"]];
+        [imageFile clearCachedFile];
+
+        NSMutableDictionary * newMessageDictionary = [[NSMutableDictionary alloc]initWithObjects:@[[NSNumber numberWithInt:1], fileUrl]
+                                                                                         forKeys:@[@"type", @"content"]];
         NSString* jsonData = [self returnJsonEncryption:newMessageDictionary];
         
         [newMessageDictionary setValue:scaledImage forKey:@"messageMedia"];
@@ -462,11 +470,11 @@ UIImage* tmpImage = nil;
      *
      *  Override the defaults in `viewDidLoad`
      */
-//    JSQMessage *message = [self.messageListData.messages objectAtIndex:indexPath.item];
+    //    JSQMessage *message = [self.messageListData.messages objectAtIndex:indexPath.item];
     
-
     
-//    return [self.messageListData.avatars objectForKey:message.senderId];
+    
+    //    return [self.messageListData.avatars objectForKey:message.senderId];
     
     return nil;
 }
@@ -656,10 +664,10 @@ UIImage* tmpImage = nil;
 - (void)onSessionMessage:(AVSession *)session message:(NSString *)message peerId:(NSString *)peerId {
     NSLog(@"on message: %@", message);
     
-    NSDictionary* messageData = [self returnJsonDncryption:message];
+    NSMutableDictionary* messageData = [self returnJsonDncryption:message];
     NSString* messageContent = [messageData objectForKey:@"content"];
     NSNumber* messageType = [messageData objectForKey:@"type"];
-
+    
     if ([messageType isEqualToNumber:[NSNumber numberWithInt:0]]) {
         
         JSQTextMessage* newMessage = [JSQTextMessage messageWithSenderId:[NSString stringWithFormat:@"%@", self.messageListData.targetUserId]
@@ -669,23 +677,25 @@ UIImage* tmpImage = nil;
         [self.messageListData.messages addObject:newMessage];
         [self storeToLocal:messageData withTargetUser:self.targetUser withMessageList:self.messageList];
         [self finishReceivingMessage];
-
+        
     }else if ([messageType isEqualToNumber:[NSNumber numberWithInt:1]]){
         
         UIImage* nilImage = [[UIImage alloc]init];
         JSQPhotoMediaItem *photoItem = [[JSQPhotoMediaItem alloc] initWithImage:nilImage];
-        JSQMediaMessage *photoMessage = [JSQMediaMessage messageWithSenderId:[NSString stringWithFormat:@"%@", [currentUser objectForKey:@"userId"]]
-                                                                 displayName:[currentUser objectForKey:@"name"]
+        JSQMediaMessage *photoMessage = [JSQMediaMessage messageWithSenderId:[NSString stringWithFormat:@"%@", self.messageListData.targetUserId]
+                                                                 displayName:self.messageListData.targetUserName
                                                                        media:photoItem];
         [self.messageListData.messages addObject:photoMessage];
         [self finishReceivingMessage];
-
+        
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             AVFile* imageFile = [AVFile fileWithURL:messageContent];
             
             NSData* rawData = [imageFile getData];
             UIImage* rawImage = [UIImage imageWithData:rawData];
             ((JSQPhotoMediaItem *)photoItem).image = rawImage;
+            [imageFile clearCachedFile];
+            [imageFile deleteInBackground];
             
             [messageData setValue:rawImage forKey:@"messageMedia"];
             [self storeImageToLocal:messageData withTargetUser:self.targetUser withMessageList:self.messageList];
@@ -697,7 +707,7 @@ UIImage* tmpImage = nil;
 - (void)onSessionMessageSent:(AVSession *)session message:(NSString *)message toPeerIds:(NSArray *)peerIds{
     NSLog(@"on session message sent: %@", message);
     AVUser* currentUser = [AVUser currentUser];
-    NSDictionary* messageData = [self returnJsonDncryption:message];
+    NSMutableDictionary* messageData = [self returnJsonDncryption:message];
     NSString* messageContent = [messageData objectForKey:@"content"];
     
     messageContent = [NSString stringWithFormat:@"%@: %@", [currentUser objectForKey:@"name"], messageContent];
@@ -706,12 +716,12 @@ UIImage* tmpImage = nil;
         messageContent = [messageContent stringByAppendingString:@"..."];
     }
     
-    NSDictionary* pushData = [NSDictionary dictionaryWithObjectsAndKeys:
-                              message, @"content",
-                              [currentUser objectForKey:@"userId"], @"userId",
-                              messageContent, @"alert",
-                              @"Increment", @"badge",
-                              nil];
+    NSMutableDictionary* pushData = [NSMutableDictionary dictionaryWithObjectsAndKeys:
+                                     message, @"content",
+                                     [currentUser objectForKey:@"userId"], @"userId",
+                                     messageContent, @"alert",
+                                     @"Increment", @"badge",
+                                     nil];
     
     AVQuery *pushQuery = [AVInstallation query];
     [pushQuery whereKey:@"userId" equalTo:self.targetUser.userId];
@@ -720,7 +730,7 @@ UIImage* tmpImage = nil;
     [push setQuery:pushQuery];
     [push setData:pushData];
     [push sendPushInBackground];
-
+    
 }
 
 - (void)onSessionError:(AVSession *)session withException:(NSException *)exception {
