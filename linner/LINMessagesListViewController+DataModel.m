@@ -27,7 +27,7 @@
     return [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:nil];
 }
 
-- (void) storeForSelfToLocal:(NSDictionary *) rawData  withMessageList: (LINMessageList *) messageList
+- (void) storeForSelfToLocal:(NSDictionary *) rawData  withMessageList: (LINMessageList *) messageList withMessageType: (NSNumber *) messageType
 {
     AVUser* currentUser = [AVUser currentUser];
     LINAppDelegate *appDelegate = (LINAppDelegate*)[[UIApplication sharedApplication] delegate];
@@ -43,7 +43,10 @@
     NSArray *results = [dataModel executeFetchRequest:request error:&error];
     LINUserObject* user = [results objectAtIndex:0];
     
-    [self storeToLocal:rawData withTargetUser:user withMessageList:messageList];
+    if ([messageType isEqualToNumber:[NSNumber numberWithInt:0]])
+        [self storeToLocal:rawData withTargetUser:user withMessageList:messageList];
+    else if ([messageType isEqualToNumber:[NSNumber numberWithInt:1]])
+        [self storeImageToLocal:rawData withTargetUser:user withMessageList:messageList];
 }
 
 - (void) storeToLocal: (NSDictionary *) rawData withTargetUser: (LINUserObject *) targetUser withMessageList: (LINMessageList *) messageList
@@ -70,17 +73,32 @@
 
 - (void) storeImageToLocal: (NSDictionary *) rawData withTargetUser: (LINUserObject *) targetUser withMessageList: (LINMessageList *) messageList
 {
+    
+    //store UIImage to local
+    
+    NSData *imageData = UIImagePNGRepresentation([rawData objectForKey:@"messageMedia"]);
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    
+    NSString *imagePath =[documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.png",@"cached"]];
+    
+    NSLog((@"pre writing to file"));
+    if (![imageData writeToFile:imagePath atomically:NO]) {
+        NSLog((@"Failed to cache image data to disk"));
+    }
+    
+    NSLog(@"the cachedImagedPath is %@",imagePath);
+    
     LINAppDelegate *appDelegate = (LINAppDelegate*)[[UIApplication sharedApplication] delegate];
     NSManagedObjectContext* dataModel = appDelegate.managedObjectContext;
     NSError *error = nil;
     LINMessageRecord* messageRecord = [NSEntityDescription insertNewObjectForEntityForName:@"MessageRecord" inManagedObjectContext:dataModel];
     
     messageRecord.toUserId = targetUser.userId;
+    messageRecord.messageMediaLocation = imagePath;
     messageRecord.messageType = [rawData objectForKey:@"type"];
-    NSLog(@"content %@", [rawData objectForKey:@"content"]);
-    if ([[rawData objectForKey:@"type"] isEqualToNumber:[NSNumber numberWithInt:0]]) {
-        messageRecord.messageText = [rawData objectForKey:@"content"];
-    }
+    
     messageRecord.messageListId = [NSString stringWithFormat:@"%@", [messageList.objectID URIRepresentation]];
     NSLog(@"messageListId: %@", [messageRecord.objectID URIRepresentation] );
     messageRecord.updatedAt = [NSDate date];
@@ -99,6 +117,8 @@
     
     if ([messageRecord.messageType isEqualToNumber:[NSNumber numberWithInt:0]])
         messageList.messageContent = messageRecord.messageText;
+    else if ([messageRecord.messageType isEqualToNumber:[NSNumber numberWithInt:1]])
+        messageList.messageContent = @"[图片]";
     
     messageList.updatedAt = [NSDate date];
     

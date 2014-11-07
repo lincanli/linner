@@ -298,7 +298,7 @@ UIImage* tmpImage = nil;
     NSDictionary* newMessageDictionary = [[NSDictionary alloc]initWithObjects:@[[NSNumber numberWithInt:0], text] forKeys:@[@"type", @"content"]];
     NSString* jsonData = [self returnJsonEncryption:newMessageDictionary];
     
-    [self storeForSelfToLocal:newMessageDictionary withMessageList:self.messageList];
+    [self storeForSelfToLocal:newMessageDictionary withMessageList:self.messageList withMessageType:[NSNumber numberWithInt:0]];
     AVMessage* sentNewMessage = [AVMessage messageForPeerWithSession:messageSession
                                                             toPeerId:[NSString stringWithFormat:@"%@", self.targetUser.userId]
                                                              payload:jsonData];
@@ -402,6 +402,9 @@ UIImage* tmpImage = nil;
         NSString* fileUrl = [imageFile url];
         NSDictionary* newMessageDictionary = [[NSDictionary alloc]initWithObjects:@[[NSNumber numberWithInt:1], fileUrl] forKeys:@[@"type", @"content"]];
         NSString* jsonData = [self returnJsonEncryption:newMessageDictionary];
+        
+        [newMessageDictionary setValue:scaledImage forKey:@"messageMedia"];
+        [self storeForSelfToLocal:newMessageDictionary withMessageList:self.messageList withMessageType:[NSNumber numberWithInt:1]];
         
         AVMessage* newMessage = [AVMessage messageForPeerWithSession:messageSession
                                                             toPeerId:[NSString stringWithFormat:@"%@", self.targetUser.userId]
@@ -683,6 +686,9 @@ UIImage* tmpImage = nil;
             NSData* rawData = [imageFile getData];
             UIImage* rawImage = [UIImage imageWithData:rawData];
             ((JSQPhotoMediaItem *)photoItem).image = rawImage;
+            
+            [messageData setValue:rawImage forKey:@"messageMedia"];
+            [self storeImageToLocal:messageData withTargetUser:self.targetUser withMessageList:self.messageList];
             [self.collectionView reloadData];
         });
     }

@@ -54,8 +54,8 @@
     
 //    AVQuery *queryRelation = [AVQuery queryWithClassName:@"userRelation"];
 //    [queryRelation whereKey:@"userRelation" equalTo:[NSNumber numberWithInt:1]];
-    
 //    AVQuery* queryPrimary = [AVQuery andQueryWithSubqueries:[NSArray arrayWithObjects:queryUser, queryRelation, nil]];
+    
     [queryUser includeKey:@"toUserObject.userInfo"];
     [queryUser includeKey:@"toUserObject.userSetting"];
     dataFromRemote = [NSMutableArray arrayWithArray:[queryUser findObjects]];
@@ -202,6 +202,13 @@
     userObject.userLocation = [userInfo objectForKey:@"userLocation"];
     userObject.userNikeName = [userInfo objectForKey:@"userNikeName"];
     userObject.userSetting = userSetting;
+    
+    AVFile* profilePhotoFile = [remoteData objectForKey:@"userProfilePhoto"];
+    if (profilePhotoFile != nil) {
+        [profilePhotoFile getDataInBackgroundWithBlock:^(NSData* data, NSError* error){
+            
+        }];
+    }
     
     return userObject;
 }

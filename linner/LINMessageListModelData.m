@@ -76,29 +76,47 @@
     self.messages = [[NSMutableArray alloc]init];
     
     for (LINMessageRecord* record in resultFromLocal) {
-        JSQTextMessage* aMessage;
-        if ([record.toUserId isEqualToNumber:self.userId]) {
-            NSLog(@"description , %@", record.description);
-            NSLog(@"23");
-            aMessage = [[JSQTextMessage alloc] initWithSenderId: [NSString stringWithFormat:@"%@", self.userId]
-                                                             senderDisplayName:self.userName
-                                                                          date:record.updatedAt
-                                                                          text:record.messageText];
-        } else {
-            NSLog(@"description , %@", record.description);
-            NSLog(@"23");
-            aMessage = [[JSQTextMessage alloc] initWithSenderId: [NSString stringWithFormat:@"%@", self.targetUserId]
-                                              senderDisplayName:self.targetUserName
-                                                           date:record.updatedAt
-                                                           text:record.messageText];
+        
+        if ([record.messageType isEqualToNumber:[NSNumber numberWithInt:0]]) {
+            JSQTextMessage* aMessage;
+            
+            if ([record.toUserId isEqualToNumber:self.userId]) {
+                aMessage = [[JSQTextMessage alloc] initWithSenderId: [NSString stringWithFormat:@"%@", self.userId]
+                                                  senderDisplayName:self.userName
+                                                               date:record.updatedAt
+                                                               text:record.messageText];
+            } else {
+                aMessage = [[JSQTextMessage alloc] initWithSenderId: [NSString stringWithFormat:@"%@", self.targetUserId]
+                                                  senderDisplayName:self.targetUserName
+                                                               date:record.updatedAt
+                                                               text:record.messageText];
+            }
+            [self.messages addObject:aMessage];
+
+        }else if ([record.messageType isEqualToNumber:[NSNumber numberWithInt:1]]) {
+            JSQPhotoMediaItem *aPhoto;
+            JSQMediaMessage* aMessage;
+            
+            NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+            NSString *documentsDirectory = [paths objectAtIndex:0];
+            NSString *getImagePath = [documentsDirectory stringByAppendingPathComponent:record.messageMediaLocation];
+            aPhoto = [[JSQPhotoMediaItem alloc] initWithImage:[UIImage imageWithContentsOfFile:getImagePath]];
+
+            
+            if ([record.toUserId isEqualToNumber:self.userId]) {
+                aMessage = [JSQMediaMessage messageWithSenderId:[NSString stringWithFormat:@"%@", self.userId]
+                                                    displayName:self.userName
+                                                          media:aPhoto];
+            } else {
+                aMessage = [JSQMediaMessage messageWithSenderId:[NSString stringWithFormat:@"%@", self.targetUserId]
+                                                    displayName:self.targetUserName
+                                                          media:aPhoto];
+            }
+            [self.messages addObject:aMessage];
         
         }
         
-        [self.messages addObject:aMessage];
     }
-    
-    
-    [self addPhotoMediaMessage];
     
 }
 

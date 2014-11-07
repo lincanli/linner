@@ -40,9 +40,7 @@
         NSPredicate *predicateTime = [NSPredicate predicateWithFormat:@"timestamp < %@", lastTime];
         [request setPredicate:predicateTime];
     }
-    
-    [request setFetchLimit:30];
-    
+        
     NSError *error = nil;
     NSArray* result = [dataModel executeFetchRequest:request error:&error];
     if (error) {
