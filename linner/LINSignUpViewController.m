@@ -97,6 +97,9 @@
 - (void) didSelectedCountry: (id) sender
 {
     self.countryCode = sender;
+    if (!self.countryCode) {
+        self.countryCode = @"+1";
+    }
     [self.countryCodeButton setTitle:self.countryCode forState:UIControlStateNormal];
     
 }

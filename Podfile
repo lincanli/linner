@@ -1,8 +1,11 @@
 source 'https://github.com/CocoaPods/Specs.git'
 
 pod 'AVOSCloud'
+
 pod 'AVOSCloudUI'
+
 pod 'AVOSCloudSNS'
+
 pod 'SinchRTC'
 pod 'HexColors'
 pod 'FontAwesomeKit'

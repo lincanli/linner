@@ -58,7 +58,6 @@
 {
     [self.descriptionLable sizeToFit];
     self.descriptionLable.numberOfLines = 0;
-    
 }
 
 - (IBAction)addFriendRequestDidTouched:(id)sender

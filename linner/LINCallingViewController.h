@@ -20,6 +20,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *record;
 @property (weak, nonatomic) IBOutlet UIButton *mute;
 @property (weak, nonatomic) IBOutlet UIButton *finish;
+@property (weak, nonatomic) IBOutlet UIButton *answer;
+@property (weak, nonatomic) IBOutlet UIButton *decline;
 
 @property (nonatomic, readwrite, strong) NSTimer *durationTimer;
 @property (nonatomic, readwrite, strong) id<SINCall> call;

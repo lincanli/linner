@@ -23,8 +23,14 @@
     if ([self.call direction] == SINCallDirectionIncoming) {
         [self setCallStatusText:@""];
         [[self audioController] startPlayingSoundFile:[self pathForSound:@"incoming.wav"] loop:YES];
+        self.mute.hidden = YES;
+        self.record.hidden = YES;
+        self.speaker.hidden = YES;
+        self.finish.hidden = YES;
     } else {
         [self setCallStatusText:@"Calling"];
+        self.answer.hidden = YES;
+        self.decline.hidden = YES;
     }
     
 }
@@ -78,6 +84,8 @@
 - (void)onDurationTimer:(NSTimer *)unused {
     NSLog(@"onDurationTimer: %@", unused);
 
+    NSLog(@"call detail : %@", [self.call details]);
+    
     NSInteger duration = [[NSDate date] timeIntervalSinceDate:[[self.call details] establishedTime]];
     NSLog(@"timer : %ld", (long)duration);
     self.duration.text = [NSString stringWithFormat:@"%d", duration];
@@ -92,15 +100,30 @@
 
 - (void)callDidEstablish:(id<SINCall>)call {
     NSLog(@"callDidEstablish");
+    self.answer.hidden = YES;
+    self.decline.hidden = YES;
+    
+    self.mute.hidden = NO;
+    self.record.hidden = NO;
+    self.speaker.hidden = NO;
+    self.finish.hidden = NO;
+    
     [self startCallDurationTimerWithSelector:@selector(onDurationTimer:)];
     [[self audioController] stopPlayingSoundFile];
 }
 
 - (void)callDidEnd:(id<SINCall>)call {
     NSLog(@"callDidEnd");
-    [self dismiss];
-    [[self audioController] stopPlayingSoundFile];
-    [self stopCallDurationTimer];
+    self.duration.text = @"call end...";
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [NSThread sleepForTimeInterval:1.0f];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self dismiss];
+            [[self audioController] stopPlayingSoundFile];
+            [self stopCallDurationTimer];
+        });
+    });
 }
 
 - (NSString *)pathForSound:(NSString *)soundName {

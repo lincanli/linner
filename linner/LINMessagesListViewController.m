@@ -286,24 +286,35 @@ UIImage* tmpImage = nil;
      *  2. Add new id<JSQMessageData> object to your data source
      *  3. Call `finishSendingMessage`
      */
+    
+    JSQTextMessage* newMessage = [JSQTextMessage messageWithSenderId:[NSString stringWithFormat:@"%@", self.messageListData.userId]
+                                                         displayName:self.messageListData.userName
+                                                                text:text];
+    
+    [JSQSystemSoundPlayer jsq_playMessageSentSound];
+    [self.messageListData.messages addObject:newMessage];
+    [self finishSendingMessage];
+    
     NSDictionary* newMessageDictionary = [[NSDictionary alloc]initWithObjects:@[[NSNumber numberWithInt:0], text] forKeys:@[@"type", @"content"]];
     NSString* jsonData = [self returnJsonEncryption:newMessageDictionary];
     
-    AVMessage* newMessage = [AVMessage messageForPeerWithSession:messageSession
-                                                        toPeerId:[NSString stringWithFormat:@"%@", self.targetUser.userId]
-                                                         payload:jsonData];
+    [self storeForSelfToLocal:newMessageDictionary withMessageList:self.messageList];
+    AVMessage* sentNewMessage = [AVMessage messageForPeerWithSession:messageSession
+                                                            toPeerId:[NSString stringWithFormat:@"%@", self.targetUser.userId]
+                                                             payload:jsonData];
+    [messageSession sendMessage:sentNewMessage];
     
-    [messageSession sendMessage:newMessage];
 }
 
 - (void)didPressAccessoryButton:(UIButton *)sender
 {
+    [self.view endEditing:YES];
     FAKIonIcons *photoIcon = [FAKIonIcons ios7PhotosOutlineIconWithSize:30];
     FAKIonIcons *cameraIcon = [FAKIonIcons ios7CameraOutlineIconWithSize:30];
     FAKIonIcons *locationIcon = [FAKIonIcons ios7LocationOutlineIconWithSize:30];
     AHKActionSheet *actionSheet = [[AHKActionSheet alloc] initWithTitle:nil];
     
-    actionSheet.blurRadius = 1.0f;
+    actionSheet.blurRadius = 2.0f;
     UIFont *defaultFont = [UIFont fontWithName:@"Avenir" size:17.0f];
     actionSheet.buttonTextAttributes = @{ NSFontAttributeName : defaultFont,
                                           NSForegroundColorAttributeName : [UIColor colorWithHexString:@"#0BD318" alpha:1] };
@@ -322,7 +333,7 @@ UIImage* tmpImage = nil;
     {
         UIImagePickerController *picker = [[UIImagePickerController alloc] init];
         picker.delegate = self;
-        picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
         [self showDetailViewController:picker sender:nil];
     }];
 
@@ -331,7 +342,7 @@ UIImage* tmpImage = nil;
     {
         UIImagePickerController *picker = [[UIImagePickerController alloc] init];
         picker.delegate = self;
-        picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        picker.sourceType = UIImagePickerControllerSourceTypeCamera;
         [self showDetailViewController:picker sender:nil];
     }];
     
@@ -366,26 +377,38 @@ UIImage* tmpImage = nil;
     
     UIImageWriteToSavedPhotosAlbum(rawImage, nil, nil, nil);
 
-    UIImage* scaledImage = [self imageWithImage:rawImage scaledToWidth:640];
-    tmpImage = scaledImage;
-    NSError* error = nil;
+    UIImage* scaledImage = [self imageWithImage:rawImage scaledToWidth:160];
+    
+    JSQPhotoMediaItem *photoItem = [[JSQPhotoMediaItem alloc] initWithImage:scaledImage];
+    JSQMediaMessage *photoMessage = [JSQMediaMessage messageWithSenderId:[NSString stringWithFormat:@"%@", [currentUser objectForKey:@"userId"]]
+                                                             displayName:[currentUser objectForKey:@"name"]
+                                                                   media:photoItem];
+    
+    [self.messageListData.messages addObject:photoMessage];
+
+    [JSQSystemSoundPlayer jsq_playMessageSentSound];
+    [self finishSendingMessage];
+    
     
     NSData *imageData = UIImagePNGRepresentation(scaledImage);
     AVFile *imageFile = [AVFile fileWithName:@"image.png" data:imageData];
-    [imageFile save:&error];
     
-    NSLog(@"error save : %@", error);
-    
-    NSString* fileObjectID = imageFile.objectId;
-    NSDictionary* newMessageDictionary = [[NSDictionary alloc]initWithObjects:@[[NSNumber numberWithInt:1], fileObjectID] forKeys:@[@"type", @"content"]];
-    NSString* jsonData = [self returnJsonEncryption:newMessageDictionary];
-    
-    AVMessage* newMessage = [AVMessage messageForPeerWithSession:messageSession
-                                                        toPeerId:[NSString stringWithFormat:@"%@", self.targetUser.userId]
-                                                         payload:jsonData];
-    
-    [messageSession sendMessage:newMessage];
-    
+    [imageFile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        
+        if(!succeeded){
+            return;
+        }
+        
+        NSString* fileUrl = [imageFile url];
+        NSDictionary* newMessageDictionary = [[NSDictionary alloc]initWithObjects:@[[NSNumber numberWithInt:1], fileUrl] forKeys:@[@"type", @"content"]];
+        NSString* jsonData = [self returnJsonEncryption:newMessageDictionary];
+        
+        AVMessage* newMessage = [AVMessage messageForPeerWithSession:messageSession
+                                                            toPeerId:[NSString stringWithFormat:@"%@", self.targetUser.userId]
+                                                             payload:jsonData];
+        [messageSession sendMessage:newMessage];
+        
+    }];
 }
 
 
@@ -646,37 +669,23 @@ UIImage* tmpImage = nil;
 
     }else if ([messageType isEqualToNumber:[NSNumber numberWithInt:1]]){
         
-        [AVFile getFileWithObjectId:messageContent withBlock:^(AVFile* file, NSError* error){
-            NSLog(@"error : %@", error);
-            if (file == nil) {
-                NSLog(@"file is nil");
-            }else{
-                NSLog(@"file's url is %@", [file url]);
-            }
-            
-            NSData* rawData = [file getData];
-            if (rawData == nil) {
-                NSLog(@"rawData is nil");
-            }
-            
-            UIImage* rawImage = [UIImage imageWithData:rawData scale:1.0];
-                                 
-            if (rawImage == nil) {
-                NSLog(@"image is nil");
-            }
-            
-            JSQPhotoMediaItem *photoItem = [[JSQPhotoMediaItem alloc] initWithImage:rawImage];
-            JSQMediaMessage *photoMessage = [JSQMediaMessage messageWithSenderId:[NSString stringWithFormat:@"%@", [currentUser objectForKey:@"userId"]]
-                                                                     displayName:[currentUser objectForKey:@"name"]
-                                                                           media:photoItem];
-            [self.messageListData.messages addObject:photoMessage];
-            [self finishReceivingMessage];
-        
-        }];
-    }
-    
+        UIImage* nilImage = [[UIImage alloc]init];
+        JSQPhotoMediaItem *photoItem = [[JSQPhotoMediaItem alloc] initWithImage:nilImage];
+        JSQMediaMessage *photoMessage = [JSQMediaMessage messageWithSenderId:[NSString stringWithFormat:@"%@", [currentUser objectForKey:@"userId"]]
+                                                                 displayName:[currentUser objectForKey:@"name"]
+                                                                       media:photoItem];
+        [self.messageListData.messages addObject:photoMessage];
+        [self finishReceivingMessage];
 
-    
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            AVFile* imageFile = [AVFile fileWithURL:messageContent];
+            
+            NSData* rawData = [imageFile getData];
+            UIImage* rawImage = [UIImage imageWithData:rawData];
+            ((JSQPhotoMediaItem *)photoItem).image = rawImage;
+            [self.collectionView reloadData];
+        });
+    }
 }
 
 - (void)onSessionMessageSent:(AVSession *)session message:(NSString *)message toPeerIds:(NSArray *)peerIds{
@@ -684,32 +693,6 @@ UIImage* tmpImage = nil;
     AVUser* currentUser = [AVUser currentUser];
     NSDictionary* messageData = [self returnJsonDncryption:message];
     NSString* messageContent = [messageData objectForKey:@"content"];
-    NSNumber* messageType = [messageData objectForKey:@"type"];
-    
-    if ([messageType isEqualToNumber:[NSNumber numberWithInt:0]]) {
-        
-        JSQTextMessage* newMessage = [JSQTextMessage messageWithSenderId:[NSString stringWithFormat:@"%@", self.messageListData.userId]
-                                                             displayName:self.messageListData.userName
-                                                                    text:messageContent];
-        [JSQSystemSoundPlayer jsq_playMessageSentSound];
-        [self.messageListData.messages addObject:newMessage];
-        [self storeForSelfToLocal:messageData withMessageList:self.messageList];
-        [self finishSendingMessage];
-        
-    }else if ([messageType isEqualToNumber:[NSNumber numberWithInt:1]]){
-        
-        AVUser* currentUser = [AVUser currentUser];
-        JSQPhotoMediaItem *photoItem = [[JSQPhotoMediaItem alloc] initWithImage:tmpImage];
-        JSQMediaMessage *photoMessage = [JSQMediaMessage messageWithSenderId:[NSString stringWithFormat:@"%@", [currentUser objectForKey:@"userId"]]
-                                                                 displayName:[currentUser objectForKey:@"name"]
-                                                                       media:photoItem];
-        [self.messageListData.messages addObject:photoMessage];
-        
-        [JSQSystemSoundPlayer jsq_playMessageSentSound];
-        [self finishSendingMessage];
-    
-    }
-    
     
     messageContent = [NSString stringWithFormat:@"%@: %@", [currentUser objectForKey:@"name"], messageContent];
     if (messageContent.length > 30) {

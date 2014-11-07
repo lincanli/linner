@@ -106,7 +106,6 @@
     
     userObject.mainUser = YES;
     userObject.userId = [currentUserInfo objectForKey:@"userId"];
-    userObject.userName = [currentUserInfo objectForKey:@"userName"];
     userObject.userRealName = [currentUserInfo objectForKey:@"userRealName"];
     userObject.userNikeName = [currentUserInfo objectForKey:@"userNikeName"];
     userObject.userEmail = [currentUserInfo objectForKey:@"userEmail"];

@@ -163,11 +163,12 @@
     return newImage;
 }
 
-- (void) saveImage: (UIImage*)Image
+- (void) saveImage: (UIImage*)Image toUserObject: (LINUserObject *) userObject
 {
+    
     AVUser* currentUser = [AVUser currentUser];
     
-    UIImage *resizedImage = [self imageWithImage:Image scaledToSize:CGSizeMake(500, 500)];
+    UIImage *resizedImage = [self imageWithImage:Image scaledToSize:CGSizeMake(160, 160)];
     NSData *imageData = UIImagePNGRepresentation(resizedImage);
     AVFile *imageFile = [AVFile fileWithName:@"userProfilePhoto.png" data:imageData];
     
@@ -175,15 +176,22 @@
         // Handle success or failure here ...
         NSLog(@"error save : %@", error);
         
-        [currentUser setObject:imageFile forKey:@"userProfilePhoto"];
-        [currentUser saveEventually];
+        LINAppDelegate *appDelegate = (LINAppDelegate*)[[UIApplication sharedApplication] delegate];
+        NSManagedObjectContext* dataModel = appDelegate.managedObjectContext;
+        NSError* localError = nil;
+        
+        AVObject* currentUserInfo = [currentUser objectForKey:@"userInfo"];
+        [currentUserInfo setObject:imageFile forKey:@"userProfilePhoto"];
+        [currentUserInfo saveEventually];
+        
+        userObject.userProfilePhoto = UIImagePNGRepresentation(resizedImage);
+        [dataModel save:&localError];
         
     } progressBlock:^(int percentDone) {
         // Update your progress spinner here. percentDone will be between 0 and 100.
         NSLog(@"upload percentage : %d", percentDone);
         
     }];
-    
 }
 
 

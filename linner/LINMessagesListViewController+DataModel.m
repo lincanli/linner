@@ -68,6 +68,29 @@
     [self updateMessageList:messageList withMessageRecord:messageRecord];
 }
 
+- (void) storeImageToLocal: (NSDictionary *) rawData withTargetUser: (LINUserObject *) targetUser withMessageList: (LINMessageList *) messageList
+{
+    LINAppDelegate *appDelegate = (LINAppDelegate*)[[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext* dataModel = appDelegate.managedObjectContext;
+    NSError *error = nil;
+    LINMessageRecord* messageRecord = [NSEntityDescription insertNewObjectForEntityForName:@"MessageRecord" inManagedObjectContext:dataModel];
+    
+    messageRecord.toUserId = targetUser.userId;
+    messageRecord.messageType = [rawData objectForKey:@"type"];
+    NSLog(@"content %@", [rawData objectForKey:@"content"]);
+    if ([[rawData objectForKey:@"type"] isEqualToNumber:[NSNumber numberWithInt:0]]) {
+        messageRecord.messageText = [rawData objectForKey:@"content"];
+    }
+    messageRecord.messageListId = [NSString stringWithFormat:@"%@", [messageList.objectID URIRepresentation]];
+    NSLog(@"messageListId: %@", [messageRecord.objectID URIRepresentation] );
+    messageRecord.updatedAt = [NSDate date];
+    
+    [dataModel save:&error];
+    
+    [self updateMessageList:messageList withMessageRecord:messageRecord];
+}
+
+
 - (void) updateMessageList: (LINMessageList *) messageList withMessageRecord: (LINMessageRecord *)messageRecord
 {
     LINAppDelegate *appDelegate = (LINAppDelegate*)[[UIApplication sharedApplication] delegate];

@@ -37,6 +37,8 @@
     self.userNikeName.text = self.targetUser.userNikeName;
     self.userDescription.text = self.targetUser.userDescription;
     
+    self.title = self.targetUser.userName;
+    
     self.edgesForExtendedLayout = UIRectEdgeNone; 
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemEdit target:self action:@selector(userSettingTouched:)];
 }

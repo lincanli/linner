@@ -17,6 +17,6 @@
 
 
 - (UIImage *)imageWithImage:(UIImage *)image scaledToSize:(CGSize)newSize;
-- (void) saveImage: (UIImage*)Image;
+- (void) saveImage: (UIImage*)Image toUserObject: (LINUserObject *) userObject;
 
 @end

@@ -26,10 +26,10 @@ NSString * const StripePublishableKey = @"pk_test_0hh6eMglKBNlFUBhnVOdsSSJ";
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    [AVOSCloud useAVCloudUS];
-
-    [AVOSCloud setApplicationId:@"dnrltp67optv4amgcg73v3u7i4jp09r5x5qgn5dmkndkwvg6"
-                      clientKey:@"l3dv1nhuo3tklitahbnwzfu3gzdva52mc515eg5ctpofu6e0"];
+//    [AVOSCloud useAVCloudUS];
+    [AVCloud setProductionMode:NO];
+    [AVOSCloud setApplicationId:@"kr0pnsluvrx5iv62jhkk2r4zgezvd8ytdd88xurkt9gb3vtr"
+                      clientKey:@"odgxv2ymny27y9g87li75mljzgxc7s9y0sirzg0njfllhawd"];
     [AVAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
     [Stripe setDefaultPublishableKey:StripePublishableKey];

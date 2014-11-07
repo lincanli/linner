@@ -172,6 +172,7 @@
 		A71B9D2719C0FF4D00C6C66D /* LINLogOutTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINLogOutTableViewCell.m; sourceTree = "<group>"; };
 		A71D6E7219C5DE8200B13FD8 /* Calling.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Calling.storyboard; sourceTree = "<group>"; };
 		A731983119FDAB1400CD17B7 /* LoginAndLogout.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginAndLogout.storyboard; sourceTree = "<group>"; };
+		A7374CEA1A0825AA00B48E0D /* AVOSCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloud.framework; sourceTree = "<group>"; };
 		A7459C8619C2884B00BECCDF /* HFStretchableTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFStretchableTableHeaderView.h; sourceTree = "<group>"; };
 		A7459C8719C2884B00BECCDF /* HFStretchableTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFStretchableTableHeaderView.m; sourceTree = "<group>"; };
 		A7459C8A19C2888500BECCDF /* LINSocialPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINSocialPageView.h; sourceTree = "<group>"; };
@@ -380,6 +381,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7A8EB0619C4897F00DDD4C2 /* SystemConfiguration.framework in Frameworks */,
 				A7D73E2A1993B2CA0092C606 /* AudioToolbox.framework in Frameworks */,
 				A7D73E2B1993B2CA0092C606 /* AVFoundation.framework in Frameworks */,
 				A77E7FE519C79CAF00E79DCB /* MapKit.framework in Frameworks */,
@@ -400,7 +402,6 @@
 				430588CD68434159B4F6B1ED /* libPods.a in Frameworks */,
 				A7A8EB0219C4896C00DDD4C2 /* OpenGLES.framework in Frameworks */,
 				A7A8EB0419C4897600DDD4C2 /* QuartzCore.framework in Frameworks */,
-				A7A8EB0619C4897F00DDD4C2 /* SystemConfiguration.framework in Frameworks */,
 				A78DDD87198385EC00534254 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -759,6 +760,7 @@
 		A78DDD81198385EC00534254 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A7374CEA1A0825AA00B48E0D /* AVOSCloud.framework */,
 				A78E8F8819CF5E370062A72F /* libicucore.dylib */,
 				A78E8F8619CF5E210062A72F /* CoreLocation.framework */,
 				A78E8F8419CF5E120062A72F /* CoreTelephony.framework */,

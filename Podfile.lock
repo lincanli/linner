@@ -1,7 +1,7 @@
 PODS:
-  - AHKActionSheet (0.4.2)
-  - AVOSCloud (2.6.6)
-  - AVOSCloudSNS (2.6.6):
+  - AHKActionSheet (0.5)
+  - AVOSCloud (2.6.7)
+  - AVOSCloudSNS (2.6.7):
     - AVOSCloud
   - AVOSCloudUI (2.1.2):
     - AVOSCloud
@@ -27,10 +27,10 @@ PODS:
   - MBProgressHUD (0.9)
   - PaymentKit (1.1.1)
   - pop (1.0.7)
-  - SinchRTC (3.2.7)
-  - Stripe (2.2.0):
+  - SinchRTC (3.2.8)
+  - Stripe (2.2.1):
     - Stripe/Core
-  - Stripe/Core (2.2.0)
+  - Stripe/Core (2.2.1)
 
 DEPENDENCIES:
   - AHKActionSheet
@@ -48,9 +48,9 @@ DEPENDENCIES:
   - Stripe
 
 SPEC CHECKSUMS:
-  AHKActionSheet: 5bac772d0e966456257fbb8eefafbea9717ccbbc
-  AVOSCloud: 64b6fcd3bba5b8009aae9bcd3150431b02f16555
-  AVOSCloudSNS: 80e6062e0bf2b66a972e5467699d4d52e848ae11
+  AHKActionSheet: f332463c7dba624b49cd4a37a59608e1da0032da
+  AVOSCloud: b9b7123e576d9d4a30d912e52a100a2561f841dd
+  AVOSCloudSNS: ba0c5167dd43e565f80b3331a2f169d42feeec13
   AVOSCloudUI: 457b626791a873e71e01c8ebc475c144a40b370b
   FontAwesomeKit: a2edea3111dab107b4cc43b85881b404eb063385
   HexColors: 01384d2bbe8dc4ffa43c3b4135db6e976952d153
@@ -59,7 +59,7 @@ SPEC CHECKSUMS:
   MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8
   PaymentKit: f77b4d5cee45947949429c3d587e8eb160a3c9e2
   pop: 2f14a1ea61339767af9e66741b418c831b3844df
-  SinchRTC: ee6d982a2adfbace7e66945f4c33db0a601ef626
-  Stripe: 935d0ff491100ca1ba0f4040c64e449c5ed69f6d
+  SinchRTC: 87eb258b3219137dfc4ffbecd4b80548d651b5e8
+  Stripe: 437edda1493d6544e81068d47ae7f54d7a9eabb7
 
 COCOAPODS: 0.34.4

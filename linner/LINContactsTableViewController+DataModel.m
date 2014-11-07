@@ -47,7 +47,8 @@
 {
     NSMutableArray* dataFromRemote;
     AVUser* currentUser = [AVUser currentUser];
-
+    [currentUser refresh];
+    
     AVQuery *queryUser = [AVQuery queryWithClassName:@"userRelation"];
     [queryUser whereKey:@"fromUserId" equalTo:[currentUser objectForKey:@"userId"]];
     
@@ -59,7 +60,7 @@
     [queryUser includeKey:@"toUserObject.userSetting"];
     dataFromRemote = [NSMutableArray arrayWithArray:[queryUser findObjects]];
     
-    NSLog(@"quried: %d", dataFromRemote.count);
+    NSLog(@"quried contact: %d", dataFromRemote.count);
     if ([dataFromRemote count] != 0)
         [self storeRemoteToLocal:dataFromRemote];
     

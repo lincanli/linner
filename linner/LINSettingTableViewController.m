@@ -137,6 +137,9 @@
         
         cell.SettingTableViewCellNameLable.text = self.userObject.userRealName;
         cell.SettingTableViewCellDescriptionLable.text = self.userObject.userDescription;
+        if ([cell.SettingTableViewCellDescriptionLable.text isEqualToString:@""]) {
+            cell.SettingTableViewCellDescriptionLable.text = @"说点什么吧";
+        }
         cell.SettingTableViewCellDescriptionLable.lineBreakMode = NSLineBreakByWordWrapping;
         cell.SettingTableViewCellDescriptionLable.numberOfLines = 0;
         [cell.SettingTableViewCellDescriptionLable sizeToFit];
@@ -322,7 +325,10 @@
     if(originalImage==nil)
         originalImage = [info objectForKey:UIImagePickerControllerCropRect];
     
-    [self saveImage:originalImage];
+    [self saveImage:originalImage toUserObject:self.userObject];
+    NSLog(@"reload?");
+    self.userObject = [self getInitData:@"UserObject"];
+    [self.tableView reloadData];
     
 }
 

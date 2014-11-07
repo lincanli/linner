@@ -51,6 +51,16 @@
             NSLog(@"errorWithCard : %@", error);
         } else {
             NSLog(@"tokenWithCard : %@", token);
+            
+            NSDictionary* parameters = @{@"stripeToken": token.tokenId};
+            
+            [AVCloud callFunctionInBackground:@"stripeCharge" withParameters:parameters block:^(id object, NSError *error) {
+                // 执行结果
+                NSLog(@"error : %@", error);
+                NSLog(@"object : %@", object);
+            }];
+
+            
         }
     }];
     
