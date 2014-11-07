@@ -156,7 +156,7 @@ static NSString *CellIdentifier = @"LINContactsTableCellTableViewCell";
         cell.ContactTableViewThumbImage.layer.cornerRadius = cell.ContactTableViewThumbImage.frame.size.width/2;
         cell.ContactTableViewThumbImage.layer.masksToBounds = YES;
         
-        cell.ContactTableViewThumbImage.image = [UIImage imageNamed:@"LoginBackground"];
+        cell.ContactTableViewThumbImage.image = [UIImage imageWithData:userRelation.userObject.userProfilePhoto];
         cell.ContactTableViewCellNameLable.text = userRelation.userObject.userRealName;
         
         return cell;

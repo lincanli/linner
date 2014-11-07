@@ -10,6 +10,6 @@
 
 @implementation LINUserObject
 
-@dynamic userActive, userId, userSex, userProfilePhoto, mainUser, userEmail, userName, userNikeName ,userRealName, userLocation, userDescription, userBirthday, updatedAt, userSetting;
+@dynamic userActive, userId, userSex, userProfilePhoto, mainUser, userEmail, userName, userNikeName ,userRealName, userLocation, userDescription, userBirthday, updatedAt, userSetting, userProfilePhotoObjectId;
 
 @end

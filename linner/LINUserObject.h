@@ -20,7 +20,7 @@
 @property (strong, nonatomic) NSString*   userRealName;
 @property (strong, nonatomic) NSString*   userDescription;
 @property (strong, nonatomic) NSString*   userLocation;
-
+@property (strong, nonatomic) NSString*   userProfilePhotoObjectId;
 
 @property (nonatomic) BOOL mainUser;
 @property (nonatomic) BOOL userActive;

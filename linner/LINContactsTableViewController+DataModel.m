@@ -203,13 +203,12 @@
     userObject.userNikeName = [userInfo objectForKey:@"userNikeName"];
     userObject.userSetting = userSetting;
     
-    AVFile* profilePhotoFile = [remoteData objectForKey:@"userProfilePhoto"];
-    if (profilePhotoFile != nil) {
-        [profilePhotoFile getDataInBackgroundWithBlock:^(NSData* data, NSError* error){
-            
-        }];
+    AVFile* profilePhotoFile = [userInfo objectForKey:@"userProfilePhoto"];
+    if (![userObject.userProfilePhotoObjectId isEqualToString:profilePhotoFile.objectId]) {
+        NSData* fileData = [profilePhotoFile getData];
+        userObject.userProfilePhoto = fileData;
+        userObject.userProfilePhotoObjectId = profilePhotoFile.objectId;
     }
-    
     return userObject;
 }
 
