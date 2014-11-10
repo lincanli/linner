@@ -21,7 +21,8 @@
     // Do any additional setup after loading the view.
     
     self.phoneTextField.inputView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 1, 1)];
-    self.title = @"电话";
+    self.navigationController.title = @"电话";
+    [self.navigationItem setHidesBackButton:YES];
     
     FAKIonIcons *phoneIcon = [FAKIonIcons ios7TelephoneOutlineIconWithSize:30];
     super.tabBarItem.image = [phoneIcon imageWithSize:CGSizeMake(30, 30)];
@@ -85,9 +86,8 @@
 
 -(void)backToChat: (UIBarButtonItem *)sender
 {
-    LINChatTableViewController* chatTableVC = [LINChatTableViewController alloc];
-    [self.navigationController setViewControllers:@[chatTableVC] animated:YES];
-    
+    self.navigationController.title = @"聊天";
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 

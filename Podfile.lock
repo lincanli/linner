@@ -21,7 +21,7 @@ PODS:
   - FontAwesomeKit/Zocial (2.1.8):
     - FontAwesomeKit/Core
   - HexColors (2.2.1)
-  - JSQMessagesViewController (6.0-beta6):
+  - JSQMessagesViewController (6.0.0):
     - JSQSystemSoundPlayer (~> 2.0.0)
   - JSQSystemSoundPlayer (2.0.0)
   - MBProgressHUD (0.9)
@@ -54,7 +54,7 @@ SPEC CHECKSUMS:
   AVOSCloudUI: 457b626791a873e71e01c8ebc475c144a40b370b
   FontAwesomeKit: a2edea3111dab107b4cc43b85881b404eb063385
   HexColors: 01384d2bbe8dc4ffa43c3b4135db6e976952d153
-  JSQMessagesViewController: 6e78b14e804a0ac4353765ef40e9d20c157a0ebf
+  JSQMessagesViewController: 61c8defbe86f3859f796146f082f8231dad8de66
   JSQSystemSoundPlayer: c98443b1cbb3b45db09d0d3d6c2355cf78294981
   MBProgressHUD: 2038dbcf3dce73215abed6001657043d53aa79a8
   PaymentKit: f77b4d5cee45947949429c3d587e8eb160a3c9e2

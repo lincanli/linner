@@ -12,7 +12,7 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="G2h-bA-M2D" id="ujV-cB-Ube">
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="登出" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BcL-a6-v1L">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="登出" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BcL-a6-v1L">
                         <rect key="frame" x="95" y="14" width="130" height="22"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -20,6 +20,10 @@
                     </label>
                 </subviews>
                 <color key="backgroundColor" red="0.98823535442352295" green="0.3333333432674408" blue="0.25882354378700256" alpha="1" colorSpace="deviceRGB"/>
+                <constraints>
+                    <constraint firstAttribute="centerY" secondItem="BcL-a6-v1L" secondAttribute="centerY" constant="-3.5" id="C1S-1z-PuL"/>
+                    <constraint firstAttribute="centerX" secondItem="BcL-a6-v1L" secondAttribute="centerX" id="Hsb-61-k2O"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="LogoutLable" destination="BcL-a6-v1L" id="dQO-ty-LJa"/>

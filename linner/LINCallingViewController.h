@@ -26,4 +26,8 @@
 @property (nonatomic, readwrite, strong) NSTimer *durationTimer;
 @property (nonatomic, readwrite, strong) id<SINCall> call;
 
+@property (strong, nonatomic) NSString* callerDisplayName;
+@property (strong, nonatomic) UIImage* userProfilePhoto;
+
+
 @end

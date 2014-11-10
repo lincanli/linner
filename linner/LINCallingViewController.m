@@ -9,6 +9,9 @@
 #import "LINCallingViewController.h"
 
 @interface LINCallingViewController ()
+@property (nonatomic)BOOL speakerEnable;
+@property (nonatomic)BOOL muteEnable;
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImage;
 
 @end
 
@@ -18,7 +21,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.speakerEnable = NO;
+    self.muteEnable = NO;
     self.call.delegate = self;
+    
+    
+    
+    self.usrName.text = self.callerDisplayName;
     
     if ([self.call direction] == SINCallDirectionIncoming) {
         [self setCallStatusText:@""];
@@ -65,6 +74,31 @@
 
 - (id<SINAudioController>)audioController {
     return [[(LINAppDelegate *)[[UIApplication sharedApplication] delegate] client] audioController];
+}
+
+- (IBAction)speakerDidTouched:(id)sender {
+    if (self.speakerEnable) {
+        [[self audioController] enableSpeaker];
+        self.speakerEnable = NO;
+        
+    }else{
+        [[self audioController] disableSpeaker];
+        self.speakerEnable = YES;
+        
+    }
+}
+
+
+- (IBAction)muteDidTouched:(id)sender {
+    if (self.speakerEnable) {
+        [[self audioController] mute];
+        self.muteEnable = NO;
+        
+    }else{
+        [[self audioController] unmute];
+        self.muteEnable = YES;
+        
+    }
 }
 
 - (IBAction)hangupButtonDidTouched:(id)sender {
