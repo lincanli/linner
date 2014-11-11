@@ -16,7 +16,6 @@
 		A70DAB511A03038200CE7104 /* LINPaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A70DAB501A03038200CE7104 /* LINPaymentViewController.m */; };
 		A71B9D1B19C0FBEB00C6C66D /* LogoutTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A71B9D1A19C0FBEB00C6C66D /* LogoutTableCell.xib */; };
 		A71B9D2819C0FF4D00C6C66D /* LINLogOutTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A71B9D2719C0FF4D00C6C66D /* LINLogOutTableViewCell.m */; };
-		A71D6E7319C5DE8200B13FD8 /* Calling.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A71D6E7219C5DE8200B13FD8 /* Calling.storyboard */; };
 		A731983219FDAB1400CD17B7 /* LoginAndLogout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A731983119FDAB1400CD17B7 /* LoginAndLogout.storyboard */; };
 		A744471A1A11D34600F28B4B /* LINSettingPrivacyControl.m in Sources */ = {isa = PBXBuildFile; fileRef = A74447191A11D34600F28B4B /* LINSettingPrivacyControl.m */; };
 		A7459C8819C2884B00BECCDF /* HFStretchableTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7459C8719C2884B00BECCDF /* HFStretchableTableHeaderView.m */; };
@@ -39,6 +38,7 @@
 		A771E2E619FDD3CA00D8474B /* LINPhoneNumberSelectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A771E2E519FDD3CA00D8474B /* LINPhoneNumberSelectionView.xib */; };
 		A771E2E919FE0BA800D8474B /* LINContactsTableCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A771E2E819FE0BA800D8474B /* LINContactsTableCellTableViewCell.m */; };
 		A771E2F119FF3F2600D8474B /* LINProfileTableViewControllerPointToPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = A771E2F019FF3F2600D8474B /* LINProfileTableViewControllerPointToPoint.m */; };
+		A77E03581A1278F400E9A0A8 /* Calling.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A77E03571A1278F400E9A0A8 /* Calling.storyboard */; };
 		A77E7FE519C79CAF00E79DCB /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A77E7FE419C79CAF00E79DCB /* MapKit.framework */; };
 		A787B72319FAE1AE00ABF8DB /* LINMessagesListViewController+DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A787B72219FAE1AE00ABF8DB /* LINMessagesListViewController+DataModel.m */; };
 		A7899CF119FD4E9D001C2D96 /* LINAddFriendsTableViewController+DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A7899CF019FD4E9D001C2D96 /* LINAddFriendsTableViewController+DataModel.m */; };
@@ -173,7 +173,6 @@
 		A71B9D1A19C0FBEB00C6C66D /* LogoutTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogoutTableCell.xib; sourceTree = "<group>"; };
 		A71B9D2619C0FF4D00C6C66D /* LINLogOutTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINLogOutTableViewCell.h; sourceTree = "<group>"; };
 		A71B9D2719C0FF4D00C6C66D /* LINLogOutTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINLogOutTableViewCell.m; sourceTree = "<group>"; };
-		A71D6E7219C5DE8200B13FD8 /* Calling.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Calling.storyboard; sourceTree = "<group>"; };
 		A731983119FDAB1400CD17B7 /* LoginAndLogout.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginAndLogout.storyboard; sourceTree = "<group>"; };
 		A7374CEA1A0825AA00B48E0D /* AVOSCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloud.framework; sourceTree = "<group>"; };
 		A74447181A11D34600F28B4B /* LINSettingPrivacyControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINSettingPrivacyControl.h; sourceTree = "<group>"; };
@@ -211,6 +210,7 @@
 		A771E2E819FE0BA800D8474B /* LINContactsTableCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINContactsTableCellTableViewCell.m; sourceTree = "<group>"; };
 		A771E2EF19FF3F2600D8474B /* LINProfileTableViewControllerPointToPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINProfileTableViewControllerPointToPoint.h; sourceTree = "<group>"; };
 		A771E2F019FF3F2600D8474B /* LINProfileTableViewControllerPointToPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINProfileTableViewControllerPointToPoint.m; sourceTree = "<group>"; };
+		A77E03571A1278F400E9A0A8 /* Calling.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Calling.storyboard; sourceTree = "<group>"; };
 		A77E7FE419C79CAF00E79DCB /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A787B72119FAE1AE00ABF8DB /* LINMessagesListViewController+DataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "LINMessagesListViewController+DataModel.h"; path = "linner/LINMessagesListViewController+DataModel.h"; sourceTree = "<group>"; };
 		A787B72219FAE1AE00ABF8DB /* LINMessagesListViewController+DataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "LINMessagesListViewController+DataModel.m"; path = "linner/LINMessagesListViewController+DataModel.m"; sourceTree = "<group>"; };
@@ -559,7 +559,7 @@
 		A763446719A2028200EB437A /* PhoneView */ = {
 			isa = PBXGroup;
 			children = (
-				A71D6E7219C5DE8200B13FD8 /* Calling.storyboard */,
+				A77E03571A1278F400E9A0A8 /* Calling.storyboard */,
 				A763446819A2029C00EB437A /* LINPhoneViewController.h */,
 				A763446919A2029C00EB437A /* LINPhoneViewController.m */,
 				A763B3DD19C64B30006733D2 /* LINCallingViewController.h */,
@@ -1272,9 +1272,9 @@
 				A7B07DA319CA8BD4005DABED /* incoming.wav in Resources */,
 				A70DAB4E1A02F92000CE7104 /* LINFinaceControlCellBalance.xib in Resources */,
 				A7D70DB51A112836005F01D7 /* SocialPageView.storyboard in Resources */,
-				A71D6E7319C5DE8200B13FD8 /* Calling.storyboard in Resources */,
 				A7A5CD6B19FB49B1005061AD /* LINChatTableViewCellList.xib in Resources */,
 				A7D73E2319937A540092C606 /* LINContactsTableCellTableViewCell.xib in Resources */,
+				A77E03581A1278F400E9A0A8 /* Calling.storyboard in Resources */,
 				A78DDD9B198385EC00534254 /* Images.xcassets in Resources */,
 				A7459C9919C2930C00BECCDF /* demo_2.jpg in Resources */,
 				A78BD1C719DDBB9100AB6A0D /* addFriends.xib in Resources */,

@@ -38,7 +38,7 @@ static NSString *listCellIdentifier = @"ChatListCellIndentifier";
 {
     [super viewDidLoad];
     
-    self.title = @"聊天";
+    self.navigationController.title = @"聊天";
     
     self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
     self.tableView.delegate = self;
@@ -84,9 +84,7 @@ static NSString *listCellIdentifier = @"ChatListCellIndentifier";
     
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Calling" bundle:nil];
     LINPhoneViewController *phoneViewController = [storyboard instantiateViewControllerWithIdentifier:@"LINPhoneViewController"];
-
-    [self.navigationController setViewControllers:@[phoneViewController] animated:YES];
-    
+    [self showViewController:phoneViewController sender:nil];
 }
 
 
