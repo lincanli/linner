@@ -140,16 +140,6 @@
                                     <action selector="oneButtonDidTouched:" destination="yIj-5n-kAc" eventType="touchUpInside" id="STb-3K-jCI"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNK-LY-NAI">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="2">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="twoButtonDidTouched:" destination="yIj-5n-kAc" eventType="touchUpInside" id="9j4-Tp-ZU1"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FWL-TE-TnK">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -381,6 +371,16 @@
                                     <action selector="callButtonDidTouched:" destination="yIj-5n-kAc" eventType="touchUpInside" id="aGw-My-1J6"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNK-LY-NAI">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="2">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="twoButtonDidTouched:" destination="yIj-5n-kAc" eventType="touchUpInside" id="9j4-Tp-ZU1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
@@ -465,7 +465,6 @@
                                 <exclude reference="aSu-bZ-rK9"/>
                                 <exclude reference="wuO-Ig-bwH"/>
                                 <exclude reference="M1d-TB-6sz"/>
-                                <exclude reference="hNK-LY-NAI"/>
                                 <exclude reference="FWL-TE-TnK"/>
                                 <exclude reference="vDe-wy-hGW"/>
                                 <exclude reference="I8s-fj-mWe"/>
@@ -479,6 +478,7 @@
                                 <exclude reference="kRM-Kn-Aw8"/>
                                 <exclude reference="mf9-BZ-Dlo"/>
                                 <exclude reference="dfe-8g-iYx"/>
+                                <exclude reference="hNK-LY-NAI"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="FP9-dG-3Ao"/>
@@ -557,7 +557,6 @@
                                 <include reference="aSu-bZ-rK9"/>
                                 <include reference="wuO-Ig-bwH"/>
                                 <include reference="M1d-TB-6sz"/>
-                                <include reference="hNK-LY-NAI"/>
                                 <include reference="FWL-TE-TnK"/>
                                 <include reference="vDe-wy-hGW"/>
                                 <include reference="I8s-fj-mWe"/>
@@ -571,6 +570,7 @@
                                 <include reference="kRM-Kn-Aw8"/>
                                 <include reference="mf9-BZ-Dlo"/>
                                 <include reference="dfe-8g-iYx"/>
+                                <include reference="hNK-LY-NAI"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="FP9-dG-3Ao"/>
