@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LINNewSocialViewController : UIViewController
+@interface LINNewSocialViewController : UIViewController <UITextViewDelegate, NSLayoutManagerDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+
+@property (weak, nonatomic) IBOutlet UIImageView *baseImageView;
+@property (weak, nonatomic) IBOutlet UITextView *socialTextView;
+@property (weak, nonatomic) IBOutlet UILabel *errorMessageTextLable;
 
 @end

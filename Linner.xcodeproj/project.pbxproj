@@ -18,6 +18,7 @@
 		A71B9D2819C0FF4D00C6C66D /* LINLogOutTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A71B9D2719C0FF4D00C6C66D /* LINLogOutTableViewCell.m */; };
 		A71D6E7319C5DE8200B13FD8 /* Calling.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A71D6E7219C5DE8200B13FD8 /* Calling.storyboard */; };
 		A731983219FDAB1400CD17B7 /* LoginAndLogout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A731983119FDAB1400CD17B7 /* LoginAndLogout.storyboard */; };
+		A744471A1A11D34600F28B4B /* LINSettingPrivacyControl.m in Sources */ = {isa = PBXBuildFile; fileRef = A74447191A11D34600F28B4B /* LINSettingPrivacyControl.m */; };
 		A7459C8819C2884B00BECCDF /* HFStretchableTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7459C8719C2884B00BECCDF /* HFStretchableTableHeaderView.m */; };
 		A7459C8C19C2888500BECCDF /* LINSocialPageView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7459C8B19C2888500BECCDF /* LINSocialPageView.m */; };
 		A7459C9819C2930C00BECCDF /* demo_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A7459C9419C2930C00BECCDF /* demo_1.jpg */; };
@@ -118,7 +119,6 @@
 		A7A8EB0619C4897F00DDD4C2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A8EB0519C4897F00DDD4C2 /* SystemConfiguration.framework */; };
 		A7B07DA319CA8BD4005DABED /* incoming.wav in Resources */ = {isa = PBXBuildFile; fileRef = A7B07DA119CA8BD4005DABED /* incoming.wav */; };
 		A7B07DA419CA8BD4005DABED /* ringback.wav in Resources */ = {isa = PBXBuildFile; fileRef = A7B07DA219CA8BD4005DABED /* ringback.wav */; };
-		A7B7919C19C1202F00F654B2 /* LINSettingPrivacyControl.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B7919B19C1202F00F654B2 /* LINSettingPrivacyControl.m */; };
 		A7B791A019C1239800F654B2 /* LINSettingGeneralControl.m in Sources */ = {isa = PBXBuildFile; fileRef = A7B7919F19C1239800F654B2 /* LINSettingGeneralControl.m */; };
 		A7BB62D019F8334700EB21CB /* LINMessageListModelData+DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BB62CF19F8334700EB21CB /* LINMessageListModelData+DataModel.m */; };
 		A7BB62D319F8336400EB21CB /* LINLoginSignUpDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A7BB62D119F8336400EB21CB /* LINLoginSignUpDataHelper.m */; };
@@ -176,6 +176,8 @@
 		A71D6E7219C5DE8200B13FD8 /* Calling.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Calling.storyboard; sourceTree = "<group>"; };
 		A731983119FDAB1400CD17B7 /* LoginAndLogout.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginAndLogout.storyboard; sourceTree = "<group>"; };
 		A7374CEA1A0825AA00B48E0D /* AVOSCloud.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AVOSCloud.framework; sourceTree = "<group>"; };
+		A74447181A11D34600F28B4B /* LINSettingPrivacyControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINSettingPrivacyControl.h; sourceTree = "<group>"; };
+		A74447191A11D34600F28B4B /* LINSettingPrivacyControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINSettingPrivacyControl.m; sourceTree = "<group>"; };
 		A7459C8619C2884B00BECCDF /* HFStretchableTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFStretchableTableHeaderView.h; sourceTree = "<group>"; };
 		A7459C8719C2884B00BECCDF /* HFStretchableTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFStretchableTableHeaderView.m; sourceTree = "<group>"; };
 		A7459C8A19C2888500BECCDF /* LINSocialPageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINSocialPageView.h; sourceTree = "<group>"; };
@@ -333,8 +335,6 @@
 		A7A8EB0519C4897F00DDD4C2 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		A7B07DA119CA8BD4005DABED /* incoming.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = incoming.wav; path = Resources/incoming.wav; sourceTree = "<group>"; };
 		A7B07DA219CA8BD4005DABED /* ringback.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = ringback.wav; path = Resources/ringback.wav; sourceTree = "<group>"; };
-		A7B7919A19C1202F00F654B2 /* LINSettingPrivacyControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LINSettingPrivacyControl.h; path = "DCIntrospect-ARC/LINSettingPrivacyControl.h"; sourceTree = "<group>"; };
-		A7B7919B19C1202F00F654B2 /* LINSettingPrivacyControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LINSettingPrivacyControl.m; path = "DCIntrospect-ARC/LINSettingPrivacyControl.m"; sourceTree = "<group>"; };
 		A7B7919E19C1239800F654B2 /* LINSettingGeneralControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINSettingGeneralControl.h; sourceTree = "<group>"; };
 		A7B7919F19C1239800F654B2 /* LINSettingGeneralControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINSettingGeneralControl.m; sourceTree = "<group>"; };
 		A7BB62CE19F8334700EB21CB /* LINMessageListModelData+DataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "LINMessageListModelData+DataModel.h"; path = "linner/LINMessageListModelData+DataModel.h"; sourceTree = "<group>"; };
@@ -1074,8 +1074,8 @@
 		A7B7919919C11FFC00F654B2 /* PrivacyControlView */ = {
 			isa = PBXGroup;
 			children = (
-				A7B7919A19C1202F00F654B2 /* LINSettingPrivacyControl.h */,
-				A7B7919B19C1202F00F654B2 /* LINSettingPrivacyControl.m */,
+				A74447181A11D34600F28B4B /* LINSettingPrivacyControl.h */,
+				A74447191A11D34600F28B4B /* LINSettingPrivacyControl.m */,
 			);
 			name = PrivacyControlView;
 			sourceTree = "<group>";
@@ -1351,7 +1351,6 @@
 				A78DDD8F198385EC00534254 /* main.m in Sources */,
 				A78DDDBE1983867600534254 /* LINLoginViewController.m in Sources */,
 				A78DDDC41983869700534254 /* LINiForgetViewController.m in Sources */,
-				A7B7919C19C1202F00F654B2 /* LINSettingPrivacyControl.m in Sources */,
 				A78BD1BF19DD987E00AB6A0D /* LINMessageRecord.m in Sources */,
 				A78DDDDF1983E03600534254 /* LINExploreViewController.m in Sources */,
 				A7BB62D319F8336400EB21CB /* LINLoginSignUpDataHelper.m in Sources */,
@@ -1409,6 +1408,7 @@
 				A763440519A0D2AD00EB437A /* Model.xcdatamodeld in Sources */,
 				A763B3DF19C64B30006733D2 /* LINCallingViewController.m in Sources */,
 				A7942BD919C1EF5600878AC5 /* LINEmailEditingView.m in Sources */,
+				A744471A1A11D34600F28B4B /* LINSettingPrivacyControl.m in Sources */,
 				A763446A19A2029C00EB437A /* LINPhoneViewController.m in Sources */,
 				A758AA0619840D2C0055A44B /* LINExploreTableViewController.m in Sources */,
 				A78BD1D219DE042100AB6A0D /* LINAVUserObject.m in Sources */,

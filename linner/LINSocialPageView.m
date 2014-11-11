@@ -9,6 +9,11 @@
 #import "LINSocialPageView.h"
 #import "LINSocialComposeViewController.h"
 
+
+#import "LINNewSocialViewController.h"
+
+
+
 @interface LINSocialPageView ()
 @property (nonatomic, strong) NSArray *tableItems;
 @property (strong, nonatomic) UIView* profilePic;
@@ -65,9 +70,13 @@
 -(void) pushToAdd:(UIBarButtonItem *)sender
 {
     
-    LINSocialComposeViewController* socialComposeVC = [[LINSocialComposeViewController alloc] initWithNibName:@"LINSocialCompose" bundle:nil];
-
-    [self showViewController:socialComposeVC sender:nil];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"SocialPageView" bundle:nil];
+    LINNewSocialViewController *newSocialVC = [storyboard instantiateViewControllerWithIdentifier:@"LINNewSocialViewController"];
+    [self showViewController:newSocialVC sender:nil];
+    
+//    LINSocialComposeViewController* socialComposeVC = [[LINSocialComposeViewController alloc] initWithNibName:@"LINSocialCompose" bundle:nil];
+//
+//    [self showViewController:socialComposeVC sender:nil];
     
 }
 
