@@ -46,6 +46,7 @@
 
 -(void)viewDidLayoutSubviews
 {
+    
     self.profilePictureView.layer.cornerRadius = self.profilePictureView.frame.size.width/2;
     self.profilePictureView.layer.masksToBounds = YES;
     
