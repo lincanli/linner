@@ -127,6 +127,9 @@
 		A7D1E3D219C22C4200C5A1C4 /* LINMultiLangView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D1E3D119C22C4200C5A1C4 /* LINMultiLangView.m */; };
 		A7D1E3D519C22C4D00C5A1C4 /* LINFontSizeEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D1E3D419C22C4D00C5A1C4 /* LINFontSizeEditView.m */; };
 		A7D1E3D919C22C6400C5A1C4 /* LINInitPageSelect.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D1E3D819C22C6400C5A1C4 /* LINInitPageSelect.m */; };
+		A7D70DB51A112836005F01D7 /* SocialPageView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7D70DB41A112836005F01D7 /* SocialPageView.storyboard */; };
+		A7D70DBB1A112E5E005F01D7 /* LINSocialPageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D70DBA1A112E5E005F01D7 /* LINSocialPageTableViewController.m */; };
+		A7D70DBE1A112E88005F01D7 /* LINNewSocialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A7D70DBD1A112E88005F01D7 /* LINNewSocialViewController.m */; };
 		A7D73E2319937A540092C606 /* LINContactsTableCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7D73E2219937A540092C606 /* LINContactsTableCellTableViewCell.xib */; };
 		A7D73E2A1993B2CA0092C606 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7D73E281993B2CA0092C606 /* AudioToolbox.framework */; };
 		A7D73E2B1993B2CA0092C606 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7D73E291993B2CA0092C606 /* AVFoundation.framework */; };
@@ -348,6 +351,11 @@
 		A7D1E3D419C22C4D00C5A1C4 /* LINFontSizeEditView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINFontSizeEditView.m; sourceTree = "<group>"; };
 		A7D1E3D719C22C6400C5A1C4 /* LINInitPageSelect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINInitPageSelect.h; sourceTree = "<group>"; };
 		A7D1E3D819C22C6400C5A1C4 /* LINInitPageSelect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINInitPageSelect.m; sourceTree = "<group>"; };
+		A7D70DB41A112836005F01D7 /* SocialPageView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SocialPageView.storyboard; sourceTree = "<group>"; };
+		A7D70DB91A112E5E005F01D7 /* LINSocialPageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINSocialPageTableViewController.h; sourceTree = "<group>"; };
+		A7D70DBA1A112E5E005F01D7 /* LINSocialPageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINSocialPageTableViewController.m; sourceTree = "<group>"; };
+		A7D70DBC1A112E88005F01D7 /* LINNewSocialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINNewSocialViewController.h; sourceTree = "<group>"; };
+		A7D70DBD1A112E88005F01D7 /* LINNewSocialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINNewSocialViewController.m; sourceTree = "<group>"; };
 		A7D73E2219937A540092C606 /* LINContactsTableCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LINContactsTableCellTableViewCell.xib; sourceTree = "<group>"; };
 		A7D73E281993B2CA0092C606 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		A7D73E291993B2CA0092C606 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -476,7 +484,7 @@
 		A7459C8419C2850900BECCDF /* SubPage */ = {
 			isa = PBXGroup;
 			children = (
-				A7459C8919C2886D00BECCDF /* socialPageView */,
+				A7459C8919C2886D00BECCDF /* SocialPageView */,
 			);
 			name = SubPage;
 			sourceTree = "<group>";
@@ -490,7 +498,7 @@
 			path = HFStretchableTableHeaderView;
 			sourceTree = "<group>";
 		};
-		A7459C8919C2886D00BECCDF /* socialPageView */ = {
+		A7459C8919C2886D00BECCDF /* SocialPageView */ = {
 			isa = PBXGroup;
 			children = (
 				A79EAF3819C2BC4100388ABF /* SubPage */,
@@ -499,8 +507,13 @@
 				A7E56EED19C29E7E00BCD476 /* SocialCell.xib */,
 				A7459C8A19C2888500BECCDF /* LINSocialPageView.h */,
 				A7459C8B19C2888500BECCDF /* LINSocialPageView.m */,
+				A7D70DB41A112836005F01D7 /* SocialPageView.storyboard */,
+				A7D70DB91A112E5E005F01D7 /* LINSocialPageTableViewController.h */,
+				A7D70DBA1A112E5E005F01D7 /* LINSocialPageTableViewController.m */,
+				A7D70DBC1A112E88005F01D7 /* LINNewSocialViewController.h */,
+				A7D70DBD1A112E88005F01D7 /* LINNewSocialViewController.m */,
 			);
-			name = socialPageView;
+			name = SocialPageView;
 			sourceTree = "<group>";
 		};
 		A7459C9319C2930400BECCDF /* Resources */ = {
@@ -1258,6 +1271,7 @@
 				A731983219FDAB1400CD17B7 /* LoginAndLogout.storyboard in Resources */,
 				A7B07DA319CA8BD4005DABED /* incoming.wav in Resources */,
 				A70DAB4E1A02F92000CE7104 /* LINFinaceControlCellBalance.xib in Resources */,
+				A7D70DB51A112836005F01D7 /* SocialPageView.storyboard in Resources */,
 				A71D6E7319C5DE8200B13FD8 /* Calling.storyboard in Resources */,
 				A7A5CD6B19FB49B1005061AD /* LINChatTableViewCellList.xib in Resources */,
 				A7D73E2319937A540092C606 /* LINContactsTableCellTableViewCell.xib in Resources */,
@@ -1333,6 +1347,7 @@
 				A78DDDCB1983876300534254 /* LINChatTableViewController.m in Sources */,
 				A7A5CD7819FC0F97005061AD /* LINAppDelegate+DataModel.m in Sources */,
 				A70DAB4C1A02F6E600CE7104 /* LINFinanceControlTableViewCellBalance.m in Sources */,
+				A7D70DBB1A112E5E005F01D7 /* LINSocialPageTableViewController.m in Sources */,
 				A78DDD8F198385EC00534254 /* main.m in Sources */,
 				A78DDDBE1983867600534254 /* LINLoginViewController.m in Sources */,
 				A78DDDC41983869700534254 /* LINiForgetViewController.m in Sources */,
@@ -1355,6 +1370,7 @@
 				A78BD1DC19DE14E900AB6A0D /* LINNotificationTableViewCellFriendRequest.m in Sources */,
 				A78DDDE81983EA6000534254 /* LINContactsTableViewController.m in Sources */,
 				A7B791A019C1239800F654B2 /* LINSettingGeneralControl.m in Sources */,
+				A7D70DBE1A112E88005F01D7 /* LINNewSocialViewController.m in Sources */,
 				A71B9D2819C0FF4D00C6C66D /* LINLogOutTableViewCell.m in Sources */,
 				A7899CF419FD584A001C2D96 /* LINNotificationTableViewController+DataModel.m in Sources */,
 				A7FCDCE919D47B0B0014818C /* LINUser.m in Sources */,
