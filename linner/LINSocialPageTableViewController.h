@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LINSocialPageTableViewCell.h"
 
-@interface LINSocialPageTableViewController : UITableViewController
+
+@interface LINSocialPageTableViewController : UITableViewController <LINSocialPageTableViewCellDelegate>
+
+@property (weak, nonatomic) IBOutlet UIView *headerView;
+@property (weak, nonatomic) IBOutlet UIImageView *headerImagView;
+@property (weak, nonatomic) IBOutlet UIImageView *userProfilePhoto;
+@property (weak, nonatomic) IBOutlet UILabel *userNameLabel;
 
 @end

@@ -17,17 +17,33 @@
     NSManagedObjectContext* dataModel = appDelegate.managedObjectContext;
     NSError *error = nil;
     
+    AVUser* currentUser = [AVUser currentUser];
+    NSNumber* currentUserId = [currentUser objectForKey:@"userId"];
+    
+    AVQuery* queryRelation = [AVQuery queryWithClassName:@"userRelation"];
+    [queryRelation whereKey:@"toUserId" equalTo:currentUserId];
+    [queryRelation whereKey:@"fromUserId" equalTo:targetUserRelation.userObject.userId];
+    
+    AVObject* currentRelation = [queryRelation getFirstObject];
+    
+    
     if ([settingName isEqualToString:@"allowCallByApp"]) {
         targetUserRelation.allowCallByApp = allowed;
+        [currentRelation setObject:[NSNumber numberWithBool:allowed] forKey:@"allowCallByApp"];
         
     }else if([settingName isEqualToString:@"allowCallByPhoneNumber"]) {
         targetUserRelation.allowCallByPhoneNumber = allowed;
-        
+        [currentRelation setObject:[NSNumber numberWithBool:allowed] forKey:@"allowCallByPhoneNumber"];
+
     }else if ([settingName isEqualToString:@"sharePhoneNumber"]){
         targetUserRelation.sharePhoneNumber = allowed;
+        [currentRelation setObject:[NSNumber numberWithBool:allowed] forKey:@"sharePhoneNumber"];
+
     }
     
+    [currentRelation saveEventually];
     [dataModel save:&error];
+    
 }
 
 -(void) updateMessageList: (LINMessageList *) messageList withSettingName: (NSString *) settingName allowed:(BOOL) allowed
@@ -45,7 +61,7 @@
     [dataModel save:&error];
 }
 
--(void) disableUser: (LINUserRelation *) targetUserRelation;
+-(void) disableUser: (LINUserRelation *) targetUserRelation
 {
     LINAppDelegate *appDelegate = (LINAppDelegate*)[[UIApplication sharedApplication] delegate];
     NSManagedObjectContext* dataModel = appDelegate.managedObjectContext;

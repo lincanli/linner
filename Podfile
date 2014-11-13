@@ -1,4 +1,4 @@
-source 'https://github.com/CocoaPods/Specs.git'
+ source 'https://github.com/CocoaPods/Specs.git'
 
 pod 'AVOSCloud'
 
@@ -9,7 +9,7 @@ pod 'AVOSCloudSNS'
 pod 'SinchRTC'
 pod 'HexColors'
 pod 'FontAwesomeKit'
-pod 'JSQMessagesViewController'
+# pod 'JSQMessagesViewController'
 pod 'JSQSystemSoundPlayer'
 pod 'AHKActionSheet'
 pod 'MBProgressHUD'

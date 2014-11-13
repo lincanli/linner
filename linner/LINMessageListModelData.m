@@ -30,63 +30,60 @@
     self = [super init];
     if (self) {
         
-        AVUser* currentUser = [AVUser currentUser];
-        self.targetUserObject = targetUser;
-        self.messageList = messageList;
-        
-        self.userName = [[AVUser currentUser] objectForKey:@"name"];
-        self.targetUserName = targetUser.userRealName;
-        
-        self.userId = [currentUser objectForKey:@"userId"];
-        self.targetUserId = targetUser.userId;
-        
-        [self loadMessages];
-        
-//        JSQMessagesAvatarImage *jsqImage = [JSQMessagesAvatarImageFactory avatarImageWithUserInitials:@"JSQ"
-//                                                                                      backgroundColor:[UIColor colorWithWhite:0.85f alpha:1.0f]
-//                                                                                            textColor:[UIColor colorWithWhite:0.60f alpha:1.0f]
-//                                                                                                 font:[UIFont systemFontOfSize:14.0f]
-//                                                                                             diameter:kJSQMessagesCollectionViewAvatarSizeDefault];
-        
-        self.userAvatar = [JSQMessagesAvatarImageFactory avatarImageWithImage:[UIImage imageNamed:@"demo_avatar_cook"]
-                                                                                       diameter:kJSQMessagesCollectionViewAvatarSizeDefault];
-        
-        self.targetUserAvatar = [JSQMessagesAvatarImageFactory avatarImageWithImage:[UIImage imageNamed:@"demo_avatar_jobs"]
-                                                                                       diameter:kJSQMessagesCollectionViewAvatarSizeDefault];
-
-
         JSQMessagesBubbleImageFactory *bubbleFactory = [[JSQMessagesBubbleImageFactory alloc] init];
-        
         self.outgoingBubbleImageData = [bubbleFactory outgoingMessagesBubbleImageWithColor:[UIColor jsq_messageBubbleLightGrayColor]];
         self.incomingBubbleImageData = [bubbleFactory incomingMessagesBubbleImageWithColor:[UIColor jsq_messageBubbleGreenColor]];
+        
+        [self setupUser:targetUser withTargetList:messageList];
+        [self loadMessages];
     }
     
     return self;
 }
 
+- (void)setupUser: (LINUserObject *) targetUser withTargetList: (LINMessageList *) messageList
+{
+    AVUser* currentUser = [AVUser currentUser];
+    self.targetUserObject = targetUser;
+    self.messageList = messageList;
+    
+    self.userName = [[AVUser currentUser] objectForKey:@"name"];
+    self.targetUserName = targetUser.userRealName;
+    
+    self.userId = [currentUser objectForKey:@"userId"];
+    self.targetUserId = targetUser.userId;
+}
+
 - (void)loadMessages
-{    
+{
     NSMutableArray* resultFromLocal = [self getInitData:self.targetUserObject messageList:self.messageList];
     self.messages = [[NSMutableArray alloc]init];
 
     if ([resultFromLocal count] == 0)
         return;
     
-    
-    self.messages = [[NSMutableArray alloc]init];
-    
     for (LINMessageRecord* record in resultFromLocal) {
         
         if ([record.messageType isEqualToNumber:[NSNumber numberWithInt:0]]) {
-            JSQTextMessage* aMessage;
-            
+            JSQMessage* aMessage;
             if ([record.toUserId isEqualToNumber:self.userId]) {
-                aMessage = [[JSQTextMessage alloc] initWithSenderId: [NSString stringWithFormat:@"%@", self.userId]
+                NSLog(@"%@  %@", self.userId,  self.targetUserName);
+                NSLog(@"%@  %@", record.updatedAt,  record.messageText);
+                @try {
+                    aMessage =[[JSQMessage alloc]  initWithSenderId:[NSString stringWithFormat:@"%@", self.userId]
                                                   senderDisplayName:self.userName
                                                                date:record.updatedAt
                                                                text:record.messageText];
+                }
+                @catch (NSException *exception) {
+                    NSLog(@"error : %@", exception);
+                }
+                @finally {
+                
+                }
+
             } else {
-                aMessage = [[JSQTextMessage alloc] initWithSenderId: [NSString stringWithFormat:@"%@", self.targetUserId]
+                aMessage = [[JSQMessage alloc] initWithSenderId: [NSString stringWithFormat:@"%@", self.targetUserId]
                                                   senderDisplayName:self.targetUserName
                                                                date:record.updatedAt
                                                                text:record.messageText];
@@ -95,14 +92,14 @@
 
         }else if ([record.messageType isEqualToNumber:[NSNumber numberWithInt:1]]) {
             JSQPhotoMediaItem *aPhoto = [[JSQPhotoMediaItem alloc]initWithImage:[UIImage imageWithData:record.messageMedia]];
-            JSQMediaMessage* aMessage;
+            JSQMessage* aMessage;
 
             if ([record.toUserId isEqualToNumber:self.userId]) {
-                aMessage = [JSQMediaMessage messageWithSenderId:[NSString stringWithFormat:@"%@", self.userId]
+                aMessage = [JSQMessage messageWithSenderId:[NSString stringWithFormat:@"%@", self.userId]
                                                     displayName:self.userName
                                                           media:aPhoto];
             } else {
-                aMessage = [JSQMediaMessage messageWithSenderId:[NSString stringWithFormat:@"%@", self.targetUserId]
+                aMessage = [JSQMessage messageWithSenderId:[NSString stringWithFormat:@"%@", self.targetUserId]
                                                     displayName:self.targetUserName
                                                           media:aPhoto];
             }
@@ -118,7 +115,7 @@
 {
     
     JSQPhotoMediaItem *photoItem = [[JSQPhotoMediaItem alloc] initWithImage:[UIImage imageNamed:@"goldengate"]];
-    JSQMediaMessage *photoMessage = [JSQMediaMessage messageWithSenderId:[NSString stringWithFormat:@"%@", self.userId]
+    JSQMessage *photoMessage = [JSQMessage messageWithSenderId:[NSString stringWithFormat:@"%@", self.userId]
                                                              displayName:self.userName
                                                                    media:photoItem];
     [self.messages addObject:photoMessage];
@@ -131,7 +128,7 @@
     JSQLocationMediaItem *locationItem = [[JSQLocationMediaItem alloc] init];
     [locationItem setLocation:ferryBuildingInSF withCompletionHandler:completion];
     
-    JSQMediaMessage *locationMessage = [JSQMediaMessage messageWithSenderId:[NSString stringWithFormat:@"%@", self.userId]
+    JSQMessage *locationMessage = [JSQMessage messageWithSenderId:[NSString stringWithFormat:@"%@", self.userId]
                                                                 displayName:self.userName
                                                                       media:locationItem];
     [self.messages addObject:locationMessage];
@@ -143,7 +140,7 @@
     NSURL *videoURL = [NSURL URLWithString:@"file://"];
     
     JSQVideoMediaItem *videoItem = [[JSQVideoMediaItem alloc] initWithFileURL:videoURL isReadyToPlay:YES];
-    JSQMediaMessage *videoMessage = [JSQMediaMessage messageWithSenderId:[NSString stringWithFormat:@"%@", self.userId]
+    JSQMessage *videoMessage = [JSQMessage messageWithSenderId:[NSString stringWithFormat:@"%@", self.userId]
                                                              displayName:self.userName
                                                                    media:videoItem];
     [self.messages addObject:videoMessage];

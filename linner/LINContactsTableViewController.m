@@ -153,10 +153,31 @@ static NSString *CellIdentifier = @"LINContactsTableCellTableViewCell";
         LINContactsTableCellTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"LINContactsTableCellTableViewCell"];
         LINUserRelation* userRelation = [self.contactData objectAtIndex:indexPath.row];
         
+        NSLog(@"info %d", userRelation.allowCallByPhoneNumber);
+        
+        cellIcon = [FAKIonIcons checkmarkCircledIconWithSize:15];
+        if (userRelation.allowCallByApp && !userRelation.allowCallByPhoneNumber) {
+            [cellIcon addAttribute:NSForegroundColorAttributeName value:[UIColor blueColor]];
+            cell.callingCertifiedImageView.image = [cellIcon imageWithSize:CGSizeMake(15, 15)];
+        }else if(userRelation.allowCallByPhoneNumber){
+            [cellIcon addAttribute:NSForegroundColorAttributeName value:[UIColor greenColor]];
+            cell.callingCertifiedImageView.image = [cellIcon imageWithSize:CGSizeMake(15, 15)];
+        }else{
+            cell.callingCertifiedImageView.image = nil;
+            cell.callingCertifiedImageView.hidden = YES;
+        }
+        
         cell.ContactTableViewThumbImage.layer.cornerRadius = cell.ContactTableViewThumbImage.frame.size.width/2;
         cell.ContactTableViewThumbImage.layer.masksToBounds = YES;
         
-        cell.ContactTableViewThumbImage.image = [UIImage imageWithData:userRelation.userObject.userProfilePhoto];
+        if (userRelation.userObject.userProfilePhoto == nil) {
+            cellIcon = [FAKIonIcons ios7PersonIconWithSize:40];
+            [cellIcon addAttribute:NSForegroundColorAttributeName value:[UIColor blueColor]];
+            cell.ContactTableViewThumbImage.image = [cellIcon imageWithSize:CGSizeMake(40, 40)];
+        }else{
+            cell.ContactTableViewThumbImage.image = [UIImage imageWithData:userRelation.userObject.userProfilePhoto];
+        }
+        
         cell.ContactTableViewCellNameLable.text = userRelation.userObject.userRealName;
         
         return cell;
@@ -166,6 +187,10 @@ static NSString *CellIdentifier = @"LINContactsTableCellTableViewCell";
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    LINUserRelation* userRelation = [self.contactData objectAtIndex:indexPath.row];
+    if (!userRelation.allowCallByApp)
+        return;
+    
     if (indexPath.section == 0) {
         if (indexPath.row == 0) {
             LINNotificationTableViewController* notiVC = [[LINNotificationTableViewController alloc]init];
@@ -187,6 +212,7 @@ static NSString *CellIdentifier = @"LINContactsTableCellTableViewCell";
 
 - (NSArray *)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     UITableViewRowAction *moreAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault
                                                                           title:@"Call" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath)
     {

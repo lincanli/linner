@@ -12,6 +12,7 @@
 
 @synthesize ContactTableViewThumbImage = _ContactTableViewThumbImage;
 @synthesize ContactTableViewCellNameLable = _ContactTableViewCellNameLable;
+@synthesize callingCertifiedImageView = _callingCertifiedImageView;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

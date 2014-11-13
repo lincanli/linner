@@ -13,5 +13,6 @@
 
 @property (nonatomic, weak) IBOutlet UILabel *ContactTableViewCellNameLable;
 @property (weak, nonatomic) IBOutlet UIImageView *ContactTableViewThumbImage;
+@property (weak, nonatomic) IBOutlet UIImageView *callingCertifiedImageView;
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "LINExploreTableViewController.h"
+#import "LINSocialPageTableViewController.h"
 
 @interface LINExploreTableViewController ()
 @property (strong, nonatomic) NSArray* exploreArray;
@@ -93,23 +94,10 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if(indexPath.section == 0){
-        //ProfileImage
-        
-//        
-//        LINSocialPageView* SocialPageView = [LINSocialPageView alloc];
-//        SocialPageView.hidesBottomBarWhenPushed = YES;
-//        [self.navigationController pushViewController:SocialPageView animated:YES];
-        
-        
-        UIStoryboard *socialStoryBoard = [UIStoryboard storyboardWithName:@"Socialx" bundle:nil];
-        
-        LINSocialPageView *SocialPageView = [socialStoryBoard instantiateViewControllerWithIdentifier:@"LINSocialPageView"];
-        
-        
-        SocialPageView.hidesBottomBarWhenPushed = YES;
-        [self.navigationController pushViewController:SocialPageView animated:YES];
-
-        
+        UIStoryboard *socialStoryBoard = [UIStoryboard storyboardWithName:@"SocialPageView" bundle:nil];
+        LINSocialPageTableViewController *SocialPageVC = [socialStoryBoard instantiateViewControllerWithIdentifier:@"LINSocialPageTableViewControllerIdentifier"];
+        SocialPageVC.hidesBottomBarWhenPushed = YES;
+        [self showViewController:SocialPageVC sender:nil];
     }
 }
 

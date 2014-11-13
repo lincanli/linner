@@ -38,7 +38,7 @@ static NSString *listCellIdentifier = @"ChatListCellIndentifier";
 {
     [super viewDidLoad];
     
-    self.navigationController.title = @"聊天";
+    self.title = @"聊天";
     
     self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
     self.tableView.delegate = self;

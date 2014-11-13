@@ -45,16 +45,13 @@
 
 -(NSMutableArray *) getDataFromRemote
 {
+    NSLog(@"getting data from remote");
     NSMutableArray* dataFromRemote;
     AVUser* currentUser = [AVUser currentUser];
     [currentUser refresh];
     
     AVQuery *queryUser = [AVQuery queryWithClassName:@"userRelation"];
     [queryUser whereKey:@"fromUserId" equalTo:[currentUser objectForKey:@"userId"]];
-    
-//    AVQuery *queryRelation = [AVQuery queryWithClassName:@"userRelation"];
-//    [queryRelation whereKey:@"userRelation" equalTo:[NSNumber numberWithInt:1]];
-//    AVQuery* queryPrimary = [AVQuery andQueryWithSubqueries:[NSArray arrayWithObjects:queryUser, queryRelation, nil]];
     
     [queryUser includeKey:@"toUserObject.userInfo"];
     [queryUser includeKey:@"toUserObject.userSetting"];
@@ -64,6 +61,9 @@
     if ([dataFromRemote count] != 0)
         [self storeRemoteToLocal:dataFromRemote];
     
+    
+    
+    NSLog(@"finish getting data from remote");
     return [self getDataFromLocal];
 }
 
@@ -71,6 +71,8 @@
 
 - (void) storeRemoteToLocal: (NSMutableArray*) remoteData
 {
+    NSLog(@"getting storeRemoteToLocal");
+
     [remoteData sortUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"toUserId" ascending:YES]]];
     LINAppDelegate *appDelegate = (LINAppDelegate*)[[UIApplication sharedApplication] delegate];
     NSManagedObjectContext* dataModel = appDelegate.managedObjectContext;
