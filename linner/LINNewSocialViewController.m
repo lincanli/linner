@@ -30,7 +30,11 @@ static CGFloat halfLineHeight;
     self.socialTextView.text = @"Lorem Ipsum is simply dummy text";
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:@selector(addPicture:)];
-    NSLog(@"height : %f", self.socialTextView.frame.size.height);
+    
+    UILongPressGestureRecognizer* pressGesture = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(didLongPressed:)];
+    pressGesture.minimumPressDuration = 1.0;
+    [self.navigationItem.rightBarButtonItem.customView addGestureRecognizer:pressGesture];
+    
 }
 
 - (void)initialDataSetUp
@@ -58,6 +62,11 @@ static CGFloat halfLineHeight;
     picker.delegate = self;
     picker.sourceType = UIImagePickerControllerSourceTypeCamera;
     [self showDetailViewController:picker sender:nil];
+}
+
+- (void)didLongPressed: (id) sender
+{
+    NSLog(@"long pressed");
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info

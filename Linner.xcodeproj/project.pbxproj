@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		430588CD68434159B4F6B1ED /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F4391B0B215C4E6CB49458B2 /* libPods.a */; };
+		5B93033E5B7A00846FA885A8 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F4391B0B215C4E6CB49458B2 /* libPods.a */; };
 		A70D7D9F1A12BAF9005AA819 /* LINSocialPageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A70D7D9E1A12BAF9005AA819 /* LINSocialPageTableViewCell.m */; };
 		A70DAB3C1A02959B00CE7104 /* LINProfileViewControllerNormal+DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A70DAB3A1A02959B00CE7104 /* LINProfileViewControllerNormal+DataModel.m */; };
 		A70DAB3F1A02B82800CE7104 /* LINProfileTableViewControllerPointToPoint+DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A70DAB3E1A02B82800CE7104 /* LINProfileTableViewControllerPointToPoint+DataModel.m */; };
@@ -534,10 +534,10 @@
 				A7A8EAFE19C4895200DDD4C2 /* libsqlite3.dylib in Frameworks */,
 				A78E8F8919CF5E370062A72F /* libicucore.dylib in Frameworks */,
 				A7A8EB0019C4896200DDD4C2 /* libstdc++.dylib in Frameworks */,
-				430588CD68434159B4F6B1ED /* libPods.a in Frameworks */,
 				A7A8EB0219C4896C00DDD4C2 /* OpenGLES.framework in Frameworks */,
 				A7A8EB0419C4897600DDD4C2 /* QuartzCore.framework in Frameworks */,
 				A78DDD87198385EC00534254 /* UIKit.framework in Frameworks */,
+				5B93033E5B7A00846FA885A8 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1862,6 +1862,61 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-l\"Pods-AHKActionSheet\"",
+					"-l\"Pods-AVOSCloud\"",
+					"-l\"Pods-AVOSCloudSNS\"",
+					"-l\"Pods-AVOSCloudUI\"",
+					"-l\"Pods-FontAwesomeKit\"",
+					"-l\"Pods-HexColors\"",
+					"-l\"Pods-JSQSystemSoundPlayer\"",
+					"-l\"Pods-MBProgressHUD\"",
+					"-l\"Pods-PaymentKit\"",
+					"-l\"Pods-SinchRTC\"",
+					"-l\"Pods-Stripe\"",
+					"-l\"Pods-pop\"",
+					"-l\"c++\"",
+					"-l\"icucore\"",
+					"-l\"stdc++.6.0.9\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"AVOSCloud\"",
+					"-framework",
+					"\"AVOSCloudSNS\"",
+					"-framework",
+					"\"AVOSCloudUI\"",
+					"-framework",
+					"\"AudioToolbox\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"Sinch\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-ObjC",
+					"-lxml2",
+					"-all_load",
+				);
 				PRODUCT_NAME = Linner;
 				PROVISIONING_PROFILE = "";
 				VALID_ARCHS = "armv7 armv7s";
@@ -1887,6 +1942,61 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-l\"Pods-AHKActionSheet\"",
+					"-l\"Pods-AVOSCloud\"",
+					"-l\"Pods-AVOSCloudSNS\"",
+					"-l\"Pods-AVOSCloudUI\"",
+					"-l\"Pods-FontAwesomeKit\"",
+					"-l\"Pods-HexColors\"",
+					"-l\"Pods-JSQSystemSoundPlayer\"",
+					"-l\"Pods-MBProgressHUD\"",
+					"-l\"Pods-PaymentKit\"",
+					"-l\"Pods-SinchRTC\"",
+					"-l\"Pods-Stripe\"",
+					"-l\"Pods-pop\"",
+					"-l\"c++\"",
+					"-l\"icucore\"",
+					"-l\"stdc++.6.0.9\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"AVOSCloud\"",
+					"-framework",
+					"\"AVOSCloudSNS\"",
+					"-framework",
+					"\"AVOSCloudUI\"",
+					"-framework",
+					"\"AudioToolbox\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreLocation\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"Sinch\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-ObjC",
+					"-lxml2",
+					"-all_load",
+				);
 				PRODUCT_NAME = Linner;
 				PROVISIONING_PROFILE = "";
 				VALID_ARCHS = "armv7 armv7s";
