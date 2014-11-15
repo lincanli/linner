@@ -8,8 +8,10 @@
 
 #include <tgmath.h>
 #import "LINNewSocialViewController.h"
+#import "LINNewSocialViewController+DataModel.h"
 
 @interface LINNewSocialViewController ()
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *baseEditorViewHightConstraint;
 
 @end
 
@@ -27,7 +29,7 @@ static CGFloat halfLineHeight;
     [self initialDataSetUp];
     [self textViewSetUp];
     
-    self.socialTextView.text = @"Lorem Ipsum is simply dummy text";
+    self.socialTextView.text = @"说点什么吧";
     
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:@selector(addPicture:)];
     
@@ -40,7 +42,7 @@ static CGFloat halfLineHeight;
 - (void)initialDataSetUp
 {
     viewWith = self.view.frame.size.width;
-    viewHeight = 200;
+    viewHeight = viewWith;
     textViewWidthInset = 20;
     halfLineHeight = self.socialTextView.font.lineHeight / 2;
 }
@@ -56,11 +58,18 @@ static CGFloat halfLineHeight;
                                                               textViewWidthInset, viewHeight / 2 - halfLineHeight, textViewWidthInset);
 }
 
+-(void)viewDidLayoutSubviews
+{
+    self.baseEditorViewHightConstraint.constant = self.view.frame.size.width;
+    [self.view layoutIfNeeded];
+}
+
 - (void)addPicture: (id) sender
 {
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     picker.delegate = self;
-    picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    picker.allowsEditing = YES;
     [self showDetailViewController:picker sender:nil];
 }
 
@@ -81,12 +90,30 @@ static CGFloat halfLineHeight;
     if(rawImage==nil)
         rawImage = [info objectForKey:UIImagePickerControllerCropRect];
     
-//    UIImageWriteToSavedPhotosAlbum(rawImage, nil, nil, nil);
-    
     self.baseImageView.image = rawImage;
     
 }
 
+- (IBAction)publishButtonDidTouched:(id)sender
+{
+    UIActivityIndicatorView* activityIndicator = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+    activityIndicator.color = [UIColor darkGrayColor];
+    UIBarButtonItem * barButton = [[UIBarButtonItem alloc] initWithCustomView:activityIndicator];
+    self.navigationItem.rightBarButtonItem = barButton;
+    [activityIndicator startAnimating];
+    
+    [self.publishButton setEnabled:NO];
+    self.publishButton.backgroundColor = [UIColor colorWithHexString:@"#FF3B30" alpha:0.7];
+    
+    NSString* content = self.socialTextView.text;
+    UIImage* backgoundImage = self.baseImageView.image;
+    NSNumber* backgroundType = backgoundImage == nil ? [NSNumber numberWithInt:0] : [NSNumber numberWithInt:1];
+ 
+    if ([self saveNewSocial:content withBackgroundType:backgroundType andBackgroundImage:backgoundImage]) {
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+    
+}
 
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
 {
@@ -96,9 +123,6 @@ static CGFloat halfLineHeight;
     }
     
     CGFloat insetHeight = ((viewHeight / 2) - textView.textContainerInset.top) * 2;
-    NSLog(@"====");
-
-    NSLog(@"insetInfo: top: %f, bottom: %f, height: %f ", textView.textContainerInset.top, textView.textContainerInset.bottom, insetHeight);
     
     return [self doesFit:textView string:text range:range height:insetHeight];
 }
@@ -109,7 +133,7 @@ static CGFloat halfLineHeight;
     NSMutableAttributedString *stringTmp = [[NSMutableAttributedString alloc] initWithAttributedString: textView.textStorage];
     [stringTmp appendAttributedString: [[NSAttributedString alloc]initWithString: myString]];
     [stringTmp appendAttributedString: [[NSAttributedString alloc]initWithString: @"   ."]];
-
+    
     NSTextStorage *textStorage = [[NSTextStorage alloc] initWithAttributedString:stringTmp];
     NSTextContainer *textContainer = [[NSTextContainer alloc] initWithSize: CGSizeMake(viewWith - 2 * textViewWidthInset, FLT_MAX)];
     NSLayoutManager *layoutManager = [[NSLayoutManager alloc] init];
@@ -118,26 +142,22 @@ static CGFloat halfLineHeight;
     [textStorage addLayoutManager:layoutManager];
     CGFloat textHeight = [layoutManager usedRectForTextContainer:textContainer].size.height;
     
-    if (textHeight < 80 || myString.length == 0) {
+    if (textHeight < 150 || myString.length == 0) {
         NSLog(@"info: textHeight : %f, height : %f, length: %lu", textHeight, height, (unsigned long)myString.length);
         
         if (floor(textHeight) > floor(height)) {
-            NSLog(@"1");
             textView.textContainerInset = UIEdgeInsetsMake(textView.textContainerInset.top - halfLineHeight,
                                                            textViewWidthInset,
                                                            textView.textContainerInset.bottom - halfLineHeight,
                                                            textViewWidthInset);
         }else if(floor(textHeight) < floor(height)){
-            NSLog(@"2");
             textView.textContainerInset = UIEdgeInsetsMake(textView.textContainerInset.top + halfLineHeight,
                                                            textViewWidthInset,
                                                            textView.textContainerInset.bottom + halfLineHeight,
                                                            textViewWidthInset);
-        }else{
-            NSLog(@"3");
         }
         
-        
+        self.errorMessageTextLable.hidden = YES;
         return YES;
         
     } else {

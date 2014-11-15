@@ -50,6 +50,8 @@
     [self.likeButton setImage:[heartIconOutline imageWithSize:CGSizeMake(40, 40)] forState:UIControlStateNormal];
     [self.likeButton setImage:[heartIcon imageWithSize:CGSizeMake(40, 40)] forState:UIControlStateHighlighted];
     
+    
+    
     UISwipeGestureRecognizer* gestureLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeLeft:)];
     gestureLeft.direction = UISwipeGestureRecognizerDirectionLeft;
     gestureLeft.delegate = self;
@@ -59,8 +61,6 @@
     gestureRight.direction = UISwipeGestureRecognizerDirectionRight;
     gestureRight.delegate = self;
     [self.contentView addGestureRecognizer:gestureRight];
-    
-
     
 }
 

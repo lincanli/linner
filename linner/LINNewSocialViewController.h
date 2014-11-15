@@ -14,4 +14,5 @@
 @property (weak, nonatomic) IBOutlet UITextView *socialTextView;
 @property (weak, nonatomic) IBOutlet UILabel *errorMessageTextLable;
 
+@property (weak, nonatomic) IBOutlet UIButton *publishButton;
 @end

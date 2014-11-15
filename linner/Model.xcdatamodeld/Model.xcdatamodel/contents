@@ -26,7 +26,15 @@
         <attribute name="toUserId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="updatedAt" optional="YES" attributeType="Date" syncable="YES"/>
     </entity>
-    <entity name="SocialRecord" syncable="YES"/>
+    <entity name="SocialRecord" syncable="YES">
+        <attribute name="backgroundImage" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES" storedInTruthFile="YES" syncable="YES"/>
+        <attribute name="backgroundType" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createdAt" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="fromUserId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="socialRecordId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="fromUserObject" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserObject" syncable="YES"/>
+    </entity>
     <entity name="UserObject" representedClassName="LINUserObject" syncable="YES">
         <attribute name="mainUser" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="updatedAt" optional="YES" attributeType="Date" syncable="YES"/>
@@ -71,7 +79,7 @@
         <element name="AppNotification" positionX="144" positionY="320" width="128" height="118"/>
         <element name="MessageList" positionX="-243" positionY="533" width="128" height="178"/>
         <element name="MessageRecord" positionX="-9" positionY="380" width="128" height="135"/>
-        <element name="SocialRecord" positionX="124" positionY="180" width="128" height="45"/>
+        <element name="SocialRecord" positionX="124" positionY="180" width="128" height="148"/>
         <element name="UserObject" positionX="-162" positionY="-9" width="128" height="270"/>
         <element name="UserRelation" positionX="-362" positionY="260" width="128" height="163"/>
         <element name="UserSetting" positionX="43" positionY="72" width="128" height="30"/>

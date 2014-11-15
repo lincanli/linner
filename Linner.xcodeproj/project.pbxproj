@@ -15,6 +15,9 @@
 		A70DAB4C1A02F6E600CE7104 /* LINFinanceControlTableViewCellBalance.m in Sources */ = {isa = PBXBuildFile; fileRef = A70DAB4B1A02F6E600CE7104 /* LINFinanceControlTableViewCellBalance.m */; };
 		A70DAB4E1A02F92000CE7104 /* LINFinaceControlCellBalance.xib in Resources */ = {isa = PBXBuildFile; fileRef = A70DAB4D1A02F92000CE7104 /* LINFinaceControlCellBalance.xib */; };
 		A70DAB511A03038200CE7104 /* LINPaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A70DAB501A03038200CE7104 /* LINPaymentViewController.m */; };
+		A7119C4A1A166D09000A0F19 /* LINNewSocialViewController+DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A7119C491A166D09000A0F19 /* LINNewSocialViewController+DataModel.m */; };
+		A7119C4D1A166D9D000A0F19 /* LINSocialRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = A7119C4C1A166D9D000A0F19 /* LINSocialRecord.m */; };
+		A7119C561A167FD8000A0F19 /* LINSocialPageTableViewController+DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A7119C551A167FD8000A0F19 /* LINSocialPageTableViewController+DataModel.m */; };
 		A71B9D1B19C0FBEB00C6C66D /* LogoutTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A71B9D1A19C0FBEB00C6C66D /* LogoutTableCell.xib */; };
 		A71B9D2819C0FF4D00C6C66D /* LINLogOutTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A71B9D2719C0FF4D00C6C66D /* LINLogOutTableViewCell.m */; };
 		A731983219FDAB1400CD17B7 /* LoginAndLogout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A731983119FDAB1400CD17B7 /* LoginAndLogout.storyboard */; };
@@ -209,6 +212,12 @@
 		A70DAB4D1A02F92000CE7104 /* LINFinaceControlCellBalance.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LINFinaceControlCellBalance.xib; sourceTree = "<group>"; };
 		A70DAB4F1A03038200CE7104 /* LINPaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINPaymentViewController.h; sourceTree = "<group>"; };
 		A70DAB501A03038200CE7104 /* LINPaymentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINPaymentViewController.m; sourceTree = "<group>"; };
+		A7119C481A166D09000A0F19 /* LINNewSocialViewController+DataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "LINNewSocialViewController+DataModel.h"; path = "linner/LINNewSocialViewController+DataModel.h"; sourceTree = "<group>"; };
+		A7119C491A166D09000A0F19 /* LINNewSocialViewController+DataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "LINNewSocialViewController+DataModel.m"; path = "linner/LINNewSocialViewController+DataModel.m"; sourceTree = "<group>"; };
+		A7119C4B1A166D9D000A0F19 /* LINSocialRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINSocialRecord.h; sourceTree = "<group>"; };
+		A7119C4C1A166D9D000A0F19 /* LINSocialRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINSocialRecord.m; sourceTree = "<group>"; };
+		A7119C541A167FD8000A0F19 /* LINSocialPageTableViewController+DataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "LINSocialPageTableViewController+DataModel.h"; path = "linner/LINSocialPageTableViewController+DataModel.h"; sourceTree = "<group>"; };
+		A7119C551A167FD8000A0F19 /* LINSocialPageTableViewController+DataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "LINSocialPageTableViewController+DataModel.m"; path = "linner/LINSocialPageTableViewController+DataModel.m"; sourceTree = "<group>"; };
 		A71B9D1A19C0FBEB00C6C66D /* LogoutTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogoutTableCell.xib; sourceTree = "<group>"; };
 		A71B9D2619C0FF4D00C6C66D /* LINLogOutTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LINLogOutTableViewCell.h; sourceTree = "<group>"; };
 		A71B9D2719C0FF4D00C6C66D /* LINLogOutTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LINLogOutTableViewCell.m; sourceTree = "<group>"; };
@@ -584,6 +593,17 @@
 			name = Cells;
 			sourceTree = "<group>";
 		};
+		A7119C471A166CE5000A0F19 /* Explort */ = {
+			isa = PBXGroup;
+			children = (
+				A7119C481A166D09000A0F19 /* LINNewSocialViewController+DataModel.h */,
+				A7119C491A166D09000A0F19 /* LINNewSocialViewController+DataModel.m */,
+				A7119C541A167FD8000A0F19 /* LINSocialPageTableViewController+DataModel.h */,
+				A7119C551A167FD8000A0F19 /* LINSocialPageTableViewController+DataModel.m */,
+			);
+			name = Explort;
+			sourceTree = "<group>";
+		};
 		A71B9D2919C1009F00C6C66D /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -773,6 +793,8 @@
 				A78BD1BB19DD980400AB6A0D /* LINMessageList.m */,
 				A78BD1BD19DD987E00AB6A0D /* LINMessageRecord.h */,
 				A78BD1BE19DD987E00AB6A0D /* LINMessageRecord.m */,
+				A7119C4B1A166D9D000A0F19 /* LINSocialRecord.h */,
+				A7119C4C1A166D9D000A0F19 /* LINSocialRecord.m */,
 			);
 			name = ModalClasses;
 			sourceTree = "<group>";
@@ -1394,6 +1416,7 @@
 		A7F6E8CB19F2B7CD0037EE06 /* ModelSource */ = {
 			isa = PBXGroup;
 			children = (
+				A7119C471A166CE5000A0F19 /* Explort */,
 				A7899CEE19FD4E6B001C2D96 /* Profile */,
 				A7899CED19FD4E5B001C2D96 /* Login/out */,
 				A7899CEC19FD4E50001C2D96 /* Setting */,
@@ -1672,6 +1695,7 @@
 				A7F45FA319F345FD0028FFBE /* LINSettingDataHelper.m in Sources */,
 				A78BD1B919DD965C00AB6A0D /* LINUserRelation.m in Sources */,
 				A70DAB3C1A02959B00CE7104 /* LINProfileViewControllerNormal+DataModel.m in Sources */,
+				A7119C4D1A166D9D000A0F19 /* LINSocialRecord.m in Sources */,
 				A7F201411A12ACA10048DB14 /* JSQMediaItem.m in Sources */,
 				A7D1E3D519C22C4D00C5A1C4 /* LINFontSizeEditView.m in Sources */,
 				A78BD1B319DD92E600AB6A0D /* LINUserObject.m in Sources */,
@@ -1703,10 +1727,12 @@
 				A763446A19A2029C00EB437A /* LINPhoneViewController.m in Sources */,
 				A758AA0619840D2C0055A44B /* LINExploreTableViewController.m in Sources */,
 				A78BD1D219DE042100AB6A0D /* LINAVUserObject.m in Sources */,
+				A7119C4A1A166D09000A0F19 /* LINNewSocialViewController+DataModel.m in Sources */,
 				A78BD1F719E062F400AB6A0D /* PinyinHelper.m in Sources */,
 				A7D1E3C919C21E7800C5A1C4 /* LINSexEditView.m in Sources */,
 				A7F6E8D919F2FAB40037EE06 /* LINSettingTableViewController+DataModel.m in Sources */,
 				A7F2014E1A12ACA10048DB14 /* JSQMessagesComposerTextView.m in Sources */,
+				A7119C561A167FD8000A0F19 /* LINSocialPageTableViewController+DataModel.m in Sources */,
 				A7F2013E1A12ACA10048DB14 /* JSQMessagesCollectionViewFlowLayoutInvalidationContext.m in Sources */,
 				A771E2E419FDD04E00D8474B /* LINPhoneNumberSelectTableViewController.m in Sources */,
 				A78DDDD119839B8900534254 /* LINChatNavViewController.m in Sources */,
